@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<head>
+    <title>CalcPed</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="format.css">
+    <link rel="icon" href=""/>
+</head>
+<body>
+    <div class="link">
+        <img id="logo" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSWwOXmYmX_gbrFn03udSnVYl5PnGOu9-InTQ&usqp=CAU" alt="Img de Perfil">
+        <h3>CalcPed</h3>
+        <form>
+            <fieldset>
+             <legend>- Dados do Paciente: |</legend>
+                 <input id="nome" type="text" placeholder=" Nome do Paciente: "><br/>
+                 <input id="mae" type="text" placeholder=" Nome da Mãe: "><br/>
+                 <input id="dat" type="date">
+                 <input id="pront" type="number" placeholder=" N° Prontuário :">
+                 <input id="peso" type="double" placeholder=" Peso (Kg):" required><br/>
+             </fieldset>
+        </form>
+        <div id="divBtn">
+            <input id="btn" type="reset" value="Limpar" onclick="limpar()" title=" Limpar cadastro">
+            <input id="btn" type="button" value="Calcular" onclick="calc()" title=" Calcula a dosagem de medicação baseada no peso informado do paciente">
+            <input id="btn" type="submit" value="Imprimir" onclick="imprimir()" title=" Imprimir relatório">
+        </div>
+            <h4><img onclick="abreTb1()" title="Expandir Tabela" src="https://i.pinimg.com/736x/34/30/72/343072b13bb3caee0c642c653a03f888.jpg">
+                Parada cardiorrespiratória/outras emergências 
+                <img onclick="fecharTb1()" title="Retrair Tabela" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMwAAADACAMAAAB/Pny7AAAAVFBMVEX///8AAAC9vb0/Pz/IyMguLi5XV1cyMjKNjY0HBweUlJTd3d3Dw8Pj4+MdHR329vZNTU3S0tKCgoLt7e03NzegoKATExNcXFxSUlIYGBhERERxcXGF/cjMAAABG0lEQVR4nO3Y226CQBiFUVrKwbOoeHz/92y1vTFMbwaTn5i1nmB/ITMoRQEAAAAAAAAAAAAAAAAAAAAASYvlZ7jl4hUlq7YumypcU9btamxLu559TMRs3Y5K2VTRBc+qzYiW6PFD2TWbbfT0oW1uTRu9PCXz3HQTOzC/qi4rZhe9O22X07Kvo2en1fuMmOUhenbaYZkR0x+jZ6cd+4yYefTq/8zFTFROTH+JXp12yTkzb3Wb7U/Rs9NOOe+Zt/oFUCya6N0pTeb/50neZzl32cM5evnQObelKKKnD+W3/DybyXzOuJuNeC53fTmZd+elzHldPln1t/pahrvWt370d7NHT/cVrntJCQAAAAAAAAAAAAAAAAAAAAB/vgGZthoLQaIweAAAAABJRU5ErkJggg=="></h4>
+            <table id="tb"> <!--Tabela #1-->  
+                <th id="rowTitulo" colspan="8"></th>
+                <tr>
+                    <th id="col1" rowspan="3">Adrenalina (1:1000)</th>
+                        <td>EV / IO (0,01mg/kg):</td>
+                        <td><div id="res1">0.00mg</div></td>
+                        <td id="col4">Diluir 1 amp em 9mL de AD e fazer:</td>
+                        <td><div id="res4">0.0ml</div></td>
+                        <td colspan="4">a cada 3 a 5 minutos.</td>
+            </tr>
+            <tr>
+                    <td>ET (0,1mg/kg):</td>
+                    <td><div id="res2">0.0mg</div></td>
+                    <td>Administrar:</td>
+                    <td><div id="res5">0.00ml</div></td>
+                    <td colspan="4">sem diluir a cada 3 a 5 minutos se ausência de acesso.</td>
+        </tr>
+        <tr>
+                <td>Anafilaxia (0,01mg/kg):</td>
+                <td><div id="res3">0.00mg</div></td>
+                <td>Administrar:</td>
+                <td><div id="res6">0.00ml</div></td>
+                <td colspan="4">IM, sem diluir, a cada 15 minutos (dose máxima: 0,3mg).</td>
+            </tr>
+            <!--###################################################################################################-->
+            <tr id="marcaTxt">
+                <th>Atropina 0,25mg/ml</th>
+                    <td>EV/IO/ET (0,02mg/kg):</td>
+                    <td><div id="res7">0.0mg</div></td>
+                    <td>Administrar:</td>
+                    <td><div id="res8">0.0ml</div></td>
+                    <td colspan="4">por dose. Mínimo de 0,1mg e máximo de 0,5mg/dose.</td>
+            </tr>
+            <!--###################################################################################################-->
+            <tr>
+                <th rowspan="2">Adenosina (6mg/2mL)</th>
+                    <td>1ª dose (0,1mg/kg):</td>
+                    <td><div id="res9">0.0mg</div></td>
+                    <td>Administrar:</td>
+                    <td><div id="res11">0.0mg</div></td>
+                    <td colspan="4">EV em bolus rápido, seguido por flush de 5 a 10mL de SF.</td>
+            </tr>
+            <tr>
+                    <td>2ª dose (0,2mg/kg):</td>
+                    <td><div id="res10">0.0ml</div></td>
+                    <td>Administrar:</td>
+                    <td><div id="res12">0.0ml</div></td>
+                    <td colspan="4">EV em bolus rápido, seguido por flush de 5 a 10mL de SF.</td>
+            </tr>
+            <!--###################################################################################################-->
+            <tr id="marcaTxt">
+                <th rowspan="2">Amiodarona (50mg/mL)</th> <!--OK-->
+                    <td>PCR (5mg/kg):</td>
+                    <td><div id="res13">0.0mg</div></td>
+                    <td>Administrar:</td>
+                    <td><div id="res15">0.0ml</div></td>
+                    <td colspan="4">sem diluir. Dose máxima: 15 - 20mg/kg/dia ou 300mg/dose.</td>
+            </tr>
+            <tr id="marcaTxt">
+                    <td>TSV/TV com pulso:</td>
+                    <td><div id="res14">0.0mg</div></td>
+                    <td>Diluir:</td>
+                    <td><div id="res16">0.0ml</div></td>
+                    <td>em:</td>
+                    <td><div id="res17">0.0ml</div></td>
+                    <td>de SF e infundir em 20 a 60 minutos.</td>
+            </tr>
+            <!--###################################################################################################-->
+            <tr>
+                <th rowspan="3">Sulfato de magnésio 10%
+                    (100mg/mL ou 0,8mEq/mL)</th>
+                    <td>a:</td>
+                    <td><div id="res18">0.0ml</div></td>
+                    <td>Administrar:</td>
+                    <td><div id="res19">0.0ml</div></td>
+                    <td>a:</td>
+                    <td><div id="res20">0.0ml</div></td>
+                    <td>em bolus na Torsades sem pulso.</td>
+            </tr>
+            <tr>
+                    <td rowspan="2" colspan="2">Torsades | Asma (25-50mg/kg):</td>
+                    
+                    <td>Diluir:</td>
+                    <td><div id="res21">0.0ml</div></td>
+                    <td>em:</td>
+                    <td><div id="res22">0.0ml</div></td>
+                    <td>de SF e infundir em 20 min na Torsades com pulso.</td>
+                    <tr>
+                        <td>Diluir:</td>
+                        <td><div id="res23">0.0ml</div></td>
+                        <td>em:</td>
+                        <td><div id="res24">0.0ml</div></td>
+                        <td>de SF e infundir em 30 min na asma grave.</td>    
+                    </tr>
+            </tr>
+            <!--###################################################################################################-->
+            <tr id="marcaTxt">
+                <th>Bicarbonato de sódio 8,4%</th>
+                    <td>PCR (1mEq/kg):</td>
+                    <td><div id="res25">0.0mEq</div></td>
+                    <td>Administrar:</td>
+                    <td><div id="res26">0.0mEq</div></td>
+                    <td colspan="4">em bolus lento..</td>
+            </tr>
+            <!--###################################################################################################-->
+            <tr>
+                <th>Gluconato de cálcio 10%</th>
+                    <td>0,5mEq/kg:</td>
+                    <td><div id="res27">0.0mEq</div></td>
+                    <td>Infundir:</td>
+                    <td><div id="res28">0.0mEq</div></td>
+                    <td colspan="4">em bolus lento na PCR e em 20min na hipocalcemia sintomática.</td>
+            </tr>
+            <!--###################################################################################################-->
+            <tr id="marcaTxt">
+                <th rowspan="2">Glicose 50%</th>
+                <td>Neonato (0,2g/kg):</td>
+                <td><div id="res29">0.0g</div></td>
+                <td>Diluir:</td>
+                <td><div id="res30">0.0ml</div></td>
+                <td>em:</td>
+                <td><div id="res31">0.0ml</div></td>
+                <td>de SF e infundir em bolus lento.</td>
+                <tr id="marcaTxt">
+                    <td>Pediatria (0,5g/kg):</td>
+                    <td><div id="res32">0.0g</div></td>
+                    <td>Diluir:</td>
+                    <td><div id="res33">0.0ml</div></td>
+                    <td>em:</td>
+                    <td><div id="res34">0.0ml</div></td>
+                    <td>de SF e infundir em bolus lento.</td>        
+                </tr>
+            </tr>
+        </table>
+
+        <h4><img onclick="abreTb2()" title="Expandir Tabela" src="https://i.pinimg.com/736x/34/30/72/343072b13bb3caee0c642c653a03f888.jpg">
+            Anticonvulsivantes 
+            <img onclick="fecharTb2()" title="Retrair Tabela" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMwAAADACAMAAAB/Pny7AAAAVFBMVEX///8AAAC9vb0/Pz/IyMguLi5XV1cyMjKNjY0HBweUlJTd3d3Dw8Pj4+MdHR329vZNTU3S0tKCgoLt7e03NzegoKATExNcXFxSUlIYGBhERERxcXGF/cjMAAABG0lEQVR4nO3Y226CQBiFUVrKwbOoeHz/92y1vTFMbwaTn5i1nmB/ITMoRQEAAAAAAAAAAAAAAAAAAAAASYvlZ7jl4hUlq7YumypcU9btamxLu559TMRs3Y5K2VTRBc+qzYiW6PFD2TWbbfT0oW1uTRu9PCXz3HQTOzC/qi4rZhe9O22X07Kvo2en1fuMmOUhenbaYZkR0x+jZ6cd+4yYefTq/8zFTFROTH+JXp12yTkzb3Wb7U/Rs9NOOe+Zt/oFUCya6N0pTeb/50neZzl32cM5evnQObelKKKnD+W3/DybyXzOuJuNeC53fTmZd+elzHldPln1t/pahrvWt370d7NHT/cVrntJCQAAAAAAAAAAAAAAAAAAAAB/vgGZthoLQaIweAAAAABJRU5ErkJggg=="></h4>
+        <!--Tabela #2-->
+         
+        <h4><img onclick="abreTb3()" title="Expandir Tabela" src="https://i.pinimg.com/736x/34/30/72/343072b13bb3caee0c642c653a03f888.jpg">
+            Drogas para sedação / analgesia 
+            <img onclick="fecharTb3()" title="Retrair Tabela" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMwAAADACAMAAAB/Pny7AAAAVFBMVEX///8AAAC9vb0/Pz/IyMguLi5XV1cyMjKNjY0HBweUlJTd3d3Dw8Pj4+MdHR329vZNTU3S0tKCgoLt7e03NzegoKATExNcXFxSUlIYGBhERERxcXGF/cjMAAABG0lEQVR4nO3Y226CQBiFUVrKwbOoeHz/92y1vTFMbwaTn5i1nmB/ITMoRQEAAAAAAAAAAAAAAAAAAAAASYvlZ7jl4hUlq7YumypcU9btamxLu559TMRs3Y5K2VTRBc+qzYiW6PFD2TWbbfT0oW1uTRu9PCXz3HQTOzC/qi4rZhe9O22X07Kvo2en1fuMmOUhenbaYZkR0x+jZ6cd+4yYefTq/8zFTFROTH+JXp12yTkzb3Wb7U/Rs9NOOe+Zt/oFUCya6N0pTeb/50neZzl32cM5evnQObelKKKnD+W3/DybyXzOuJuNeC53fTmZd+elzHldPln1t/pahrvWt370d7NHT/cVrntJCQAAAAAAAAAAAAAAAAAAAAB/vgGZthoLQaIweAAAAABJRU5ErkJggg=="></h4>
+        <!--Tabela #3-->
+
+        <h4><img onclick="abreTb4()" title="Expandir Tabela" src="https://i.pinimg.com/736x/34/30/72/343072b13bb3caee0c642c653a03f888.jpg">
+            Drogas para infusão contínua
+            <img onclick="fecharTb4()" title="Retrair Tabela" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMwAAADACAMAAAB/Pny7AAAAVFBMVEX///8AAAC9vb0/Pz/IyMguLi5XV1cyMjKNjY0HBweUlJTd3d3Dw8Pj4+MdHR329vZNTU3S0tKCgoLt7e03NzegoKATExNcXFxSUlIYGBhERERxcXGF/cjMAAABG0lEQVR4nO3Y226CQBiFUVrKwbOoeHz/92y1vTFMbwaTn5i1nmB/ITMoRQEAAAAAAAAAAAAAAAAAAAAASYvlZ7jl4hUlq7YumypcU9btamxLu559TMRs3Y5K2VTRBc+qzYiW6PFD2TWbbfT0oW1uTRu9PCXz3HQTOzC/qi4rZhe9O22X07Kvo2en1fuMmOUhenbaYZkR0x+jZ6cd+4yYefTq/8zFTFROTH+JXp12yTkzb3Wb7U/Rs9NOOe+Zt/oFUCya6N0pTeb/50neZzl32cM5evnQObelKKKnD+W3/DybyXzOuJuNeC53fTmZd+elzHldPln1t/pahrvWt370d7NHT/cVrntJCQAAAAAAAAAAAAAAAAAAAAB/vgGZthoLQaIweAAAAABJRU5ErkJggg=="></h4>
+        <!--Tabela #4-->
+
+        <h4><img onclick="abreTb5()" title="Expandir Tabela" src="https://i.pinimg.com/736x/34/30/72/343072b13bb3caee0c642c653a03f888.jpg">
+            Dispositivos 
+            <img onclick="fecharTb5()" title="Retrair Tabela" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMwAAADACAMAAAB/Pny7AAAAVFBMVEX///8AAAC9vb0/Pz/IyMguLi5XV1cyMjKNjY0HBweUlJTd3d3Dw8Pj4+MdHR329vZNTU3S0tKCgoLt7e03NzegoKATExNcXFxSUlIYGBhERERxcXGF/cjMAAABG0lEQVR4nO3Y226CQBiFUVrKwbOoeHz/92y1vTFMbwaTn5i1nmB/ITMoRQEAAAAAAAAAAAAAAAAAAAAASYvlZ7jl4hUlq7YumypcU9btamxLu559TMRs3Y5K2VTRBc+qzYiW6PFD2TWbbfT0oW1uTRu9PCXz3HQTOzC/qi4rZhe9O22X07Kvo2en1fuMmOUhenbaYZkR0x+jZ6cd+4yYefTq/8zFTFROTH+JXp12yTkzb3Wb7U/Rs9NOOe+Zt/oFUCya6N0pTeb/50neZzl32cM5evnQObelKKKnD+W3/DybyXzOuJuNeC53fTmZd+elzHldPln1t/pahrvWt370d7NHT/cVrntJCQAAAAAAAAAAAAAAAAAAAAB/vgGZthoLQaIweAAAAABJRU5ErkJggg=="></h4>
+        <!--Tabela #5-->
+
+    <footer>
+        <h5>Versão 1.0. - 2024 &copy; Todos direitos reservados.</h5>
+    </footer>
+    </div>
+    <script src="js.js"> </script>
+    </body>
+</html>
