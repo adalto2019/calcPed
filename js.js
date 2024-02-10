@@ -36,12 +36,22 @@ var res34 = window.document.getElementById('res34')
 var peso = window.document.getElementById('peso')
 
 function calc(){
-    peso = peso.value
-     if (peso == 0) {
+
+    peso = peso.value //Passando para variával o valor informado do peso no input/
+    console.log(peso)
+     
+    if (peso == 0) {
         alert("Informe o peso do paciente!") 
+        location.reload();  
+    
+    }else if(peso < 0){
+        alert("Ação inválida, o peso não pode ser menor que zero!")
         location.reload();
-       
-     } else {
+
+    }else if(peso > 150){
+        alert("Ação inválida, informe um peso válido!")
+        location.reload();
+    }else {
         var formula1 = 0.01*peso //FÓRMULA '1': 0.01 * PESO DO PCT
         var formula2 = 0.1*peso //FÓRMULA '2': 0.1 * PESO DO PCT
         var formula3 = 0.02*peso //FÓRMULA '3': 0.02 * PESO DO PCT
@@ -129,7 +139,9 @@ function calc(){
             res33.style.backgroundColor = 'black'
         res34.innerHTML = formula14.toFixed(1) + 'ml'
             res34.style.backgroundColor = 'black'
-    }
+     }
+
+     peso = null; //Não permite calcular ao acionar o btn 2x vezes\
 }
 
 function limpar(){
@@ -138,7 +150,22 @@ function limpar(){
 
 function imprimir(){
     alert("Ops.. Função Imprimir ainda em desenvolvimento!")
+    
 }
+
+//Funções que mudam a cor dos botões ao passar o mouse sobre ele, e que volta ao estado anterior ao retirar o mouse sobre ele.
+function mudaCorBtn1(){
+    var btn = document.getElementById('btn1'); btn.style.color = 'white', btn.style.backgroundColor = 'rgb(146, 130, 102)' }
+function voltaCorBtn1(){var btn = document.getElementById('btn1'); btn.style.color = 'rgb(99, 11, 11)', btn.style.backgroundColor = 'wheat'}
+
+function mudaCorBtn2(){
+    var btn = document.getElementById('btn2'); btn.style.color = 'white' , btn.style.backgroundColor = 'rgb(146, 130, 102)'}
+function voltaCorBtn2(){var btn = document.getElementById('btn2'); btn.style.color = 'rgb(99, 11, 11)', btn.style.backgroundColor = 'wheat'}
+
+function mudaCorBtn3(){
+    var btn = document.getElementById('btn3'); btn.style.color = 'white' , btn.style.backgroundColor = 'rgb(146, 130, 102)'}
+function voltaCorBtn3(){var btn = document.getElementById('btn3'); btn.style.color = 'rgb(99, 11, 11)', btn.style.backgroundColor = 'wheat'}
+
 
 function abreTb1(){
     var tabela = window.document.getElementById("tb")
@@ -150,4 +177,12 @@ function fecharTb1(){
     tabela.style.display = 'none'
 }
 
+//Função configurando o input de recebimento do peso do pct
+const kg = window.document.getElementById("peso")
+kg.addEventListener('keypress', () => {
+    let tam = kg.value.length
 
+    if (tam === 2){
+        kg.value += ''
+    }
+})
