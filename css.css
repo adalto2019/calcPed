@@ -75,7 +75,7 @@ body{background-image: url();
     border-collapse: collapse;
     border-style:  groove;
     margin: auto;
-    font-size: 12px;
+    font-size: 11px;
     color: wheat;
     } 
 
@@ -95,8 +95,6 @@ body{background-image: url();
     border-radius: 40px;
     width: 80%;
     padding: 20px;}
-
-.link a:hover{background-color: var(--cor-hover);}
 
 .link footer{margin: 20px 0px;}
 

@@ -150,6 +150,7 @@ function limpar(){
 
 function imprimir(){
     alert("Ops.. Função Imprimir ainda em desenvolvimento!")
+    location.reload();
     
 }
 
