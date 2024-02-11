@@ -14,18 +14,20 @@
             <fieldset>
              <legend>*Informe o Peso do Paciente:</legend>
              <!-- não permite auto-complete, e tamanho máximo 4 posições -->
-                 <input id="peso" type="number" autocomplete="off" maxlength="4" placeholder=" ex. 0.0kg" title="Informe o peso do paciente. *Campo obrigatório."><br/>
-             </fieldset>
+                <input id="peso" type="number" autocomplete="off" maxlength="4" placeholder=" ex. 0.0kg" title="Informe o peso do paciente. *Campo obrigatório."><br/>
+                
+                </fieldset>
         </form>
         <div id="divBtn">
             <input id="btn1" type="reset"  value="Limpar" onclick="limpar()" onmouseenter="mudaCorBtn1('btn2')" onmouseout="voltaCorBtn1()" title=" Limpar a página">
             <input id="btn2" type="button" value="Calcular" onclick="calc()" onmouseenter="mudaCorBtn2()" onmouseout="voltaCorBtn2()" title=" Calcula a dosagem de medicação baseada no peso informado do paciente">
             <input id="btn3" type="submit" value="Imprimir" onclick="imprimir()" onmouseenter="mudaCorBtn3()" onmouseout="voltaCorBtn3()" title=" Imprimir relatório">
         </div>
-            <h4><img onclick="abreTb1()" onmouseenter="cor()" title="Expandir Tabela" src="https://i.pinimg.com/736x/34/30/72/343072b13bb3caee0c642c653a03f888.jpg">
+         <!--INICIO TABELA 1 ###################################################################################################-->
+            <h4><img onclick="abreTb1()" title="Expandir Tabela" src="https://i.pinimg.com/736x/34/30/72/343072b13bb3caee0c642c653a03f888.jpg">
                 Parada cardiorrespiratória/emergências 
                 <img onclick="fecharTb1()" title="Retrair Tabela" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMwAAADACAMAAAB/Pny7AAAAVFBMVEX///8AAAC9vb0/Pz/IyMguLi5XV1cyMjKNjY0HBweUlJTd3d3Dw8Pj4+MdHR329vZNTU3S0tKCgoLt7e03NzegoKATExNcXFxSUlIYGBhERERxcXGF/cjMAAABG0lEQVR4nO3Y226CQBiFUVrKwbOoeHz/92y1vTFMbwaTn5i1nmB/ITMoRQEAAAAAAAAAAAAAAAAAAAAASYvlZ7jl4hUlq7YumypcU9btamxLu559TMRs3Y5K2VTRBc+qzYiW6PFD2TWbbfT0oW1uTRu9PCXz3HQTOzC/qi4rZhe9O22X07Kvo2en1fuMmOUhenbaYZkR0x+jZ6cd+4yYefTq/8zFTFROTH+JXp12yTkzb3Wb7U/Rs9NOOe+Zt/oFUCya6N0pTeb/50neZzl32cM5evnQObelKKKnD+W3/DybyXzOuJuNeC53fTmZd+elzHldPln1t/pahrvWt370d7NHT/cVrntJCQAAAAAAAAAAAAAAAAAAAAB/vgGZthoLQaIweAAAAABJRU5ErkJggg=="></h4>
-            <table id="tb"> <!--Tabela #1-->  
+            <table id="tb1"> <!--Tabela #1-->  
                 <th id="rowTitulo" colspan="8"></th>
                 <tr>
                     <th id="col1" rowspan="3">Adrenalina (1:1000)</th>
@@ -49,7 +51,7 @@
                 <td><div id="res6">0.00ml</div></td>
                 <td colspan="4">IM, sem diluir, a cada 15 minutos (dose máxima: 0,3mg).</td>
             </tr>
-            <!--###################################################################################################-->
+            <!--ROW TB1 ###################################################################################################-->
             <tr id="marcaTxt">
                 <th>Atropina 0,25mg/ml</th>
                     <td>EV/IO/ET (0,02mg/kg):</td>
@@ -58,7 +60,7 @@
                     <td><div id="res8">0.0ml</div></td>
                     <td colspan="4">por dose. Mínimo de 0,1mg e máximo de 0,5mg/dose.</td>
             </tr>
-            <!--###################################################################################################-->
+            <!--ROW TB1 ###################################################################################################-->
             <tr>
                 <th rowspan="2">Adenosina (6mg/2mL)</th>
                     <td>1ª dose (0,1mg/kg):</td>
@@ -74,7 +76,7 @@
                     <td><div id="res12">0.0ml</div></td>
                     <td colspan="4">EV em bolus rápido, seguido por flush de 5 a 10mL de SF.</td>
             </tr>
-            <!--###################################################################################################-->
+            <!--ROW TB1 ###################################################################################################-->
             <tr id="marcaTxt">
                 <th rowspan="2">Amiodarona (50mg/mL)</th> <!--OK-->
                     <td>PCR (5mg/kg):</td>
@@ -92,7 +94,7 @@
                     <td><div id="res17">0.0ml</div></td>
                     <td>de SF e infundir em 20 a 60 minutos.</td>
             </tr>
-            <!--###################################################################################################-->
+            <!--ROW TB1 ###################################################################################################-->
             <tr>
                 <th rowspan="3">Sulfato de magnésio 10%
                     (100mg/mL ou 0,8mEq/mL)</th>
@@ -120,7 +122,7 @@
                         <td>de SF e infundir em 30 min na asma grave.</td>    
                     </tr>
             </tr>
-            <!--###################################################################################################-->
+            <!--ROW TB1 ###################################################################################################-->
             <tr id="marcaTxt">
                 <th>Bicarbonato de sódio 8,4%</th>
                     <td>PCR (1mEq/kg):</td>
@@ -129,7 +131,7 @@
                     <td><div id="res26">0.0mEq</div></td>
                     <td colspan="4">em bolus lento..</td>
             </tr>
-            <!--###################################################################################################-->
+            <!--ROW TB1 ###################################################################################################-->
             <tr>
                 <th>Gluconato de cálcio 10%</th>
                     <td>0,5mEq/kg:</td>
@@ -138,7 +140,7 @@
                     <td><div id="res28">0.0mEq</div></td>
                     <td colspan="4">em bolus lento na PCR e em 20min na hipocalcemia sintomática.</td>
             </tr>
-            <!--###################################################################################################-->
+            <!--ROW TB1 ###################################################################################################-->
             <tr id="marcaTxt">
                 <th rowspan="2">Glicose 50%</th>
                 <td>Neonato (0,2g/kg):</td>
@@ -159,27 +161,73 @@
                 </tr>
             </tr>
         </table>
-
+        <!--FIM TABELA 1 ###################################################################################################-->
+         
+        <!--INICIO TABELA 2 ################################################################################################-->
         <h4><img onclick="abreTb2()" title="Expandir Tabela" src="https://i.pinimg.com/736x/34/30/72/343072b13bb3caee0c642c653a03f888.jpg">
             Anticonvulsivantes 
             <img onclick="fecharTb2()" title="Retrair Tabela" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMwAAADACAMAAAB/Pny7AAAAVFBMVEX///8AAAC9vb0/Pz/IyMguLi5XV1cyMjKNjY0HBweUlJTd3d3Dw8Pj4+MdHR329vZNTU3S0tKCgoLt7e03NzegoKATExNcXFxSUlIYGBhERERxcXGF/cjMAAABG0lEQVR4nO3Y226CQBiFUVrKwbOoeHz/92y1vTFMbwaTn5i1nmB/ITMoRQEAAAAAAAAAAAAAAAAAAAAASYvlZ7jl4hUlq7YumypcU9btamxLu559TMRs3Y5K2VTRBc+qzYiW6PFD2TWbbfT0oW1uTRu9PCXz3HQTOzC/qi4rZhe9O22X07Kvo2en1fuMmOUhenbaYZkR0x+jZ6cd+4yYefTq/8zFTFROTH+JXp12yTkzb3Wb7U/Rs9NOOe+Zt/oFUCya6N0pTeb/50neZzl32cM5evnQObelKKKnD+W3/DybyXzOuJuNeC53fTmZd+elzHldPln1t/pahrvWt370d7NHT/cVrntJCQAAAAAAAAAAAAAAAAAAAAB/vgGZthoLQaIweAAAAABJRU5ErkJggg=="></h4>
-        <!--Tabela #2-->
+        <table id="tb2">
+            <th id="rowTitulo" colspan="10"></th>
+                <tr>
+                    <th>Diazepam (5mg/mL)</th>
+                    <td>0,3mg/kg:</td>
+                    <td><div id="res35">0.0mg</div></td>
+                    <td>Administrar:</td>
+                    <td><div id="res36">0.0ml</div></td>
+                    <td colspan="5">em bolus lento sem diluir. Repetir até 2x a cada 5 min.</td>
+                </tr>
+                <tr>
+                    <th>Fenitoína (50mg/mL)</th>
+                    <td>15mg/kg:</td>
+                    <td><div id="res37">0.0mg</div></td>
+                    <td>Diluir:</td>
+                    <td><div id="res38">0.0ml</div></td>
+                    <td>em:</td>
+                    <td><div id="res39">0.0ml</div></td>
+                    <td>de SF e infundir em:</td>
+                    <td><div id="res40">-</div></td>
+                    <td>(máx: 30mg/kg/dia).</td>
+                </tr>
+                <tr>
+                    <th>Fenobarbital (100mg/mL)</th>
+                    <td>15mg/kg:</td>
+                    <td><div id="res41">0.0mg</div></td>
+                    <td>Diluir:</td>
+                    <td><div id="res42">0.0ml</div></td>
+                    <td>em:</td>
+                    <td><div id="res43">0.0ml</div></td>
+                    <td>de SF e infundir em:</td>
+                    <td><div id="res44">-</div></td>
+                    <td>(máx: 40mg/kg/dia).</td>
+                </tr>
+        </table>
+        <!--FIM TABELA 2 ###################################################################################################-->
          
+        <!--INICIO TABELA 3 ################################################################################################-->
         <h4><img onclick="abreTb3()" title="Expandir Tabela" src="https://i.pinimg.com/736x/34/30/72/343072b13bb3caee0c642c653a03f888.jpg">
             Drogas para sedação / analgesia 
             <img onclick="fecharTb3()" title="Retrair Tabela" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMwAAADACAMAAAB/Pny7AAAAVFBMVEX///8AAAC9vb0/Pz/IyMguLi5XV1cyMjKNjY0HBweUlJTd3d3Dw8Pj4+MdHR329vZNTU3S0tKCgoLt7e03NzegoKATExNcXFxSUlIYGBhERERxcXGF/cjMAAABG0lEQVR4nO3Y226CQBiFUVrKwbOoeHz/92y1vTFMbwaTn5i1nmB/ITMoRQEAAAAAAAAAAAAAAAAAAAAASYvlZ7jl4hUlq7YumypcU9btamxLu559TMRs3Y5K2VTRBc+qzYiW6PFD2TWbbfT0oW1uTRu9PCXz3HQTOzC/qi4rZhe9O22X07Kvo2en1fuMmOUhenbaYZkR0x+jZ6cd+4yYefTq/8zFTFROTH+JXp12yTkzb3Wb7U/Rs9NOOe+Zt/oFUCya6N0pTeb/50neZzl32cM5evnQObelKKKnD+W3/DybyXzOuJuNeC53fTmZd+elzHldPln1t/pahrvWt370d7NHT/cVrntJCQAAAAAAAAAAAAAAAAAAAAB/vgGZthoLQaIweAAAAABJRU5ErkJggg=="></h4>
-        <!--Tabela #3-->
-
+        
+        
+        <!--FIM TABELA 3 ###################################################################################################-->
+        
+        <!--INICIO TABELA 4 ################################################################################################-->
         <h4><img onclick="abreTb4()" title="Expandir Tabela" src="https://i.pinimg.com/736x/34/30/72/343072b13bb3caee0c642c653a03f888.jpg">
             Drogas para infusão contínua
             <img onclick="fecharTb4()" title="Retrair Tabela" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMwAAADACAMAAAB/Pny7AAAAVFBMVEX///8AAAC9vb0/Pz/IyMguLi5XV1cyMjKNjY0HBweUlJTd3d3Dw8Pj4+MdHR329vZNTU3S0tKCgoLt7e03NzegoKATExNcXFxSUlIYGBhERERxcXGF/cjMAAABG0lEQVR4nO3Y226CQBiFUVrKwbOoeHz/92y1vTFMbwaTn5i1nmB/ITMoRQEAAAAAAAAAAAAAAAAAAAAASYvlZ7jl4hUlq7YumypcU9btamxLu559TMRs3Y5K2VTRBc+qzYiW6PFD2TWbbfT0oW1uTRu9PCXz3HQTOzC/qi4rZhe9O22X07Kvo2en1fuMmOUhenbaYZkR0x+jZ6cd+4yYefTq/8zFTFROTH+JXp12yTkzb3Wb7U/Rs9NOOe+Zt/oFUCya6N0pTeb/50neZzl32cM5evnQObelKKKnD+W3/DybyXzOuJuNeC53fTmZd+elzHldPln1t/pahrvWt370d7NHT/cVrntJCQAAAAAAAAAAAAAAAAAAAAB/vgGZthoLQaIweAAAAABJRU5ErkJggg=="></h4>
-        <!--Tabela #4-->
-
+        
+        
+        <!--FIM TABELA 4 ###################################################################################################-->
+        
+        <!--INICIO TABELA 5 ################################################################################################-->
         <h4><img onclick="abreTb5()" title="Expandir Tabela" src="https://i.pinimg.com/736x/34/30/72/343072b13bb3caee0c642c653a03f888.jpg">
             Dispositivos 
             <img onclick="fecharTb5()" title="Retrair Tabela" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMwAAADACAMAAAB/Pny7AAAAVFBMVEX///8AAAC9vb0/Pz/IyMguLi5XV1cyMjKNjY0HBweUlJTd3d3Dw8Pj4+MdHR329vZNTU3S0tKCgoLt7e03NzegoKATExNcXFxSUlIYGBhERERxcXGF/cjMAAABG0lEQVR4nO3Y226CQBiFUVrKwbOoeHz/92y1vTFMbwaTn5i1nmB/ITMoRQEAAAAAAAAAAAAAAAAAAAAASYvlZ7jl4hUlq7YumypcU9btamxLu559TMRs3Y5K2VTRBc+qzYiW6PFD2TWbbfT0oW1uTRu9PCXz3HQTOzC/qi4rZhe9O22X07Kvo2en1fuMmOUhenbaYZkR0x+jZ6cd+4yYefTq/8zFTFROTH+JXp12yTkzb3Wb7U/Rs9NOOe+Zt/oFUCya6N0pTeb/50neZzl32cM5evnQObelKKKnD+W3/DybyXzOuJuNeC53fTmZd+elzHldPln1t/pahrvWt370d7NHT/cVrntJCQAAAAAAAAAAAAAAAAAAAAB/vgGZthoLQaIweAAAAABJRU5ErkJggg=="></h4>
-        <!--Tabela #5-->
-
+        
+        
+        <!--FIM TABELA 5 ###################################################################################################-->
+        
     <footer>
         <h5>Versão 1.0. - 2024 &copy; Todos direitos reservados.</h5>
     </footer>

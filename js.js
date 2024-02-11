@@ -32,6 +32,16 @@ var res31 = window.document.getElementById('res31')
 var res32 = window.document.getElementById('res32')
 var res33 = window.document.getElementById('res33')
 var res34 = window.document.getElementById('res34')
+var res35 = window.document.getElementById('res35')
+var res36 = window.document.getElementById('res36')
+var res37 = window.document.getElementById('res37')
+var res38 = window.document.getElementById('res38')
+var res39 = window.document.getElementById('res39')
+var res40 = window.document.getElementById('res40')
+var res41 = window.document.getElementById('res41')
+var res42 = window.document.getElementById('res42')
+var res43 = window.document.getElementById('res43')
+var res44 = window.document.getElementById('res44')
 
 var peso = window.document.getElementById('peso')
 
@@ -68,7 +78,15 @@ function calc(){
         var formula14 = peso*1  //FÓRMULA '14': SÓ PESO
         var formula15 = 0.5*peso //FÓRMULA '15': 0.5 * PESO DO PCT
         var formula16 = 0.4*peso //FÓRMULA '16': 0.4 * PESO DO PCT
-        var formula17 = ((5*(0.4*peso))-(0.4*peso)) //FÓRMULA '17'        
+        var formula17 = ((5*(0.4*peso))-(0.4*peso)) //FÓRMULA '17'
+        var formula18 = 0.3*peso //FÓRMULA '18': 0.3 * PESO DO PCT
+        var formula19 = 0.06*peso //FÓRMULA '19': 0.06 * PESO DO PCT
+        var formula20 = 15*peso //FÓRMULA '20': 15 * PESO DO PCT 
+        var formula21 = ((3*peso)-(0.3*peso)) //FÓRMULA '21'
+        var formula22 = (15*peso)/peso //FÓRMULA '22': (15 * PESO DO PCT) - PESO DO PCT 
+        var formula23 = ((3*peso)-(0.15*peso)) //FÓRMULA '23'       
+        var formula24 = 0.15*peso //FÓRMULA '20': 0.15 * PESO DO PCT       
+         
 
 
         res1.innerHTML = formula1.toFixed(2) + 'mg'
@@ -139,6 +157,32 @@ function calc(){
             res33.style.backgroundColor = 'black'
         res34.innerHTML = formula14.toFixed(1) + 'ml'
             res34.style.backgroundColor = 'black'
+            //FIM DA TABELA 1
+
+            //INICIO TABELA 2
+        res35.innerHTML = formula18.toFixed(1) + 'mg'//Diazepam (5mg/mL)
+             res35.style.backgroundColor = 'black'
+        res36.innerHTML = formula19.toFixed(1) + 'ml'
+            res36.style.backgroundColor = 'black'
+        res37.innerHTML = formula20.toFixed(1) + 'mg'//Fenitoína (50mg/mL)
+            res37.style.backgroundColor = 'black'
+        res38.innerHTML = formula18.toFixed(1) + 'ml'
+            res38.style.backgroundColor = 'black'
+        res39.innerHTML = formula21.toFixed(1) + 'ml'//em:
+            res39.style.backgroundColor = 'black'
+        res40.innerHTML = formula22.toFixed(0) + 'mim'
+            res40.style.backgroundColor = 'black'
+        res41.innerHTML = formula20.toFixed(1) + 'mg'
+            res41.style.backgroundColor = 'black'
+        res42.innerHTML = formula24.toFixed(1) + 'ml'//Diluir:
+            res42.style.backgroundColor = 'black'
+        res43.innerHTML = formula23.toFixed(1) + 'ml'//em:
+            res43.style.backgroundColor = 'black'
+        res44.innerHTML = formula22.toFixed(0) + 'min'
+            res44.style.backgroundColor = 'black'
+            //FIM DA TABELA 2
+
+            //INICIO TABELA 3
      }
 
      peso = null; //Não permite calcular ao acionar o btn 2x vezes\
@@ -150,7 +194,6 @@ function limpar(){
 
 function imprimir(){
     alert("Ops.. Função Imprimir ainda em desenvolvimento!")
-    location.reload();
     
 }
 
@@ -168,15 +211,53 @@ function mudaCorBtn3(){
 function voltaCorBtn3(){var btn = document.getElementById('btn3'); btn.style.color = 'rgb(99, 11, 11)', btn.style.backgroundColor = 'wheat'}
 
 
+//INICIO CONTRAIR E EXPANDIR TABELAS ****************************************
 function abreTb1(){
-    var tabela = window.document.getElementById("tb")
+    var tabela = window.document.getElementById("tb1")
     tabela.style.display = 'block'
 }
-
 function fecharTb1(){
-    var tabela = window.document.getElementById("tb")
+    var tabela = window.document.getElementById("tb1")
     tabela.style.display = 'none'
 }
+
+function abreTb2(){
+    var tabela = window.document.getElementById("tb2")
+    tabela.style.display = 'block'
+}
+function fecharTb2(){
+    var tabela = window.document.getElementById("tb2")
+    tabela.style.display = 'none'
+}
+
+function abreTb3(){
+    var tabela = window.document.getElementById("tb3")
+    tabela.style.display = 'block'
+}
+function fecharTb3(){
+    var tabela = window.document.getElementById("tb3")
+    tabela.style.display = 'none'
+}
+
+function abreTb4(){
+    var tabela = window.document.getElementById("tb4")
+    tabela.style.display = 'block'
+}
+function fecharTb4(){
+    var tabela = window.document.getElementById("tb4")
+    tabela.style.display = 'none'
+}
+
+function abreTb5(){
+    var tabela = window.document.getElementById("tb5")
+    tabela.style.display = 'block'
+}
+function fecharTb5(){
+    var tabela = window.document.getElementById("tb5")
+    tabela.style.display = 'none'
+}
+//FIM CONTRAIR E EXPANDIR TABELAS ****************************************
+
 
 //Função configurando o input de recebimento do peso do pct
 const kg = window.document.getElementById("peso")
