@@ -15,8 +15,7 @@
              <legend>*Informe o Peso do Paciente:</legend>
              <!-- não permite auto-complete, e tamanho máximo 4 posições -->
                 <input id="peso" type="number" autocomplete="off" maxlength="4" placeholder=" ex. 0.0kg" title="Informe o peso do paciente. *Campo obrigatório."><br/>
-                
-                </fieldset>
+            </fieldset>
         </form>
         <div id="divBtn">
             <input id="btn1" type="reset"  value="Limpar" onclick="limpar()" onmouseenter="mudaCorBtn1('btn2')" onmouseout="voltaCorBtn1()" title=" Limpar a página">
@@ -36,21 +35,21 @@
                         <td id="col4">Diluir 1 amp em 9mL de AD e fazer:</td>
                         <td><div id="res4">0.0ml</div></td>
                         <td colspan="4">a cada 3 a 5 minutos.</td>
-            </tr>
-            <tr>
-                    <td>ET (0,1mg/kg):</td>
-                    <td><div id="res2">0.0mg</div></td>
-                    <td>Administrar:</td>
-                    <td><div id="res5">0.00ml</div></td>
-                    <td colspan="4">sem diluir a cada 3 a 5 minutos se ausência de acesso.</td>
-        </tr>
-        <tr>
-                <td>Anafilaxia (0,01mg/kg):</td>
-                <td><div id="res3">0.00mg</div></td>
-                <td>Administrar:</td>
-                <td><div id="res6">0.00ml</div></td>
-                <td colspan="4">IM, sem diluir, a cada 15 minutos (dose máxima: 0,3mg).</td>
-            </tr>
+                </tr>
+                    <tr>    
+                        <td>ET (0,1mg/kg):</td>
+                        <td><div id="res2">0.0mg</div></td>
+                        <td>Administrar:</td>
+                        <td><div id="res5">0.00ml</div></td>
+                        <td colspan="4">sem diluir a cada 3 a 5 minutos se ausência de acesso.</td>
+                    </tr>
+                    <tr>
+                        <td>Anafilaxia (0,01mg/kg):</td>
+                        <td><div id="res3">0.00mg</div></td>
+                        <td>Administrar:</td>
+                        <td><div id="res6">0.00ml</div></td>
+                        <td colspan="4">IM, sem diluir, a cada 15 minutos (dose máxima: 0,3mg).</td>
+                    </tr>
             <!--ROW TB1 ###################################################################################################-->
             <tr id="marcaTxt">
                 <th>Atropina 0,25mg/ml</th>
@@ -208,7 +207,7 @@
         <h4><img onclick="abreTb3()" title="Expandir Tabela" src="https://i.pinimg.com/736x/34/30/72/343072b13bb3caee0c642c653a03f888.jpg">
             Drogas para sedação / analgesia 
             <img onclick="fecharTb3()" title="Retrair Tabela" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMwAAADACAMAAAB/Pny7AAAAVFBMVEX///8AAAC9vb0/Pz/IyMguLi5XV1cyMjKNjY0HBweUlJTd3d3Dw8Pj4+MdHR329vZNTU3S0tKCgoLt7e03NzegoKATExNcXFxSUlIYGBhERERxcXGF/cjMAAABG0lEQVR4nO3Y226CQBiFUVrKwbOoeHz/92y1vTFMbwaTn5i1nmB/ITMoRQEAAAAAAAAAAAAAAAAAAAAASYvlZ7jl4hUlq7YumypcU9btamxLu559TMRs3Y5K2VTRBc+qzYiW6PFD2TWbbfT0oW1uTRu9PCXz3HQTOzC/qi4rZhe9O22X07Kvo2en1fuMmOUhenbaYZkR0x+jZ6cd+4yYefTq/8zFTFROTH+JXp12yTkzb3Wb7U/Rs9NOOe+Zt/oFUCya6N0pTeb/50neZzl32cM5evnQObelKKKnD+W3/DybyXzOuJuNeC53fTmZd+elzHldPln1t/pahrvWt370d7NHT/cVrntJCQAAAAAAAAAAAAAAAAAAAAB/vgGZthoLQaIweAAAAABJRU5ErkJggg=="></h4>
-        
+            
         
         <!--FIM TABELA 3 ###################################################################################################-->
         
@@ -224,8 +223,51 @@
         <h4><img onclick="abreTb5()" title="Expandir Tabela" src="https://i.pinimg.com/736x/34/30/72/343072b13bb3caee0c642c653a03f888.jpg">
             Dispositivos 
             <img onclick="fecharTb5()" title="Retrair Tabela" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMwAAADACAMAAAB/Pny7AAAAVFBMVEX///8AAAC9vb0/Pz/IyMguLi5XV1cyMjKNjY0HBweUlJTd3d3Dw8Pj4+MdHR329vZNTU3S0tKCgoLt7e03NzegoKATExNcXFxSUlIYGBhERERxcXGF/cjMAAABG0lEQVR4nO3Y226CQBiFUVrKwbOoeHz/92y1vTFMbwaTn5i1nmB/ITMoRQEAAAAAAAAAAAAAAAAAAAAASYvlZ7jl4hUlq7YumypcU9btamxLu559TMRs3Y5K2VTRBc+qzYiW6PFD2TWbbfT0oW1uTRu9PCXz3HQTOzC/qi4rZhe9O22X07Kvo2en1fuMmOUhenbaYZkR0x+jZ6cd+4yYefTq/8zFTFROTH+JXp12yTkzb3Wb7U/Rs9NOOe+Zt/oFUCya6N0pTeb/50neZzl32cM5evnQObelKKKnD+W3/DybyXzOuJuNeC53fTmZd+elzHldPln1t/pahrvWt370d7NHT/cVrntJCQAAAAAAAAAAAAAAAAAAAAB/vgGZthoLQaIweAAAAABJRU5ErkJggg=="></h4>
-        
-        
+        <table id="tb5">
+            <th id="rowTitulo" colspan="12"></th>
+                <tr>
+                    <th>Ambu</th>
+                    <th>Lâmina laringo</th>
+                    <th colspan="2">Cânula traqueal</th>
+                    <th>Fixação</th>
+                    <th>Dreno de tórax</th>
+                    <th>S. aspiração</th>
+                    <th>SNG</th>
+                    <th>S. urinária</th>
+                    <th colspan="2">Intra-óssea</th>
+                </tr>
+                <tr>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td colspan="2">-</td>
+                </tr>
+                <tr>
+                    <th colspan="2">Pás de desfibralação</th>
+                    <th colspan="5">Carga para desfibrilação</th>
+                    <th colspan="5">Carga para cardioversão</th>
+                </tr>
+                <tr>
+                    <td colspan="2">-</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>-</td>
+                </tr>
+
+            
+        </table>    
         <!--FIM TABELA 5 ###################################################################################################-->
         
     <footer>

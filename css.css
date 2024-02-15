@@ -79,6 +79,22 @@ body{background-image: url();
     color: wheat;
     } 
 
+.link #tb2{border: solid black 1px;
+    border-collapse: collapse;
+    border-style:  groove;
+    margin: auto;
+    font-size: 9.5px;
+    color: wheat;
+    }
+
+.link #tb5{border: solid black 1px;
+    border-collapse: collapse;
+    border-style:  groove;
+    margin: auto;
+    font-size: 9px;
+    color: wheat;
+    }    
+
 .link th, td, tr{border: solid black 1px;
     border-collapse: collapse;
     border-style:  groove;
