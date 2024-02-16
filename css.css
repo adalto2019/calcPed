@@ -71,7 +71,7 @@ body{background-image: url();
     margin: 3px;
     }
 
-.link table{border: solid black 1px;
+.link #tb1, #tb3{border: solid black 1px;
     border-collapse: collapse;
     border-style:  groove;
     margin: auto;
