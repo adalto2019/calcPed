@@ -42,6 +42,94 @@ var res41 = window.document.getElementById('res41')
 var res42 = window.document.getElementById('res42')
 var res43 = window.document.getElementById('res43')
 var res44 = window.document.getElementById('res44')
+var res45 = window.document.getElementById('res45')
+var res46 = window.document.getElementById('res46')
+var res47 = window.document.getElementById('res47')
+var res48 = window.document.getElementById('res48')
+var res49 = window.document.getElementById('res49')
+var res50 = window.document.getElementById('res50')
+var res51 = window.document.getElementById('res51')
+var res52 = window.document.getElementById('res52')
+var res53 = window.document.getElementById('res53')
+var res54 = window.document.getElementById('res54')
+var res55 = window.document.getElementById('res55')
+var res56 = window.document.getElementById('res56')
+var res57 = window.document.getElementById('res57')
+var res58 = window.document.getElementById('res58')
+var res59 = window.document.getElementById('res59')
+var res60 = window.document.getElementById('res60')
+var res61 = window.document.getElementById('res61')
+var res62 = window.document.getElementById('res62')
+var res63 = window.document.getElementById('res63')
+var res64 = window.document.getElementById('res64')
+var res65 = window.document.getElementById('res65')
+var res66 = window.document.getElementById('res66')
+var res67 = window.document.getElementById('res67')
+var res68 = window.document.getElementById('res68')
+var res69 = window.document.getElementById('res69')
+var res70 = window.document.getElementById('res70')
+var res71 = window.document.getElementById('res71')
+var res72 = window.document.getElementById('res72')
+var res73 = window.document.getElementById('res73')
+var res74 = window.document.getElementById('res74')
+var res75 = window.document.getElementById('res75')
+var res76 = window.document.getElementById('res76')
+var res77 = window.document.getElementById('res77')
+var res78 = window.document.getElementById('res78')
+var res79 = window.document.getElementById('res79')
+var res80 = window.document.getElementById('res80')
+var res81 = window.document.getElementById('res81')
+var res82 = window.document.getElementById('res82')
+var res83 = window.document.getElementById('res83')
+var res84 = window.document.getElementById('res84')
+var res85 = window.document.getElementById('res85')
+var res86 = window.document.getElementById('res86')
+var res87 = window.document.getElementById('res87')
+var res88 = window.document.getElementById('res88')
+var res89 = window.document.getElementById('res89')
+var res90 = window.document.getElementById('res90')
+var res91 = window.document.getElementById('res91')
+var res92 = window.document.getElementById('res92')
+var res93 = window.document.getElementById('res93')
+var res94 = window.document.getElementById('res94')
+var res95 = window.document.getElementById('res95')
+var res96 = window.document.getElementById('res96')
+var res97 = window.document.getElementById('res97')
+var res98 = window.document.getElementById('res98')
+var res99 = window.document.getElementById('res99')
+
+var res100 = window.document.getElementById('res100')
+var res101 = window.document.getElementById('res101')
+var res102 = window.document.getElementById('res102')
+var res103 = window.document.getElementById('res103')
+var res104 = window.document.getElementById('res104')
+var res105 = window.document.getElementById('res105')
+var res106 = window.document.getElementById('res106')
+var res107 = window.document.getElementById('res107')
+var res108 = window.document.getElementById('res108')
+var res109 = window.document.getElementById('res109')
+var res110 = window.document.getElementById('res110')
+var res111 = window.document.getElementById('res111')
+var res112 = window.document.getElementById('res112')
+var res113 = window.document.getElementById('res113')
+var res114 = window.document.getElementById('res114')
+var res115 = window.document.getElementById('res115')
+var res116 = window.document.getElementById('res116')
+var res117 = window.document.getElementById('res117')
+var res118 = window.document.getElementById('res118')
+var res119 = window.document.getElementById('res119')
+var res120 = window.document.getElementById('res120')
+var res121 = window.document.getElementById('res121')
+var res122 = window.document.getElementById('res122')
+var res123 = window.document.getElementById('res123')
+var res124 = window.document.getElementById('res124')
+var res125 = window.document.getElementById('res125')
+var res126 = window.document.getElementById('res126')
+var res127 = window.document.getElementById('res127')
+var res128 = window.document.getElementById('res128')
+var res129 = window.document.getElementById('res129')
+var res130 = window.document.getElementById('res130')
+
 
 var peso = window.document.getElementById('peso')
 
@@ -62,127 +150,418 @@ function calc(){
         alert("Ação inválida, informe um peso válido!")
         location.reload();
     }else {
-        var formula1 = 0.01*peso //FÓRMULA '1': 0.01 * PESO DO PCT
-        var formula2 = 0.1*peso //FÓRMULA '2': 0.1 * PESO DO PCT
-        var formula3 = 0.02*peso //FÓRMULA '3': 0.02 * PESO DO PCT
-        var formula4 = 0.08*peso //FÓRMULA '4': 0.08 * PESO DO PCT
-        var formula5 = 0.2*peso //FÓRMULA '5': 0.2 * PESO DO PCT
-        var formula6 = (0.1*peso)/3 //FÓRMULA '6': 0.1 * PESO DO PCT / 3
-        var formula7 = (0.2*peso)/3 //FÓRMULA '7': 0.2 * PESO DO PCT /  3
-        var formula8 = 5*peso //FÓRMULA '8': 5 * PESO DO PCT
-        var formula9 = (2*peso) - (0.1*peso) //FÓRMULA '9': 2 * PESO DO PCT - 0.1 * PESO DO PCT
-        var formula10 = 50*peso //FÓRMULA '10': 50 * PESO DO PCT
-        var formula11 = (25*peso)/100 //FÓRMULA '11': 25 * PESO DO PCT / 100
-        var formula12 = (50*peso)/100 //FÓRMULA '12': 50 * PESO DO PCT / 100
-        var formula13 = ((((50*peso)/100)*100)/40) - ((50*peso)/100)  //FÓRMULA '13'
-        var formula14 = peso*1  //FÓRMULA '14': SÓ PESO
-        var formula15 = 0.5*peso //FÓRMULA '15': 0.5 * PESO DO PCT
-        var formula16 = 0.4*peso //FÓRMULA '16': 0.4 * PESO DO PCT
-        var formula17 = ((5*(0.4*peso))-(0.4*peso)) //FÓRMULA '17'
-        var formula18 = 0.3*peso //FÓRMULA '18': 0.3 * PESO DO PCT
-        var formula19 = 0.06*peso //FÓRMULA '19': 0.06 * PESO DO PCT
-        var formula20 = 15*peso //FÓRMULA '20': 15 * PESO DO PCT 
-        var formula21 = ((3*peso)-(0.3*peso)) //FÓRMULA '21'
-        var formula22 = (15*peso)/peso //FÓRMULA '22': (15 * PESO DO PCT) - PESO DO PCT 
-        var formula23 = ((3*peso)-(0.15*peso)) //FÓRMULA '23'       
-        var formula24 = 0.15*peso //FÓRMULA '20': 0.15 * PESO DO PCT       
-         
-
-
-        res1.innerHTML = formula1.toFixed(2) + 'mg'
+        res1.innerHTML = ((0.01*peso) >= 1 ? 1 : (0.01*peso)).toFixed(2) + 'mg'
             res1.style.backgroundColor = 'black'
-        res2.innerHTML = formula2.toFixed(1) + 'mg'
+            
+        res2.innerHTML =  ((0.1*peso) >= 10 ? 10 : (0.1*peso)).toFixed(1) + 'ml'
             res2.style.backgroundColor = 'black'
-        res3.innerHTML = formula1.toFixed(2) + 'mg'
+
+        res3.innerHTML =  ((0.1*peso) >= 2.5 ? 2.5 : (0.1*peso)).toFixed(1) + 'mg'
             res3.style.backgroundColor = 'black'
-        res4.innerHTML = formula2.toFixed(1) + 'ml' 
+
+        res4.innerHTML =  ((0.1*peso) >= 2.5 ? 2.5 : (0.1*peso)).toFixed(1) + 'ml' 
             res4.style.backgroundColor = 'black'
-        res5.innerHTML = formula2.toFixed(1) + 'ml'
+
+        res5.innerHTML =  ((0.01*peso) >= 0.3 ? 0.3 : (0.01*peso)).toFixed(2) + 'mg'
             res5.style.backgroundColor = 'black'
-        res6.innerHTML = formula1.toFixed(2) + 'ml'
+
+        res6.innerHTML =  ((0.01*peso) >= 0.3 ? 0.3 : (0.01*peso)).toFixed(2) + 'ml'
             res6.style.backgroundColor = 'black'
-        res7.innerHTML = formula3.toFixed(1) + 'mg'
+
+        res7.innerHTML = ((0.02*peso) < 0.1 ? 0.1 : (0.02*peso) > 0.5 ? 0.5 : (0.02*peso)).toFixed(1) + 'mg'//Atropina
             res7.style.backgroundColor = 'black'
-        res8.innerHTML = formula4.toFixed(1) + 'ml'
+
+        res8.innerHTML = ((0.08*peso) < 0.2 ? 0.2 :  (0.08*peso) > 1 ? 1 : (0.08*peso)).toFixed(1) + 'ml'
             res8.style.backgroundColor = 'black'
-        res9.innerHTML = formula2.toFixed(1) + 'mg' //Adenosina (6mg/2mL)
+
+        res9.innerHTML = ((0.1*peso) > 6 ? 6 : (0.1*peso)).toFixed(1) + 'mg' //Adenosina (6mg/2mL)
             res9.style.backgroundColor = 'black'
-        res10.innerHTML = formula5.toFixed(1) + 'mg' 
+
+        res10.innerHTML = (((0.1*peso) / 3) > 2 ? 2 : ((0.1*peso) / 3)).toFixed(1) + 'ml' 
             res10.style.backgroundColor = 'black'
-        res11.innerHTML = formula6.toFixed(1) + 'ml'
+
+        res11.innerHTML = ((0.2*peso) > 12 ? 12 : (0.2*peso)).toFixed(1) + 'mg'
             res11.style.backgroundColor = 'black'
-        res12.innerHTML = formula7.toFixed(1) + 'ml'
+
+        res12.innerHTML = (((0.2*peso)/3) > 4 ? 4 : ((0.2*peso)/3)).toFixed(1) + 'ml'
             res12.style.backgroundColor = 'black'
-        res13.innerHTML = formula8.toFixed(1) + 'mg'//Amiodarona (50mg/mL)
+
+        res13.innerHTML = ((5*peso) >= 300 ? 300 : (5*peso)).toFixed(1) + 'mg'//Amiodarona (50mg/mL)
             res13.style.backgroundColor = 'black'
-        res14.innerHTML = formula8.toFixed(1) + 'mg'
+
+        res14.innerHTML = ((0.1*peso) >= 6 ? 6 : (0.1*peso)).toFixed(1) + 'ml'
             res14.style.backgroundColor = 'black'
-        res15.innerHTML = formula2.toFixed(1) + 'ml'
+
+        res15.innerHTML = ((5*peso) >= 300 ? 300 : (5*peso)).toFixed(1) + 'mg'
             res15.style.backgroundColor = 'black'
-        res16.innerHTML = formula2.toFixed(1) + 'ml'
+
+        res16.innerHTML = ((0.1*peso) >= 6 ? 6 : (0.1*peso)).toFixed(1) + 'ml'
             res16.style.backgroundColor = 'black'
-        res17.innerHTML = formula9.toFixed(1) + 'ml'
+
+        res17.innerHTML = (((2*peso) - (0.1*peso)) >= 6 ? 6 : (0.1*peso)).toFixed(1) + 'ml'
             res17.style.backgroundColor = 'black'
-        res18.innerHTML = formula10.toFixed(1) + 'mg'//Sulfato de Magnésio
+
+        res18.innerHTML = ((50*peso) >= 2000 ? 2000 : (50*peso)).toFixed(1) + 'mg'//Sulfato de Magnésio
             res18.style.backgroundColor = 'black'
-        res19.innerHTML = formula11.toFixed(1) + 'ml'
+
+        res19.innerHTML = (((25*peso)/100) >= 20 ? 20 : ((25*peso)/100)).toFixed(1) + 'ml'
             res19.style.backgroundColor = 'black'
-        res20.innerHTML = formula12.toFixed(1) + 'ml'
+
+        res20.innerHTML = (((50*peso)/100) >= 20 ? 20 : ((50*peso)/100)).toFixed(1) + 'ml'
             res20.style.backgroundColor = 'black'
-        res21.innerHTML = formula12.toFixed(1) + 'ml'
+
+        res21.innerHTML = (((50*peso)/100) >= 20 ? 20 : ((50*peso)/100)).toFixed(1) + 'ml'
             res21.style.backgroundColor = 'black'
-        res22.innerHTML = formula13.toFixed(1) + 'ml'
+
+        res22.innerHTML = (((((50*peso)/100) >= 20 ? 20 : (((50*peso)/100))*100)/40) - (((50*peso)/100) >= 20 ? 20 : ((50*peso)/100))).toFixed(1)  + 'ml'
             res22.style.backgroundColor = 'black'
-        res23.innerHTML = formula12.toFixed(1) + 'ml'
+
+        res23.innerHTML = (((50*peso)/100) >= 20 ? 20 : ((50*peso)/100)).toFixed(1) + 'ml'
             res23.style.backgroundColor = 'black'
-        res24.innerHTML = formula13.toFixed(1) + 'ml'
+
+        res24.innerHTML = (((((50*peso)/100) >= 20 ? 20 : (((50*peso)/100))*100)/40) - (((50*peso)/100) >= 20 ? 20 : ((50*peso)/100))).toFixed(1) + 'ml'
             res24.style.backgroundColor = 'black'
-        res25.innerHTML = formula14.toFixed(1) + 'mEq'//Bicarbonato de sódio
+
+        res25.innerHTML = (peso*1).toFixed(1) + 'mEq'//Bicarbonato de sódio
             res25.style.backgroundColor = 'black'
-        res26.innerHTML = formula14.toFixed(1) + 'ml'
+
+        res26.innerHTML = (peso*1).toFixed(1) + 'ml'
             res26.style.backgroundColor = 'black'
-        res27.innerHTML = formula15.toFixed(1) + 'mEq'//Gluconato de cálcio
+
+        res27.innerHTML = (0.5*peso).toFixed(1) + 'mEq'//Gluconato de cálcio
             res27.style.backgroundColor = 'black'
-        res28.innerHTML = formula14.toFixed(1) + 'ml'
+
+        res28.innerHTML = (peso*1).toFixed(1) + 'ml'
             res28.style.backgroundColor = 'black'
-        res29.innerHTML = formula5.toFixed(1) + 'g'//Glicose 50%
+
+        res29.innerHTML = ((0.2*peso) >= 25 ? 25 : (0.2*peso)).toFixed(1) + 'g'//Glicose 50%
             res29.style.backgroundColor = 'black'
-        res30.innerHTML = formula16.toFixed(1) + 'ml'
+            
+        res30.innerHTML = ((0.4*peso) >= 50 ? 50 : (0.4*peso)).toFixed(1) + 'ml'
             res30.style.backgroundColor = 'black'
-        res31.innerHTML = formula17.toFixed(1) + 'ml'//
+
+        res31.innerHTML = ((5*((0.4*peso) >= 50 ? 50 : (0.4*peso)))-((0.4*peso) >= 50 ? 50 : (0.4*peso))).toFixed(1) + 'ml'//
             res31.style.backgroundColor = 'black'
-        res32.innerHTML = formula15.toFixed(1) + 'g'
+
+        res32.innerHTML = ((0.5*peso) >= 25 ? 25 : (0.5*peso)).toFixed(1) + 'g'
             res32.style.backgroundColor = 'black'
-        res33.innerHTML = formula14.toFixed(1) + 'ml'
+
+        res33.innerHTML = ((peso*1) >= 50 ? 50 : (peso*1)).toFixed(1) + 'ml'
             res33.style.backgroundColor = 'black'
-        res34.innerHTML = formula14.toFixed(1) + 'ml'
+
+        res34.innerHTML = ((peso*1) >= 50 ? 50 : (peso*1)).toFixed(1) + 'ml'
             res34.style.backgroundColor = 'black'
-            //FIM DA TABELA 1
+            //FIM DA TABELA 1 ****************************************************************************************
 
-            //INICIO TABELA 2
-        res35.innerHTML = formula18.toFixed(1) + 'mg'//Diazepam (5mg/mL)
-             res35.style.backgroundColor = 'black'
-        res36.innerHTML = formula19.toFixed(1) + 'ml'
+            //INICIO TABELA 2 ****************************************************************************************
+        res35.innerHTML =  ((0.3*peso) >= 10 ? 10 : (0.3*peso)).toFixed(1) + 'mg'//Diazepam (5mg/mL)
+             res35.style.backgroundColor = 'black' 
+
+        res36.innerHTML =  ((0.06*peso) >= 2 ? 2 : (0.06*peso)).toFixed(1) + 'ml'
             res36.style.backgroundColor = 'black'
-        res37.innerHTML = formula20.toFixed(1) + 'mg'//Fenitoína (50mg/mL)
-            res37.style.backgroundColor = 'black'
-        res38.innerHTML = formula18.toFixed(1) + 'ml'
-            res38.style.backgroundColor = 'black'
-        res39.innerHTML = formula21.toFixed(1) + 'ml'//em:
-            res39.style.backgroundColor = 'black'
-        res40.innerHTML = formula22.toFixed(0) + 'mim'
-            res40.style.backgroundColor = 'black'
-        res41.innerHTML = formula20.toFixed(1) + 'mg'
-            res41.style.backgroundColor = 'black'
-        res42.innerHTML = formula24.toFixed(1) + 'ml'//Diluir:
-            res42.style.backgroundColor = 'black'
-        res43.innerHTML = formula23.toFixed(1) + 'ml'//em:
-            res43.style.backgroundColor = 'black'
-        res44.innerHTML = formula22.toFixed(0) + 'min'
-            res44.style.backgroundColor = 'black'
-            //FIM DA TABELA 2
 
-            //INICIO TABELA 3
+        res37.innerHTML =  ((15*peso) >= 1000 ? 1000 : (15*peso)).toFixed(1) + 'mg'//Fenitoína (50mg/mL)
+            res37.style.backgroundColor = 'black'
+
+        res38.innerHTML =  ((0.3*peso) >= 20 ? 20 : (0.3*peso)).toFixed(1) + 'ml'
+            res38.style.backgroundColor = 'black'
+
+        res39.innerHTML =  ((3*peso) - ((0.3*peso) >= 20 ? 20 : (0.3*peso))).toFixed(1) + 'ml'//em:
+            res39.style.backgroundColor = 'black'
+
+        res40.innerHTML = (((15*peso) >= 1000 ? 1000 : (15*peso))/peso).toFixed(0) + 'min'
+            res40.style.backgroundColor = 'black'
+            
+        res41.innerHTML = ((15*peso) >= 1000 ? 1000 : (15*peso)).toFixed(1) + 'mg'
+            res41.style.backgroundColor = 'black'
+
+        res42.innerHTML = ((0.15*peso) >= 10 ? 10 : (0.15*peso)).toFixed(2) + 'ml'//Diluir:
+            res42.style.backgroundColor = 'black'
+
+        res43.innerHTML = ((3*peso) - ((0.15*peso) >= 10 ? 10 : (0.15*peso))).toFixed(1)  + 'ml'//em:
+            res43.style.backgroundColor = 'black'
+
+        res44.innerHTML = (((15*peso) >= 1000 ? 1000 : (15*peso))/peso).toFixed(0) + 'min'
+            res44.style.backgroundColor = 'black'
+            //FIM DA TABELA 2 ****************************************************************************************
+
+            //INICIO TABELA 3 ****************************************************************************************
+        res45.innerHTML =  ((0.2*peso) >= 15 ? 15 : (0.2*peso)).toFixed(1) + 'mg'
+            res45.style.backgroundColor = 'black'
+
+        res46.innerHTML =  ((0.04*peso) >= 3 ? 3 : (0.04*peso)).toFixed(1) + 'ml'
+            res46.style.backgroundColor = 'black'
+
+        res47.innerHTML =  ((2*peso) >= 100 ? 100 : (2*peso)).toFixed(1) + 'mcg'
+            res47.style.backgroundColor = 'black'
+
+        res48.innerHTML =  ((0.04*peso) >= 2 ? 2 : (0.04*peso)).toFixed(1) + 'ml'
+            res48.style.backgroundColor = 'black'
+
+        res49.innerHTML = (((0.04*peso) >= 2 ? 2 : (0.04*peso)) > 1) ? (5 - ((0.04*peso) >= 2 ? 2 : (0.04*peso))) : (3 - ((0.04*peso) >= 2 ? 2 : (0.04*peso))).toFixed(1) + 'ml'
+            res49.style.backgroundColor = 'black'
+
+        res50.innerHTML = (0.1*peso) >= 15 ? 15 : (0.1*peso).toFixed(1) + 'mg'//Morfina
+            res50.style.backgroundColor = 'black'
+
+        res51.innerHTML = (0.1*peso) >= 15 ? 15 : (0.1*peso).toFixed(1) + 'ml'
+            res51.style.backgroundColor = 'black'
+
+        res52.innerHTML = 
+        ((0.1*peso) >= 15 ? 15 : (0.1*peso)) < 1 ? (3-((0.1*peso) >= 15 ? 15 : (0.1*peso))).toFixed(1) + 'ml': 
+        ((0.1*peso) >= 15 ? 15 : (0.1*peso)) < 3 ? (5-((0.1*peso) >= 15 ? 15 : (0.1*peso))).toFixed(1)+ 'ml': 
+        ((0.1*peso) >= 15 ? 15 : (0.1*peso)) < 5 ? (10-((0.1*peso) >= 15 ? 15 : (0.1*peso))).toFixed(1)+ 'ml': 
+        ((0.1*peso) >= 15 ? 15 : (0.1*peso)) < 10 ? (15-((0.1*peso) >= 15 ? 15 : (0.1*peso))).toFixed(1)+ 'ml': 
+        ((0.1*peso) >= 15 ? 15 : (0.1*peso)) < 15 ? (20-((0.1*peso) >= 15 ? 15 : (0.1*peso))).toFixed(1)+ 'ml': 0
+            res52.style.backgroundColor = 'black'
+
+        res53.innerHTML = ((2*peso) >= 100 ? 100 : (2*peso)).toFixed(1) + 'mg' //Dextrocetamina
+            res53.style.backgroundColor = 'black'
+
+        res54.innerHTML = ((0.04*peso) >= 2 ? 2 : (0.04*peso)).toFixed(1) + 'ml'
+            res54.style.backgroundColor = 'black'
+
+        res55.innerHTML = (((0.04*peso) >= 2 ? 2 : (0.04*peso)) > 1 ? (5-((0.04*peso) >= 2 ? 2 : (0.04*peso))) : (3-((0.04*peso) >= 2 ? 2 : (0.04*peso)))).toFixed(1) + 'ml'
+            res55.style.backgroundColor = 'black'
+
+        res56.innerHTML = ((0.5*peso) >= 50 ? 50 : (0.5*peso)).toFixed(1) + 'mg'//Atracúrio
+            res56.style.backgroundColor = 'black'
+
+        res57.innerHTML = ((0.05*peso) >= 5 ? 5 : (0.05*peso)).toFixed(1) + 'ml'
+            res57.style.backgroundColor = 'black'
+                    
+        res58.innerHTML = ((peso*1) >= 50 ? 50 : (peso*1)).toFixed(1) + 'mg'//
+            res58.style.backgroundColor = 'black'
+        
+        res59.innerHTML = ((0.1*peso) >= 5 ? 5 : (0.1*peso)).toFixed(1) + 'ml'
+            res59.style.backgroundColor = 'black'
+            
+        res60.innerHTML = ((peso*1) >= 50 ? 50 : (peso*1)).toFixed(1) + 'mg'//
+            res60.style.backgroundColor = 'black'
+            
+        res61.innerHTML = ((0.05*peso) >= 5 ? 5 : (0.05*peso)).toFixed(1) + 'ml'
+            res61.style.backgroundColor = 'black'
+        
+        res62.innerHTML = ((2*peso) >= 100 ? 100 : (2*peso)).toFixed(1) + 'mg'//Tiopental
+            res62.style.backgroundColor = 'black'
+        
+        res63.innerHTML = ((0.08*peso) >= 5 ? 5 : (0.08*peso)).toFixed(1) + 'ml'
+            res63.style.backgroundColor = 'black'
+        
+        res64.innerHTML = ((0.01*peso) >= 0.5 ? 0.5 : (0.01*peso)).toFixed(2) + 'mg'//
+            res64.style.backgroundColor = 'black'
+        
+        res65.innerHTML = ((0.1*peso) >= 2 ? 2 : (0.1*peso)).toFixed(1) + 'ml'
+            res65.style.backgroundColor = 'black'
+        
+        res66.innerHTML = ((0.1*peso) >= 2 ? 2 : (0.1*peso)).toFixed(1) + 'mg'
+            res66.style.backgroundColor = 'black'
+        
+        res67.innerHTML = ((0.25*peso) >= 5 ? 5 : (0.25*peso)).toFixed(1) + 'ml'
+            res67.style.backgroundColor = 'black'
+            //FIM DA TABELA 3 ****************************************************************************************
+        
+            //INICIO TABELA 4 ****************************************************************************************
+        res68.innerHTML = Math.round((0.2*peso*24/5)).toFixed(1) + 'ml'
+            res68.style.backgroundColor = 'black'
+
+        res69.innerHTML = Math.round((2*peso*24/50)).toFixed(1) + 'ml'
+            res69.style.backgroundColor = 'black'
+            
+        res70.innerHTML = 
+        Math.round((0.2*peso*24/5))+Math.round((2*peso*24/50)) < 24 ? 24-Math.round((0.2*peso*24/5))-Math.round((2*peso*24/50)) + 'ml' :
+        Math.round((0.2*peso*24/5))+Math.round((2*peso*24/50)) < 48 ? 48-Math.round((0.2*peso*24/5))-Math.round((2*peso*24/50)) + 'ml':
+        Math.round((0.2*peso*24/5))+Math.round((2*peso*24/50)) < 72 ? 72-Math.round((0.2*peso*24/5))-Math.round((2*peso*24/50)) + 'ml':
+        Math.round((0.2*peso*24/5))+Math.round((2*peso*24/50)) < 96 ? 96-Math.round((0.2*peso*24/5))-Math.round((2*peso*24/50)) + 'ml':
+        Math.round((0.2*peso*24/5))+Math.round((2*peso*24/50)) < 120 ? 120-Math.round((0.2*peso*24/5))-Math.round((2*peso*24/50)) + 'ml':
+        Math.round((0.2*peso*24/5))+Math.round((2*peso*24/50)) < 144 ? 144-Math.round((0.2*peso*24/5))-Math.round((2*peso*24/50)) + 'ml':
+        Math.round((0.2*peso*24/5))+Math.round((2*peso*24/50)) < 168 ? 168-Math.round((0.2*peso*24/5))-Math.round((2*peso*24/50)) + 'ml':
+        Math.round((0.2*peso*24/5))+Math.round((2*peso*24/50)) < 192 ? 192-Math.round((0.2*peso*24/5))-Math.round((2*peso*24/50)) + 'ml': 
+        Math.round((0.2*peso*24/5))+Math.round((2*peso*24/50)) < 216 ? 216-Math.round((0.2*peso*24/5))-Math.round((2*peso*24/50)): 0 + 'ml' 
+            res70.style.backgroundColor = 'black'
+        
+        res71.innerHTML = Math.round((Math.round((0.2*peso*24/5))*5)/(((Math.round(5*(0.2*peso*24/5)))/(Math.round((0.2*peso*24/5))+Math.round((2*peso*24/50))+
+        Math.round((0.2*peso*24/5))+Math.round((2*peso*24/50)) < 24 ? 24-Math.round((0.2*peso*24/5))-Math.round((2*peso*24/50)):
+        Math.round((0.2*peso*24/5))+Math.round((2*peso*24/50)) < 48 ? 48-Math.round((0.2*peso*24/5))-Math.round((2*peso*24/50)):
+        Math.round((0.2*peso*24/5))+Math.round((2*peso*24/50)) < 72 ? 72-Math.round((0.2*peso*24/5))-Math.round((2*peso*24/50)):
+        Math.round((0.2*peso*24/5))+Math.round((2*peso*24/50)) < 96 ? 96-Math.round((0.2*peso*24/5))-Math.round((2*peso*24/50)):
+        Math.round((0.2*peso*24/5))+Math.round((2*peso*24/50)) < 120 ? 120-Math.round((0.2*peso*24/5))-Math.round((2*peso*24/50)):
+        Math.round((0.2*peso*24/5))+Math.round((2*peso*24/50)) < 144 ? 144-Math.round((0.2*peso*24/5))-Math.round((2*peso*24/50)):
+        Math.round((0.2*peso*24/5))+Math.round((2*peso*24/50)) < 168 ? 168-Math.round((0.2*peso*24/5))-Math.round((2*peso*24/50)):
+        Math.round((0.2*peso*24/5))+Math.round((2*peso*24/50)) < 192 ? 192-Math.round((0.2*peso*24/5))-Math.round((2*peso*24/50)): 
+        Math.round((0.2*peso*24/5))+Math.round((2*peso*24/50)) < 216 ? 216-Math.round((0.2*peso*24/5))-Math.round((2*peso*24/50)): 0))*24)).toFixed(1) + 'ml/h'
+            res71.style.backgroundColor = 'black'
+        
+        res72.innerHTML = + 'ml' /////////////////////////////////aqui
+            res72.style.backgroundColor = 'black'
+        
+        res73.innerHTML = (((10*peso)*1,44)/50) < 1 ? 1 + 'ml' : Math.round((((10*peso)*1,44)/50)) + 'ml'
+            res73.style.backgroundColor = 'black'
+        
+        res74.innerHTML = + 'ml' /////////////////////////////////aqui
+            res74.style.backgroundColor = 'black'
+        
+        res75.innerHTML =  + 'ml' /////////////////////////////////aqui
+            res75.style.backgroundColor = 'black'
+        
+        res76.innerHTML = + 'ml' /////////////////////////////////aqui
+            res76.style.backgroundColor = 'black'
+        
+        res77.innerHTML =  Math.round(((0.3*peso)*24)/10) + 'ml' 
+            res77.style.backgroundColor = 'black'    
+ 
+        res78.innerHTML =  + 'ml' /////////////////////////////////aqui
+            res78.style.backgroundColor = 'black'    
+        
+        res79.innerHTML =  + 'ml' /////////////////////////////////aqui
+            res79.style.backgroundColor = 'black'    
+        
+        res80.innerHTML =  + 'ml' /////////////////////////////////aqui
+            res80.style.backgroundColor = 'black'    
+        
+        res81.innerHTML = Math.round((((0.6*peso)*24)/10)).toFixed(1) + 'ml' 
+            res81.style.backgroundColor = 'black'    
+        
+        res82.innerHTML =  + 'ml' /////////////////////////////////aqui
+            res82.style.backgroundColor = 'black'    
+        
+        res83.innerHTML =  + 'ml' /////////////////////////////////aqui
+            res83.style.backgroundColor = 'black'    
+        
+        res84.innerHTML =  + 'ml' /////////////////////////////////aqui
+            res84.style.backgroundColor = 'black'    
+        
+        res85.innerHTML = (((10*peso)*1.44)/25) < 1 ? 1 : Math.round(((10*peso)*1.44/25)) + 'ml'
+            res85.style.backgroundColor = 'black'    
+            
+        res86.innerHTML =  + 'ml' /////////////////////////////////aqui
+            res86.style.backgroundColor = 'black'    
+        
+        res87.innerHTML =  + 'ml' /////////////////////////////////aqui
+            res87.style.backgroundColor = 'black'    
+        
+        res88.innerHTML =  + 'ml'/////////////////////////////////aqui
+            res88.style.backgroundColor = 'black'    
+        
+        res89.innerHTML =  + 'ml'
+            res89.style.backgroundColor = 'black'    
+            
+        res90.innerHTML =  + 'ml'
+            res90.style.backgroundColor = 'black'    
+        
+        res91.innerHTML =  + 'ml'
+            res91.style.backgroundColor = 'black'    
+        
+        res92.innerHTML =  + 'ml'
+            res92.style.backgroundColor = 'black'    
+        
+        res93.innerHTML =  + 'ml'
+            res93.style.backgroundColor = 'black'    
+        
+        res94.innerHTML =  + 'ml'
+            res94.style.backgroundColor = 'black'    
+        
+        res95.innerHTML =  + 'ml'
+            res95.style.backgroundColor = 'black'    
+        
+        res96.innerHTML =  + 'ml'
+            res96.style.backgroundColor = 'black'    
+        
+        res97.innerHTML =  + 'ml'
+            res97.style.backgroundColor = 'black'    
+        
+        res98.innerHTML =  + 'ml'
+            res98.style.backgroundColor = 'black'    
+        
+        res99.innerHTML =  + 'ml'
+            res99.style.backgroundColor = 'black'    
+        
+        res100.innerHTML =  + 'ml'
+            res100.style.backgroundColor = 'black'    
+        
+        res101.innerHTML =  + 'ml'
+            res101.style.backgroundColor = 'black'    
+        
+        res102.innerHTML =  + 'ml'
+            res101.style.backgroundColor = 'black'    
+        
+        res102.innerHTML =  + 'ml'
+            res101.style.backgroundColor = 'black'    
+        
+        res103.innerHTML =  + 'ml'
+            res103.style.backgroundColor = 'black'    
+        
+        res104.innerHTML =  + 'ml'
+            res104.style.backgroundColor = 'black'    
+            
+        res105.innerHTML =  + 'ml'
+            res105.style.backgroundColor = 'black'    
+        
+        res106.innerHTML =  + 'ml'
+            res106.style.backgroundColor = 'black'    
+        
+        res107.innerHTML =  + 'ml'
+            res107.style.backgroundColor = 'black'    
+        
+        res108.innerHTML =  + 'ml'
+            res108.style.backgroundColor = 'black'    
+        
+        res109.innerHTML =  + 'ml'
+            res109.style.backgroundColor = 'black'    
+        
+        res110.innerHTML =  + 'ml'
+            res110.style.backgroundColor = 'black'    
+        
+        res111.innerHTML =  + 'ml'
+            res111.style.backgroundColor = 'black'    
+        
+        res112.innerHTML =  + 'ml'
+            res112.style.backgroundColor = 'black'    
+        
+        res113.innerHTML =  + 'ml'
+            res113.style.backgroundColor = 'black'    
+        
+        res114.innerHTML =  + 'ml'
+            res114.style.backgroundColor = 'black'    
+        
+        res115.innerHTML =  + 'ml'
+            res115.style.backgroundColor = 'black'    
+        
+        res116.innerHTML =  + 'ml'
+            res116.style.backgroundColor = 'black'    
+            
+        res117.innerHTML =  + 'ml'
+            res117.style.backgroundColor = 'black'    
+            
+        res118.innerHTML =  + 'ml'
+            res118.style.backgroundColor = 'black'    
+        
+        res119.innerHTML =  + 'ml'
+            res119.style.backgroundColor = 'black'    
+            
+        res120.innerHTML =  + 'ml'
+            res120.style.backgroundColor = 'black'    
+        
+        res121.innerHTML =  + 'ml'
+            res121.style.backgroundColor = 'black'    
+        
+        res122.innerHTML =  + 'ml'
+            res122.style.backgroundColor = 'black'    
+            
+        res123.innerHTML =  + 'ml'
+            res123.style.backgroundColor = 'black'    
+        
+        res124.innerHTML =  + 'ml'
+            res124.style.backgroundColor = 'black'    
+            
+        res125.innerHTML =  + 'ml'
+            res125.style.backgroundColor = 'black'    
+        
+            //FIM DA TABELA 4 ****************************************************************************************
+
+            //INICIO TABELA 5 ****************************************************************************************
+
+            //FIM DA TABELA 5 ****************************************************************************************
      }
 
      peso = null; //Não permite calcular ao acionar o btn 2x vezes\

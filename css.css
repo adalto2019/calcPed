@@ -87,7 +87,7 @@ body{background-image: url();
     color: wheat;
     }
 
-.link #tb5{border: solid black 1px;
+.link #tb4, #tb5{border: solid black 1px;
     border-collapse: collapse;
     border-style:  groove;
     margin: auto;
