@@ -392,33 +392,85 @@ function calc(){
         Math.round((0.2*peso*24/5))+Math.round((2*peso*24/50)) < 216 ? 216-Math.round((0.2*peso*24/5))-Math.round((2*peso*24/50)): 0))*24)).toFixed(1) + 'ml/h'
             res71.style.backgroundColor = 'black'
         
-        res72.innerHTML = + 'ml' /////////////////////////////////aqui
+        res72.innerHTML =  Math.round((0.2*peso*24/5)) + Math.round((2*peso*24/50)) +
+        (Math.round((0.2*peso*24/5))+Math.round((2*peso*24/50)) < 24 ? 24-Math.round((0.2*peso*24/5))-Math.round((2*peso*24/50)) + 'ml' :
+        Math.round((0.2*peso*24/5))+Math.round((2*peso*24/50)) < 48 ? 48-Math.round((0.2*peso*24/5))-Math.round((2*peso*24/50)) + 'ml':
+        Math.round((0.2*peso*24/5))+Math.round((2*peso*24/50)) < 72 ? 72-Math.round((0.2*peso*24/5))-Math.round((2*peso*24/50)) + 'ml':
+        Math.round((0.2*peso*24/5))+Math.round((2*peso*24/50)) < 96 ? 96-Math.round((0.2*peso*24/5))-Math.round((2*peso*24/50)) + 'ml':
+        Math.round((0.2*peso*24/5))+Math.round((2*peso*24/50)) < 120 ? 120-Math.round((0.2*peso*24/5))-Math.round((2*peso*24/50)) + 'ml':
+        Math.round((0.2*peso*24/5))+Math.round((2*peso*24/50)) < 144 ? 144-Math.round((0.2*peso*24/5))-Math.round((2*peso*24/50)) + 'ml':
+        Math.round((0.2*peso*24/5))+Math.round((2*peso*24/50)) < 168 ? 168-Math.round((0.2*peso*24/5))-Math.round((2*peso*24/50)) + 'ml':
+        Math.round((0.2*peso*24/5))+Math.round((2*peso*24/50)) < 192 ? 192-Math.round((0.2*peso*24/5))-Math.round((2*peso*24/50)) + 'ml': 
+        Math.round((0.2*peso*24/5))+Math.round((2*peso*24/50)) < 216 ? 216-Math.round((0.2*peso*24/5))-Math.round((2*peso*24/50)): 0)  == 24 ? '(Preparar 2x)' : '(Preparar 1.5x)'
             res72.style.backgroundColor = 'black'
-        
+        //_____________________________________________________________________________________________________________
         res73.innerHTML = (((10*peso)*1,44)/50) < 1 ? 1 + 'ml' : Math.round((((10*peso)*1,44)/50)) + 'ml'
             res73.style.backgroundColor = 'black'
         
-        res74.innerHTML = + 'ml' /////////////////////////////////aqui
+        res74.innerHTML = Math.round(((((10*peso)*1.44))/50) < 1 ? (24*50)/((10*peso)*1.44):
+        res73.innerHTML < 14 ? (24 - res73.innerHTML):
+        res73.innerHTML < 24 ? (48 - res73.innerHTML):
+        res73.innerHTML < 52 ? (72 - res73.innerHTML):
+        res73.innerHTML < 76 ? (96 - res73.innerHTML):
+        res73.innerHTML < 100 ? (120 - res73.innerHTML):
+        res73.innerHTML < 124 ? (144 - res73.innerHTML):
+        res73.innerHTML < 148 ? (168 - res73.innerHTML):
+        res73.innerHTML < 172 ? (192 - res73.innerHTML):0.5).toFixed(1) + 'ml'
             res74.style.backgroundColor = 'black'
         
-        res75.innerHTML =  + 'ml' /////////////////////////////////aqui
+        res75.innerHTML = ((((10*peso)*1.44)/50) < 1 ? 1 : (res73.innerHTML*50) / (((50*res73.innerHTML)/(res73.innerHTML+res74.innerHTML)*24))).toFixed(1) + 'ml/h' 
             res75.style.backgroundColor = 'black'
         
-        res76.innerHTML = + 'ml' /////////////////////////////////aqui
+        res76.innerHTML = ( (((10*peso)*1,44)/50) < 1 ? 1 + 'ml' : Math.round((((10*peso)*1,44)/50)) + 
+        (((((10*peso)*1.44))/50) < 1 ? (24*50)/((10*peso)*1.44):
+        res73.innerHTML < 14 ? (24 - res73.innerHTML):
+        res73.innerHTML < 24 ? (48 - res73.innerHTML):
+        res73.innerHTML < 52 ? (72 - res73.innerHTML):
+        res73.innerHTML < 76 ? (96 - res73.innerHTML):
+        res73.innerHTML < 100 ? (120 - res73.innerHTML):
+        res73.innerHTML < 124 ? (144 - res73.innerHTML):
+        res73.innerHTML < 148 ? (168 - res73.innerHTML):
+        res73.innerHTML < 172 ? (192 - res73.innerHTML):0.5)) == 24 ? '(Preparar 2x)' : '(Preparar 1.5x)'
             res76.style.backgroundColor = 'black'
-        
+        //_____________________________________________________________________________________________________________
         res77.innerHTML =  Math.round(((0.3*peso)*24)/10) + 'ml' 
             res77.style.backgroundColor = 'black'    
- 
-        res78.innerHTML =  + 'ml' /////////////////////////////////aqui
+        
+        res78.innerHTML = (Math.round(((0.3*peso)*24)/10) < 14 ? 24-(Math.round(((0.3*peso)*24)/10)):
+        Math.round(((0.3*peso)*24)/10) < 28 ? 48-(Math.round(((0.3*peso)*24)/10)):
+        Math.round(((0.3*peso)*24)/10) < 52 ? 72-(Math.round(((0.3*peso)*24)/10)):
+        Math.round(((0.3*peso)*24)/10) < 76 ? 96-(Math.round(((0.3*peso)*24)/10)):
+        Math.round(((0.3*peso)*24)/10) < 100 ? 120-(Math.round(((0.3*peso)*24)/10)):
+        Math.round(((0.3*peso)*24)/10) < 124 ? 144-(Math.round(((0.3*peso)*24)/10)):
+        Math.round(((0.3*peso)*24)/10) < 148 ? 168-(Math.round(((0.3*peso)*24)/10)):
+        Math.round(((0.3*peso)*24)/10) < 172 ? 192-(Math.round(((0.3*peso)*24)/10)):0).toFixed(1) + 'ml'
             res78.style.backgroundColor = 'black'    
         
-        res79.innerHTML =  + 'ml' /////////////////////////////////aqui
+        res79.innerHTML = ((Math.round(((0.3*peso)*24)/10)*10) / (((10*Math.round(((0.3*peso)*24)/10)) / 
+        (Math.round(((0.3*peso)*24)/10) +
+        (Math.round(((0.3*peso)*24)/10) < 14 ? 24-(Math.round(((0.3*peso)*24)/10)):
+        Math.round(((0.3*peso)*24)/10) < 28 ? 48-(Math.round(((0.3*peso)*24)/10)):
+        Math.round(((0.3*peso)*24)/10) < 52 ? 72-(Math.round(((0.3*peso)*24)/10)):
+        Math.round(((0.3*peso)*24)/10) < 76 ? 96-(Math.round(((0.3*peso)*24)/10)):
+        Math.round(((0.3*peso)*24)/10) < 100 ? 120-(Math.round(((0.3*peso)*24)/10)):
+        Math.round(((0.3*peso)*24)/10) < 124 ? 144-(Math.round(((0.3*peso)*24)/10)):
+        Math.round(((0.3*peso)*24)/10) < 148 ? 168-(Math.round(((0.3*peso)*24)/10)):
+        Math.round(((0.3*peso)*24)/10) < 172 ? 192-(Math.round(((0.3*peso)*24)/10)):0)
+        )) *24)).toFixed(1) + 'ml/h'
+        
             res79.style.backgroundColor = 'black'    
         
-        res80.innerHTML =  + 'ml' /////////////////////////////////aqui
+        res80.innerHTML = Math.round(((0.3*peso)*24)/10) +
+        (Math.round(((0.3*peso)*24)/10) < 14 ? 24-(Math.round(((0.3*peso)*24)/10)):
+        Math.round(((0.3*peso)*24)/10) < 28 ? 48-(Math.round(((0.3*peso)*24)/10)):
+        Math.round(((0.3*peso)*24)/10) < 52 ? 72-(Math.round(((0.3*peso)*24)/10)):
+        Math.round(((0.3*peso)*24)/10) < 76 ? 96-(Math.round(((0.3*peso)*24)/10)):
+        Math.round(((0.3*peso)*24)/10) < 100 ? 120-(Math.round(((0.3*peso)*24)/10)):
+        Math.round(((0.3*peso)*24)/10) < 124 ? 144-(Math.round(((0.3*peso)*24)/10)):
+        Math.round(((0.3*peso)*24)/10) < 148 ? 168-(Math.round(((0.3*peso)*24)/10)):
+        Math.round(((0.3*peso)*24)/10) < 172 ? 192-(Math.round(((0.3*peso)*24)/10)):0)  == 24 ? '(Preparar 2x)' : '(Preparar 1.5x)'
             res80.style.backgroundColor = 'black'    
-        
+        //_____________________________________________________________________________________________________________
         res81.innerHTML = Math.round((((0.6*peso)*24)/10)).toFixed(1) + 'ml' 
             res81.style.backgroundColor = 'black'    
         
