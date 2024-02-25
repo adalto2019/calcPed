@@ -22,21 +22,19 @@
             <input id="btn2" type="button" value="Calcular" onclick="calc()" onmouseenter="mudaCorBtn2()" onmouseout="voltaCorBtn2()" title=" Calcula a dosagem de medicação baseada no peso informado do paciente">
             <input id="btn3" type="submit" value="Imprimir" onclick="imprimir()" onmouseenter="mudaCorBtn3()" onmouseout="voltaCorBtn3()" title=" Imprimir relatório">
         </div>
-         <!--INICIO TABELA 1 ###################################################################################################-->
-            <h4><img onclick="abreTb1()" title="Expandir Tabela" src="https://i.pinimg.com/736x/34/30/72/343072b13bb3caee0c642c653a03f888.jpg">
-                Parada cardiorrespiratória/emergências 
-                <img onclick="fecharTb1()" title="Retrair Tabela" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMwAAADACAMAAAB/Pny7AAAAVFBMVEX///8AAAC9vb0/Pz/IyMguLi5XV1cyMjKNjY0HBweUlJTd3d3Dw8Pj4+MdHR329vZNTU3S0tKCgoLt7e03NzegoKATExNcXFxSUlIYGBhERERxcXGF/cjMAAABG0lEQVR4nO3Y226CQBiFUVrKwbOoeHz/92y1vTFMbwaTn5i1nmB/ITMoRQEAAAAAAAAAAAAAAAAAAAAASYvlZ7jl4hUlq7YumypcU9btamxLu559TMRs3Y5K2VTRBc+qzYiW6PFD2TWbbfT0oW1uTRu9PCXz3HQTOzC/qi4rZhe9O22X07Kvo2en1fuMmOUhenbaYZkR0x+jZ6cd+4yYefTq/8zFTFROTH+JXp12yTkzb3Wb7U/Rs9NOOe+Zt/oFUCya6N0pTeb/50neZzl32cM5evnQObelKKKnD+W3/DybyXzOuJuNeC53fTmZd+elzHldPln1t/pahrvWt370d7NHT/cVrntJCQAAAAAAAAAAAAAAAAAAAAB/vgGZthoLQaIweAAAAABJRU5ErkJggg=="></h4>
-            <table id="tb1"> <!--Tabela #1-->  
-                <th id="rowTitulo" colspan="8"></th>
-                <tr>
-                    <th id="col1" rowspan="3">Adrenalina (1:1000)</th>
+         <!-- Adrenalina ###################################################################################################-->
+         <h4>Parada cardiorrespiratória/emergências</h4> 
+         <div id="btnsParadaCardio">   
+            <input type="button" onclick="exibirAdrenalina()" id="btnMed1" value=" Adrenalina (1:1000) ">  
+                <table id="tbAdrenalina" style="display: none;">
+                    <tr>
                         <td>EV / IO (0,01mg/kg):</td>
                         <td><div id="res1">0.00mg</div></td>
                         <td id="col4">Diluir 1 amp em 9mL de AD e fazer:</td>
                         <td><div id="res2">0.0ml</div></td>
                         <td colspan="4">a cada 3 a 5 minutos.</td>
-                </tr>
-                    <tr>    
+                    </tr>
+                        <tr>    
                         <td>ET (0,1mg/kg):</td>
                         <td><div id="res3">0.0mg</div></td>
                         <td>Administrar:</td>
@@ -50,69 +48,74 @@
                         <td><div id="res6">0.00ml</div></td>
                         <td colspan="4">IM, sem diluir, a cada 15 minutos (dose máxima: 0,3mg).</td>
                     </tr>
-            <!--ROW TB1 ###################################################################################################-->
-            <tr id="marcaTxt">
-                <th>Atropina 0,25mg/ml</th>
+            </table>    
+            <!-- Atropina ###################################################################################################-->
+            <input type="button" onclick="exibirAtropina()" id="btnMed2" value=" Atropina 0,25mg/ml ">  
+                <table id="tbAtropina" style="display: none;">
                     <td>EV/IO/ET (0,02mg/kg):</td>
                     <td><div id="res7">0.0mg</div></td>
                     <td>Administrar:</td>
                     <td><div id="res8">0.0ml</div></td>
                     <td colspan="4">por dose. Mínimo de 0,1mg e máximo de 0,5mg/dose.</td>
-            </tr>
-            <!--ROW TB1 ###################################################################################################-->
-            <tr>
-                <th rowspan="2">Adenosina (6mg/2mL)</th>
-                    <td>1ª dose (0,1mg/kg):</td>
-                    <td><div id="res9">0.0mg</div></td>
-                    <td>Administrar:</td>
-                    <td><div id="res10">0.0mg</div></td>
-                    <td colspan="4">EV em bolus rápido, seguido por flush de 5 a 10mL de SF.</td>
-            </tr>
-            <tr>
-                    <td>2ª dose (0,2mg/kg):</td>
-                    <td><div id="res11">0.0ml</div></td>
-                    <td>Administrar:</td>
-                    <td><div id="res12">0.0ml</div></td>
-                    <td colspan="4">EV em bolus rápido, seguido por flush de 5 a 10mL de SF.</td>
-            </tr>
-            <!--ROW TB1 ###################################################################################################-->
-            <tr id="marcaTxt">
-                <th rowspan="2">Amiodarona (50mg/mL)</th> <!--OK-->
-                    <td>PCR (5mg/kg):</td>
-                    <td><div id="res13">0.0mg</div></td>
-                    <td>Administrar:</td>
-                    <td><div id="res14">0.0ml</div></td>
-                    <td colspan="4">sem diluir. Dose máxima: 15 - 20mg/kg/dia ou 300mg/dose.</td>
-            </tr>
-            <tr id="marcaTxt">
-                    <td>TSV/TV com pulso:</td>
-                    <td><div id="res15">0.0mg</div></td>
-                    <td>Diluir:</td>
-                    <td><div id="res16">0.0ml</div></td>
-                    <td>em:</td>
-                    <td><div id="res17">0.0ml</div></td>
-                    <td>de SF e infundir em 20 a 60 minutos.</td>
-            </tr>
-            <!--ROW TB1 ###################################################################################################-->
-            <tr>
-                <th rowspan="3">Sulfato de magnésio 10%
-                    (100mg/mL ou 0,8mEq/mL)</th>
-                    <td>a:</td>
-                    <td><div id="res18">0.0ml</div></td>
-                    <td>Administrar:</td>
-                    <td><div id="res19">0.0ml</div></td>
-                    <td>a:</td>
-                    <td><div id="res20">0.0ml</div></td>
-                    <td>em bolus na Torsades sem pulso.</td>
-            </tr>
-            <tr>
-                    <td rowspan="2" colspan="2">Torsades | Asma (25-50mg/kg):</td>
-                    
-                    <td>Diluir:</td>
-                    <td><div id="res21">0.0ml</div></td>
-                    <td>em:</td>
-                    <td><div id="res22">0.0ml</div></td>
-                    <td>de SF e infundir em 20 min na Torsades com pulso.</td>
+                </table>
+            <!-- Adenosina ###################################################################################################-->
+            <input type="button" onclick="exibirAdenosina()" id="btnMed3" value=" Adenosina (6mg/2mL) ">  
+                <table id="tbAdenosina" style="display: none;">
+                    <tr>
+                        <td>1ª dose (0,1mg/kg):</td>
+                        <td><div id="res9">0.0mg</div></td>
+                        <td>Administrar:</td>
+                        <td><div id="res10">0.0mg</div></td>
+                        <td colspan="4">EV em bolus rápido, seguido por flush de 5 a 10mL de SF.</td>
+                    </tr>
+                    <tr>
+                        <td>2ª dose (0,2mg/kg):</td>
+                        <td><div id="res11">0.0ml</div></td>
+                        <td>Administrar:</td>
+                        <td><div id="res12">0.0ml</div></td>
+                        <td colspan="4">EV em bolus rápido, seguido por flush de 5 a 10mL de SF.</td>
+                    </tr>
+                </table>
+            <!-- Amiodarona (50mg/mL) ###################################################################################################-->
+            <input type="button" onclick="exibirAmiodaroma()" id="btnMed4" value=" Amiodarona (50mg/mL) ">  
+                <table id="tbAmiodaroma" style="display: none;">
+                    <tr>
+                        <td>PCR (5mg/kg):</td>
+                        <td><div id="res13">0.0mg</div></td>
+                        <td>Administrar:</td>
+                        <td><div id="res14">0.0ml</div></td>
+                        <td colspan="4">sem diluir. Dose máxima: 15 - 20mg/kg/dia ou 300mg/dose.</td>
+                    </tr>
+                    <tr>
+                        <td>TSV/TV com pulso:</td>
+                        <td><div id="res15">0.0mg</div></td>
+                        <td>Diluir:</td>
+                        <td><div id="res16">0.0ml</div></td>
+                        <td>em:</td>
+                        <td><div id="res17">0.0ml</div></td>
+                        <td>de SF e infundir em 20 a 60 minutos.</td>
+                    </tr>
+                </table>
+            <!-- Sulfato de magnésio 10%
+                    (100mg/mL ou 0,8mEq/mL) ###################################################################################################-->
+            <input type="button" onclick="exibirSulfato()" id="btnMed5" value=" Sulfato de magnésio 10% ">  
+                <table id="tbSulfato" style="display: none;">
+                    <tr>
+                        <td>a:</td>
+                        <td><div id="res18">0.0ml</div></td>
+                        <td>Administrar:</td>
+                        <td><div id="res19">0.0ml</div></td>
+                        <td>a:</td>
+                        <td><div id="res20">0.0ml</div></td>
+                        <td>em bolus na Torsades sem pulso.</td>
+                    </tr>
+                    <tr>
+                        <td rowspan="2" colspan="2">Torsades | Asma (25-50mg/kg):</td>
+                        <td>Diluir:</td>
+                        <td><div id="res21">0.0ml</div></td>
+                        <td>em:</td>
+                        <td><div id="res22">0.0ml</div></td>
+                        <td>de SF e infundir em 20 min na Torsades com pulso.</td>
                     <tr>
                         <td>Diluir:</td>
                         <td><div id="res23">0.0ml</div></td>
@@ -120,398 +123,453 @@
                         <td><div id="res24">0.0ml</div></td>
                         <td>de SF e infundir em 30 min na asma grave.</td>    
                     </tr>
-            </tr>
-            <!--ROW TB1 ###################################################################################################-->
-            <tr id="marcaTxt">
-                <th>Bicarbonato de sódio 8,4%</th>
-                    <td>PCR (1mEq/kg):</td>
-                    <td><div id="res25">0.0mEq</div></td>
-                    <td>Administrar:</td>
-                    <td><div id="res26">0.0mEq</div></td>
-                    <td colspan="4">em bolus lento..</td>
-            </tr>
-            <!--ROW TB1 ###################################################################################################-->
-            <tr>
-                <th>Gluconato de cálcio 10%</th>
-                    <td>0,5mEq/kg:</td>
-                    <td><div id="res27">0.0mEq</div></td>
-                    <td>Infundir:</td>
-                    <td><div id="res28">0.0mEq</div></td>
-                    <td colspan="4">em bolus lento na PCR e em 20min na hipocalcemia sintomática.</td>
-            </tr>
-            <!--ROW TB1 ###################################################################################################-->
-            <tr id="marcaTxt">
-                <th rowspan="2">Glicose 50%</th>
-                <td>Neonato (0,2g/kg):</td>
-                <td><div id="res29">0.0g</div></td>
-                <td>Diluir:</td>
-                <td><div id="res30">0.0ml</div></td>
-                <td>em:</td>
-                <td><div id="res31">0.0ml</div></td>
-                <td>de SF e infundir em bolus lento.</td>
-                <tr id="marcaTxt">
-                    <td>Pediatria (0,5g/kg):</td>
-                    <td><div id="res32">0.0g</div></td>
-                    <td>Diluir:</td>
-                    <td><div id="res33">0.0ml</div></td>
-                    <td>em:</td>
-                    <td><div id="res34">0.0ml</div></td>
-                    <td>de SF e infundir em bolus lento.</td>        
-                </tr>
-            </tr>
-        </table>
+                </table>
+            <!-- Bicarbonato de sódio 8,4% ###################################################################################################-->
+            <input type="button" onclick="exibirBicarbonato()" id="btnMed6" value=" Bicarbonato de sódio 8,4% ">  
+                <table id="tbBicarbonato" style="display: none;">
+                    <tr>
+                        <td>PCR (1mEq/kg):</td>
+                        <td><div id="res25">0.0mEq</div></td>
+                        <td>Administrar:</td>
+                        <td><div id="res26">0.0mEq</div></td>
+                        <td colspan="4">em bolus lento..</td>
+                    </tr>
+                </table>   
+            <!-- Gluconato de cálcio 10% ###################################################################################################-->
+            <input type="button" onclick="exibirGluconato()" id="btnMed7" value=" Gluconato de cálcio 10% ">  
+                <table id="tbGluconato" style="display: none;">
+                    <tr>
+                        <td>0,5mEq/kg:</td>
+                        <td><div id="res27">0.0mEq</div></td>
+                        <td>Infundir:</td>
+                        <td><div id="res28">0.0mEq</div></td>
+                        <td colspan="4">em bolus lento na PCR e em 20min na hipocalcemia sintomática.</td>
+                     </tr>
+                </table>
+            <!-- Glicose 50% ###################################################################################################-->
+            <input type="button" onclick="exibirGlicose()" id="btnMed8" value=" Glicose 50% ">  
+                <table id="tbGlicose" style="display: none">
+                    <tr>
+                        <td>Neonato (0,2g/kg):</td>
+                        <td><div id="res29">0.0g</div></td>
+                        <td>Diluir:</td>
+                        <td><div id="res30">0.0ml</div></td>
+                        <td>em:</td>
+                        <td><div id="res31">0.0ml</div></td>
+                        <td>de SF e infundir em bolus lento.</td>
+                    <tr id="marcaTxt">
+                        <td>Pediatria (0,5g/kg):</td>
+                        <td><div id="res32">0.0g</div></td>
+                        <td>Diluir:</td>
+                        <td><div id="res33">0.0ml</div></td>
+                        <td>em:</td>
+                        <td><div id="res34">0.0ml</div></td>
+                        <td>de SF e infundir em bolus lento.</td>        
+                    </tr>
+                </table>
+        </div>
         <!--FIM TABELA 1 ###################################################################################################-->
          
-        <!--INICIO TABELA 2 ################################################################################################-->
-        <h4><img onclick="abreTb2()" title="Expandir Tabela" src="https://i.pinimg.com/736x/34/30/72/343072b13bb3caee0c642c653a03f888.jpg">
-            Anticonvulsivantes 
-            <img onclick="fecharTb2()" title="Retrair Tabela" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMwAAADACAMAAAB/Pny7AAAAVFBMVEX///8AAAC9vb0/Pz/IyMguLi5XV1cyMjKNjY0HBweUlJTd3d3Dw8Pj4+MdHR329vZNTU3S0tKCgoLt7e03NzegoKATExNcXFxSUlIYGBhERERxcXGF/cjMAAABG0lEQVR4nO3Y226CQBiFUVrKwbOoeHz/92y1vTFMbwaTn5i1nmB/ITMoRQEAAAAAAAAAAAAAAAAAAAAASYvlZ7jl4hUlq7YumypcU9btamxLu559TMRs3Y5K2VTRBc+qzYiW6PFD2TWbbfT0oW1uTRu9PCXz3HQTOzC/qi4rZhe9O22X07Kvo2en1fuMmOUhenbaYZkR0x+jZ6cd+4yYefTq/8zFTFROTH+JXp12yTkzb3Wb7U/Rs9NOOe+Zt/oFUCya6N0pTeb/50neZzl32cM5evnQObelKKKnD+W3/DybyXzOuJuNeC53fTmZd+elzHldPln1t/pahrvWt370d7NHT/cVrntJCQAAAAAAAAAAAAAAAAAAAAB/vgGZthoLQaIweAAAAABJRU5ErkJggg=="></h4>
-        <table id="tb2">
-            <th id="rowTitulo" colspan="10"></th>
-                <tr>
-                    <th>Diazepam (5mg/mL)</th>
-                    <td>0,3mg/kg:</td>
-                    <td><div id="res35">0.0mg</div></td>
-                    <td>Administrar:</td>
-                    <td><div id="res36">0.0ml</div></td>
-                    <td colspan="5">em bolus lento sem diluir. Repetir até 2x a cada 5 min.</td>
-                </tr>
-                <tr>
-                    <th>Fenitoína (50mg/mL)</th>
-                    <td>15mg/kg:</td>
-                    <td><div id="res37">0.0mg</div></td>
-                    <td>Diluir:</td>
-                    <td><div id="res38">0.0ml</div></td>
-                    <td>em:</td>
-                    <td><div id="res39">0.0ml</div></td>
-                    <td>de SF e infundir em:</td>
-                    <td><div id="res40">-</div></td>
-                    <td>(máx: 30mg/kg/dia).</td>
-                </tr>
-                <tr>
-                    <th>Fenobarbital (100mg/mL)</th>
-                    <td>15mg/kg:</td>
-                    <td><div id="res41">0.0mg</div></td>
-                    <td>Diluir:</td>
-                    <td><div id="res42">0.0ml</div></td>
-                    <td>em:</td>
-                    <td><div id="res43">0.0ml</div></td>
-                    <td>de SF e infundir em:</td>
-                    <td><div id="res44">-</div></td>
-                    <td>(máx: 40mg/kg/dia).</td>
-                </tr>
-        </table>
+        <!--INICIO TABELA 2 -Diazepam (5mg/mL) ################################################################################################-->
+        <h4>Anticonvulsivantes</h4>
+            <div id="btnsAnticonvulsivantes"> 
+                <input type="button" onclick="exibirDiazepam()" id="btnMed9" value=" Diazepam (5mg/mL) ">  
+                    <table id="tbDiazepam" style="display: none">
+                        <tr>
+                            <td>0,3mg/kg:</td>
+                            <td><div id="res35">0.0mg</div></td>
+                            <td>Administrar:</td>
+                            <td><div id="res36">0.0ml</div></td>
+                            <td colspan="5">em bolus lento sem diluir. Repetir até 2x a cada 5 min.</td>
+                        </tr>
+                    </table>
+                <input type="button" onclick="exibirFenitoina()" id="btnMed10" value=" Fenitoína (50mg/mL) ">
+                    <table id="tbFenitoina" style="display: none">
+                        <tr>
+                            <td>15mg/kg:</td>
+                            <td><div id="res37">0.0mg</div></td>
+                            <td>Diluir:</td>
+                            <td><div id="res38">0.0ml</div></td>
+                            <td>em:</td>
+                            <td><div id="res39">0.0ml</div></td>
+                            <td>de SF e infundir em:</td>
+                            <td><div id="res40">-</div></td>
+                            <td>(máx: 30mg/kg/dia).</td>
+                        </tr>
+                    </table>    
+                <input type="button" onclick="exibirFenobar()" id="btnMed11" value=" Fenobarbital (100mg/mL) ">        
+                    <table id="tbFenobar" style="display: none">    
+                        <tr>
+                            <td>15mg/kg:</td>
+                            <td><div id="res41">0.0mg</div></td>
+                            <td>Diluir:</td>
+                            <td><div id="res42">0.0ml</div></td>
+                            <td>em:</td>
+                            <td><div id="res43">0.0ml</div></td>
+                            <td>de SF e infundir em:</td>
+                            <td><div id="res44">-</div></td>
+                            <td>(máx: 40mg/kg/dia).</td>
+                        </tr>
+                    </table>
+            </div>        
         <!--FIM TABELA 2 ###################################################################################################-->
          
-        <!--INICIO TABELA 3 ################################################################################################-->
-        <h4><img onclick="abreTb3()" title="Expandir Tabela" src="https://i.pinimg.com/736x/34/30/72/343072b13bb3caee0c642c653a03f888.jpg">
-            Drogas para sedação / analgesia 
-            <img onclick="fecharTb3()" title="Retrair Tabela" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMwAAADACAMAAAB/Pny7AAAAVFBMVEX///8AAAC9vb0/Pz/IyMguLi5XV1cyMjKNjY0HBweUlJTd3d3Dw8Pj4+MdHR329vZNTU3S0tKCgoLt7e03NzegoKATExNcXFxSUlIYGBhERERxcXGF/cjMAAABG0lEQVR4nO3Y226CQBiFUVrKwbOoeHz/92y1vTFMbwaTn5i1nmB/ITMoRQEAAAAAAAAAAAAAAAAAAAAASYvlZ7jl4hUlq7YumypcU9btamxLu559TMRs3Y5K2VTRBc+qzYiW6PFD2TWbbfT0oW1uTRu9PCXz3HQTOzC/qi4rZhe9O22X07Kvo2en1fuMmOUhenbaYZkR0x+jZ6cd+4yYefTq/8zFTFROTH+JXp12yTkzb3Wb7U/Rs9NOOe+Zt/oFUCya6N0pTeb/50neZzl32cM5evnQObelKKKnD+W3/DybyXzOuJuNeC53fTmZd+elzHldPln1t/pahrvWt370d7NHT/cVrntJCQAAAAAAAAAAAAAAAAAAAAB/vgGZthoLQaIweAAAAABJRU5ErkJggg=="></h4>
-        <table id="tb3">
-            <th id="rowTitulo" colspan="8"></th>
-                <tr>
-                    <th>Midazolam (5mg/mL)</th>
-                    <td>0,1 a 0,5mg/kg:</td>
-                    <td><div id="res45">0.0mg</div></td>
-                    <td>Administrar:</td>
-                    <td><div id="res46">0.0ml</div></td>
-                    <td colspan="3">em bolus lento sem diluir. Repetir até 2x a cada 5 min.</td>
-                </tr>
-                <tr>
-                    <th>Fentanil (50mcg/mL)</th>
-                    <td>1 a 5mcg/kg:</td>
-                    <td><div id="res47">0.0mcg</div></td>
-                    <td>Diluir:</td>
-                    <td><div id="res48">0.0ml</div></td>
-                    <td>em:</td>
-                    <td><div id="res49">0.0ml</div></td>
-                    <td>de SF e infundir em bolus lento (dose: 2mcg/kg).</td>
-                </tr>
-                <tr>
-                    <th>Morfina (1mg/mL)</th>
-                    <td>0,05 a 0,1mg/kg:</td>
-                    <td><div id="res50">0.0mg</div></td>
-                    <td>Diluir:</td>
-                    <td><div id="res51">0.0ml</div></td>
-                    <td>em:</td>
-                    <td><div id="res52">0.0ml</div></td>
-                    <td>de SF e infundir em bolus lento (dose: 0,1mg/kg).</td>
-                </tr>
-                <tr>
-                    <th>Dextrocetamina (50mg/mL)</th>
-                    <td>0,5 a 4mg/kg:</td>
-                    <td><div id="res53">0.0mg</div></td>
-                    <td>Diluir:</td>
-                    <td><div id="res54">0.0ml</div></td>
-                    <td>em:</td>
-                    <td><div id="res55">0.0ml</div></td>
-                    <td>de SF e infundir em bolus lento (dose: 2mg/kg).</td>
-                </tr>
-                <tr>
-                    <th>Atracúrio (10mg/mL)</th>
-                    <td>0,3 a 0,7mg/kg:</td>
-                    <td><div id="res56">0.0mg</div></td>
-                    <td>Administrar:</td>
-                    <td><div id="res57">0.0ml</div></td>
-                    <td colspan="3">em bolus lento sem diluir (dose: 0,5mg/kg).</td>
-                </tr>
-                <tr>
-                    <th>Rocurônio (10mg/mL)</th>
-                    <td>0,6 a 1,2mg/kg:</td>
-                    <td><div id="res58">0.0mg</div></td>
-                    <td>Administrar:</td>
-                    <td><div id="res59">0.0ml</div></td>
-                    <td colspan="3">em bolus lento sem diluir (dose: 1mg/kg).</td>
-                </tr>
-                <tr>
-                    <th>Lidocaína 2% (20mg/mL)</th>
-                    <td>1 a 2mg/kg:</td>
-                    <td><div id="res60">0.0mg</div></td>
-                    <td>Administrar:</td>
-                    <td><div id="res61">0.0ml</div></td>
-                    <td colspan="3">em bolus lento sem diluir (dose: 1mg/kg).</td>
-                </tr>
-                <tr>
-                    <th>Tiopental (Fr 500mg)</th>
-                    <td>2 a 5mg/kg:</td>
-                    <td><div id="res62">0.0mg</div></td>
-                    <td>Diluir 1 frasco em 20mL de SF e administrar:</td>
-                    <td><div id="res63">0.0ml</div></td>
-                    <td colspan="3">em bolus lento (dose: 2mg/kg).</td>
-                </tr>
-                <tr>
-                    <th>Flumazenil (0,1mg/mL)</th>
-                    <td>0,01mg/kg:</td>
-                    <td><div id="res64">0.0mg</div></td>
-                    <td>Administrar:</td>
-                    <td><div id="res65">0.0ml</div></td>
-                    <td colspan="3">em bolus lento. Repetir a cada 1min (Dose máx acumulada: 1mg).</td>
-                </tr>
-                <tr>
-                    <th>Naloxone (0,4mg/mL)</th>
-                    <td>0,1mg/kg:</td>
-                    <td><div id="res66">0.0mg</div></td>
-                    <td>Administrar:</td>
-                    <td><div id="res67">0.0ml</div></td>
-                    <td colspan="3">em bolus lento sem diluir. </td>
-                </tr>
+        <!--INICIO TABELA 3 - Midazolam (5mg/mL) ################################################################################################-->
+        <h4>Drogas para sedação / analgesia</h4>
+        <div id="btnsAnticonvulsivantes"> 
+                <input type="button" id="btnMed12" value=" Midazolam (5mg/mL) ">  
+                    <table style="display: none">
+                        <tr>
+                            <td>0,1 a 0,5mg/kg:</td>
+                            <td><div id="res45">0.0mg</div></td>
+                            <td>Administrar:</td>
+                            <td><div id="res46">0.0ml</div></td>
+                            <td colspan="3">em bolus lento sem diluir. Repetir até 2x a cada 5 min.</td>
+                        </tr>
+                    </table>
+                <input type="button" id="btnMed13" value=" Fentanil (50mcg/mL) ">  
+                    <table style="display: none">
+                        <tr>
+                            <td>1 a 5mcg/kg:</td>
+                            <td><div id="res47">0.0mcg</div></td>
+                            <td>Diluir:</td>
+                            <td><div id="res48">0.0ml</div></td>
+                            <td>em:</td>
+                            <td><div id="res49">0.0ml</div></td>
+                            <td>de SF e infundir em bolus lento (dose: 2mcg/kg).</td>
+                        </tr>
+                    </table>
+                <input type="button" id="btnMed14" value=" Morfina (1mg/mL) ">  
+                    <table style="display: none">
+                        <tr>
+                            <td>0,05 a 0,1mg/kg:</td>
+                            <td><div id="res50">0.0mg</div></td>
+                            <td>Diluir:</td>
+                            <td><div id="res51">0.0ml</div></td>
+                            <td>em:</td>
+                            <td><div id="res52">0.0ml</div></td>
+                            <td>de SF e infundir em bolus lento (dose: 0,1mg/kg).</td>
+                        </tr>
+                    </table>    
+                <input type="button" id="btnMed15" value=" Dextrocetamina (50mg/mL) ">  
+                    <table style="display: none">
+                        <tr>
+                            <td>0,5 a 4mg/kg:</td>
+                            <td><div id="res53">0.0mg</div></td>
+                            <td>Diluir:</td>
+                            <td><div id="res54">0.0ml</div></td>
+                            <td>em:</td>
+                            <td><div id="res55">0.0ml</div></td>
+                            <td>de SF e infundir em bolus lento (dose: 2mg/kg).</td>
+                        </tr>
+                    </table>
+                <input type="button" id="btnMed16" value=" Atracúrio (10mg/mL) ">  
+                    <table style="display: none">
+                        <tr>
+                            <td>0,3 a 0,7mg/kg:</td>
+                            <td><div id="res56">0.0mg</div></td>
+                            <td>Administrar:</td>
+                            <td><div id="res57">0.0ml</div></td>
+                            <td colspan="3">em bolus lento sem diluir (dose: 0,5mg/kg).</td>
+                        </tr>
+                    </table>
+                <input type="button" id="btnMed17" value=" Rocurônio (10mg/mL) ">  
+                    <table style="display: none">
+                        <tr>
+                            <td>0,6 a 1,2mg/kg:</td>
+                            <td><div id="res58">0.0mg</div></td>
+                            <td>Administrar:</td>
+                            <td><div id="res59">0.0ml</div></td>
+                            <td colspan="3">em bolus lento sem diluir (dose: 1mg/kg).</td>
+                        </tr>
+                    </table>    
+                <input type="button" id="btnMed18" value=" Lidocaína 2% (20mg/mL) ">  
+                    <table style="display: none">
+                        <tr>
+                            <td>1 a 2mg/kg:</td>
+                            <td><div id="res60">0.0mg</div></td>
+                            <td>Administrar:</td>
+                            <td><div id="res61">0.0ml</div></td>
+                            <td colspan="3">em bolus lento sem diluir (dose: 1mg/kg).</td>
+                        </tr>
+                    </table>    
+                <input type="button" id="btnMed19" value=" Tiopental (Fr 500mg) ">  
+                    <table style="display: none">
+                        <tr>
+                            <td>2 a 5mg/kg:</td>
+                            <td><div id="res62">0.0mg</div></td>
+                            <td>Diluir 1 frasco em 20mL de SF e administrar:</td>
+                            <td><div id="res63">0.0ml</div></td>
+                            <td colspan="3">em bolus lento (dose: 2mg/kg).</td>
+                        </tr>
+                    </table>
+                <input type="button" id="btnMed20" value=" Flumazenil (0,1mg/mL) ">  
+                    <table style="display: none">               
+                        <tr>
+                            <td>0,01mg/kg:</td>
+                            <td><div id="res64">0.0mg</div></td>
+                            <td>Administrar:</td>
+                            <td><div id="res65">0.0ml</div></td>
+                            <td colspan="3">em bolus lento. Repetir a cada 1min (Dose máx acumulada: 1mg).</td>
+                        </tr>
+                    </table>
+                <input type="button" id="btnMed21" value=" Naloxone (0,4mg/mL) ">  
+                    <table style="display: none">               
+                        <tr>
+                            <td>0,1mg/kg:</td>
+                            <td><div id="res66">0.0mg</div></td>
+                            <td>Administrar:</td>
+                            <td><div id="res67">0.0ml</div></td>
+                            <td colspan="3">em bolus lento sem diluir. </td>
+                        </tr>
+                    </table>    
         </table>    
+        </div>
         <!--FIM TABELA 3 ###################################################################################################-->
         
         <!--INICIO TABELA 4 ################################################################################################-->
-        <h4><img onclick="abreTb4()" title="Expandir Tabela" src="https://i.pinimg.com/736x/34/30/72/343072b13bb3caee0c642c653a03f888.jpg">
-            Drogas para infusão contínua
-            <img onclick="fecharTb4()" title="Retrair Tabela" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMwAAADACAMAAAB/Pny7AAAAVFBMVEX///8AAAC9vb0/Pz/IyMguLi5XV1cyMjKNjY0HBweUlJTd3d3Dw8Pj4+MdHR329vZNTU3S0tKCgoLt7e03NzegoKATExNcXFxSUlIYGBhERERxcXGF/cjMAAABG0lEQVR4nO3Y226CQBiFUVrKwbOoeHz/92y1vTFMbwaTn5i1nmB/ITMoRQEAAAAAAAAAAAAAAAAAAAAASYvlZ7jl4hUlq7YumypcU9btamxLu559TMRs3Y5K2VTRBc+qzYiW6PFD2TWbbfT0oW1uTRu9PCXz3HQTOzC/qi4rZhe9O22X07Kvo2en1fuMmOUhenbaYZkR0x+jZ6cd+4yYefTq/8zFTFROTH+JXp12yTkzb3Wb7U/Rs9NOOe+Zt/oFUCya6N0pTeb/50neZzl32cM5evnQObelKKKnD+W3/DybyXzOuJuNeC53fTmZd+elzHldPln1t/pahrvWt370d7NHT/cVrntJCQAAAAAAAAAAAAAAAAAAAAB/vgGZthoLQaIweAAAAABJRU5ErkJggg=="></h4>
-        <table id="tb4">
-            <th id="rowTitulo" colspan="10"></th>
-            <tr>
-                <th>Midazolam (5mg/mL)</th>
-                <td>0,1 a 0,5mg/kg/h:</td>
-                <td rowspan="2"><div id="res68">0.0ml</div></td>
-                <td rowspan="2">Fentanil 2mcg/kg/h:</td>
-                <td rowspan="2"><div id="res69">0.0ml</div></td>
-                <td rowspan="2">+ SF:</td>
-                <td rowspan="2"><div id="res70">0.0ml</div></td>
-                <td rowspan="2">infundir a:</td>
-                <td rowspan="2"><div id="res71">0.0ml/h</div></td>
-                <td rowspan="2"><div id="res72">--</div></td>
-            </tr>
-            <tr>
-                <th>Fentanil (50mcg/mL)</th>
-                <td>1 a 5mcg/kg/h:</td>
-            </tr>
-            <tr>
-                <th>Cetamina (50mg/mL)</th>
-                <td>10 a 40mcg/kg/min</td>
-                <td>Cetamina:</td>
-                <td><div id="res73">0.0ml</div></td>
-                <td>+ SF:</td>
-                <td><div id="res74">0.0ml</div></td>
-                <td>infundir a:</td>
-                <td><div id="res75">0.0ml/h</div></td>
-                <td><div id="res76">--</div></td>
-                <td>Dose: 10mcg/kg/min</td>
-            </tr>
-            <tr>
-                <th>Atracúrio (10mg/mL)</th>
-                <td>0,3 a 0,7mg/kg/h:</td>
-                <td>Atracúrio:</td>
-                <td><div id="res77">0.0ml</div></td>
-                <td>+ SF:</td>
-                <td><div id="res78">0.0ml</div></td>
-                <td>infundir a:</td>
-                <td><div id="res79">0.0ml</div></td>
-                <td><div id="res80">--</div></td>
-                <td>Dose: 0,3mg/kg/h</td>
-            </tr>
-            <tr>
-                <th>Rocurônio (10mg/mL)</th>
-                <td>0,6 a 1,2mg/kg/h:</td>
-                <td>Rocurônio:</td>
-                <td><div id="res81">0.0ml</div></td>
-                <td>+ SF:</td>
-                <td><div id="res82">0.0ml</div></td>
-                <td>infundir a:</td>
-                <td><div id="res83">0.0ml/h</div></td>
-                <td><div id="res84">--</div></td>
-                <td>Dose: 0,6mg/kg/h</td>
-            </tr>
-            <tr>
-                <th>Tiopental (25mg/mL)</th>
-                <td>10 a 40mcg/kg/min:</td>
-                <td>Tiopental:</td>
-                <td><div id="res85">0.0ml</div></td>
-                <td>+ SF:</td>
-                <td><div id="res86">0.0ml</div></td>
-                <td>infundir a:</td>
-                <td><div id="res87">0.0ml/h</div></td>
-                <td><div id="res88">--</div></td>
-                <td>Dose: 10mcg/kg/min</td>
-            </tr>
-
-            <tr>
-                <th>Adrenalina (1mg/mL):</th>
-                <td><div id="res89">0.0ml</div></td>
-                <td>+</td>
-                <td>SF ou SG 5%:</td>
-                <td><div id="res90">0.0ml</div></td>
-                <td>infundir a:</td>
-                <td><div id="res91">0.0ml/h</div></td>
-                <td><div id="res92">--</div></td>
-                <td><div id="res93">--</div></td>
-                <td><div id="res94">--</div></td>
-            </tr>
-            <tr>
-                <th>Noradrenalina (1mg/mL):</th>
-                <td><div id="res95">0.0ml</div></td>
-                <td>+</td>
-                <td>SF ou SG 5%:</td>
-                <td><div id="res96">0.0ml</div></td>
-                <td>infundir a:</td>
-                <td><div id="res97">0.0ml/h</div></td>
-                <td><div id="res98">--</div></td>
-                <td><div id="res99">--</div></td>
-                <td><div id="res100">--</div></td>
-            </tr>
-            <tr>
-                <th>Dobutamina (250mg/20mL):</th>
-                <td><div id="res101">0.0ml</div></td>
-                <td>+</td>
-                <td>SF ou SG 5%:</td>
-                <td><div id="res102">0.0ml</div></td>
-                <td>infundir a:</td>
-                <td><div id="res103">0.0ml/h</div></td>
-                <td><div id="res104">--</div></td>
-                <td><div id="res105">--</div></td>
-                <td><div id="res106">--</div></td>
-            </tr>
-            <tr>
-                <th>Milrinone (1mg/mL):</th>
-                <td><div id="res107">0.0ml</div></td>
-                <td>+</td>
-                <td>SF ou SG 5%:</td>
-                <td><div id="res108">0.0ml</div></td>
-                <td>infundir a:</td>
-                <td><div id="res109">0.0ml/h</div></td>
-                <td><div id="res110">--</div></td>
-                <td><div id="res111">--</div></td>
-                <td><div id="res112">--</div></td>
-            </tr>
-            <tr>
-                <th>Nitroprussiato (25mg/mL):</th>
-                <td><div id="res113">0.0ml</div></td>
-                <td>+</td>
-                <td>SG 5%:</td>
-                <td><div id="res114">0.0ml</div></td>
-                <td>infundir a:</td>
-                <td><div id="res115">0.0ml/h</div></td>
-                <td><div id="res116">--</div></td>
-                <td><div id="res117">--</div></td>
-                <td><div id="res118">--</div></td>
-            </tr>
-            <tr>
-                <th>Vasopressina (20 UI/mL):</th>
-                <td><div id="res119">0.0ml</div></td>
-                <td>+</td>
-                <td>SF ou SG 5%:</td>
-                <td><div id="res120">0.0ml</div></td>
-                <td>infundir a:</td>
-                <td><div id="res121">0.0ml/h</div></td>
-                <td><div id="res122">--</div></td>
-                <td><div id="res123">--</div></td>
-                <td><div id="res124">--</div></td>
-            </tr>
-            <tr>
-                <th>Terbutalina (0,5mg/mL):</th>
-                <td><div id="res125">0.0ml</div></td>
-                <td>+</td>
-                <td>SF ou SG 5%:</td>
-                <td><div id="res126">0.0ml</div></td>
-                <td>infundir a:</td>
-                <td><div id="res127">0.0ml/h</div></td>
-                <td><div id="res128">--</div></td>
-                <td><div id="res129">--</div></td>
-                <td><div id="res130">--</div></td>
-            </tr>
-        </table>       
+        <h4>Drogas para infusão contínua</h4>
+            <div id="btnsAnticonvulsivantes"> 
+                <input type="button" id="btnMed22" value=" Midazolam (5mg/mL) ">  
+                    <table style="display: none">  
+                        <tr>
+                            <td>0,1 a 0,5mg/kg/h:</td>
+                            <td rowspan="2"><div id="res68">0.0ml</div></td>
+                            <td rowspan="2">Fentanil 2mcg/kg/h:</td>
+                            <td rowspan="2"><div id="res69">0.0ml</div></td>
+                            <td rowspan="2">+ SF:</td>
+                            <td rowspan="2"><div id="res70">0.0ml</div></td>
+                            <td rowspan="2">infundir a:</td>
+                            <td rowspan="2"><div id="res71">0.0ml/h</div></td>
+                            <td rowspan="2"><div id="res72">--</div></td>
+                        </tr>
+                        <tr>
+                            <td>1 a 5mcg/kg/h:</td>
+                        </tr>
+                    </table>
+                <input type="button" id="btnMed23" value=" Cetamina (50mg/mL) ">  
+                    <table style="display: none">        
+                        <tr>
+                            <td>10 a 40mcg/kg/min</td>
+                            <td>Cetamina:</td>
+                            <td><div id="res73">0.0ml</div></td>
+                            <td>+ SF:</td>
+                            <td><div id="res74">0.0ml</div></td>
+                            <td>infundir a:</td>
+                            <td><div id="res75">0.0ml/h</div></td>
+                            <td><div id="res76">--</div></td>
+                            <td>Dose: 10mcg/kg/min</td>
+                        </tr>
+                    </table>
+                <input type="button" id="btnMed24" value=" Atracúrio (10mg/mL) ">  
+                    <table style="display: none">        
+                        <tr>
+                            <td>0,3 a 0,7mg/kg/h:</td>
+                            <td>Atracúrio:</td>
+                            <td><div id="res77">0.0ml</div></td>
+                            <td>+ SF:</td>
+                            <td><div id="res78">0.0ml</div></td>
+                            <td>infundir a:</td>
+                            <td><div id="res79">0.0ml</div></td>
+                            <td><div id="res80">--</div></td>
+                            <td>Dose: 0,3mg/kg/h</td>
+                        </tr>
+                    </table>
+                <input type="button" id="btnMed25" value=" Rocurônio (10mg/mL) ">  
+                    <table style="display: none">        
+                        <tr>
+                            <td>0,6 a 1,2mg/kg/h:</td>
+                            <td>Rocurônio:</td>
+                            <td><div id="res81">0.0ml</div></td>
+                            <td>+ SF:</td>
+                            <td><div id="res82">0.0ml</div></td>
+                            <td>infundir a:</td>
+                            <td><div id="res83">0.0ml/h</div></td>
+                            <td><div id="res84">--</div></td>
+                            <td>Dose: 0,6mg/kg/h</td>
+                        </tr>
+                    </table>
+                <input type="button" id="btnMed26" value=" Tiopental (25mg/mL) ">  
+                    <table style="display: none">        
+                        <tr>
+                            <td>10 a 40mcg/kg/min:</td>
+                            <td>Tiopental:</td>
+                            <td><div id="res85">0.0ml</div></td>
+                            <td>+ SF:</td>
+                            <td><div id="res86">0.0ml</div></td>
+                            <td>infundir a:</td>
+                            <td><div id="res87">0.0ml/h</div></td>
+                            <td><div id="res88">--</div></td>
+                            <td>Dose: 10mcg/kg/min</td>
+                        </tr>
+                    </table>    
+                <input type="button" id="btnMed27" value=" Adrenalina (1mg/mL): ">  
+                    <table style="display: none">
+                        <tr>
+                            <td><div id="res89">0.0ml</div></td>
+                            <td>+</td>
+                            <td>SF ou SG 5%:</td>
+                            <td><div id="res90">0.0ml</div></td>
+                            <td>infundir a:</td>
+                            <td><div id="res91">0.0ml/h</div></td>
+                            <td><div id="res92">--</div></td>
+                            <td><div id="res93">--</div></td>
+                            <td><div id="res94">--</div></td>
+                        </tr>
+                    </table> 
+                <input type="button" id="btnMed28" value=" Noradrenalina (1mg/mL):  ">  
+                    <table style="display: none">          
+                        <tr>
+                            <td><div id="res95">0.0ml</div></td>
+                            <td>+</td>
+                            <td>SF ou SG 5%:</td>
+                            <td><div id="res96">0.0ml</div></td>
+                            <td>infundir a:</td>
+                            <td><div id="res97">0.0ml/h</div></td>
+                            <td><div id="res98">--</div></td>
+                            <td><div id="res99">--</div></td>
+                            <td><div id="res100">--</div></td>
+                        </tr>
+                    </table>
+                <input type="button" id="btnMed29" value=" Dobutamina (250mg/20mL):  ">  
+                    <table style="display: none">          
+                        <tr>
+                            <td><div id="res101">0.0ml</div></td>
+                            <td>+</td>
+                            <td>SF ou SG 5%:</td>
+                            <td><div id="res102">0.0ml</div></td>
+                            <td>infundir a:</td>
+                            <td><div id="res103">0.0ml/h</div></td>
+                            <td><div id="res104">--</div></td>
+                            <td><div id="res105">--</div></td>
+                            <td><div id="res106">--</div></td>
+                        </tr>
+                    </table>
+                <input type="button" id="btnMed30" value=" Milrinone (1mg/mL):  ">  
+                    <table style="display: none">                  
+                        <tr>
+                            <td><div id="res107">0.0ml</div></td>
+                            <td>+</td>
+                            <td>SF ou SG 5%:</td>
+                            <td><div id="res108">0.0ml</div></td>
+                            <td>infundir a:</td>
+                            <td><div id="res109">0.0ml/h</div></td>
+                            <td><div id="res110">--</div></td>
+                            <td><div id="res111">--</div></td>
+                            <td><div id="res112">--</div></td>
+                        </tr>
+                    </table> 
+                <input type="button" id="btnMed31" value=" Nitroprussiato (25mg/mL):  ">  
+                    <table style="display: none">                          
+                        <tr>
+                            <td><div id="res113">0.0ml</div></td>
+                            <td>+</td>
+                            <td>SG 5%:</td>
+                            <td><div id="res114">0.0ml</div></td>
+                            <td>infundir a:</td>
+                            <td><div id="res115">0.0ml/h</div></td>
+                            <td><div id="res116">--</div></td>
+                            <td><div id="res117">--</div></td>
+                            <td><div id="res118">--</div></td>
+                        </tr>
+                    </table>
+                <input type="button" id="btnMed32" value=" Vasopressina (20 UI/mL):  ">  
+                    <table style="display: none">                                    
+                        <tr>
+                            <td><div id="res119">0.0ml</div></td>
+                            <td>+</td>
+                            <td>SF ou SG 5%:</td>
+                            <td><div id="res120">0.0ml</div></td>
+                            <td>infundir a:</td>
+                            <td><div id="res121">0.0ml/h</div></td>
+                            <td><div id="res122">--</div></td>
+                            <td><div id="res123">--</div></td>
+                            <td><div id="res124">--</div></td>
+                        </tr>
+                    </table>
+                <input type="button" id="btnMed33" value=" Terbutalina (0,5mg/mL):  ">  
+                    <table style="display: none">                                                
+                        <tr>
+                            <td><div id="res125">0.0ml</div></td>
+                            <td>+</td>
+                            <td>SF ou SG 5%:</td>
+                            <td><div id="res126">0.0ml</div></td>
+                            <td>infundir a:</td>
+                            <td><div id="res127">0.0ml/h</div></td>
+                            <td><div id="res128">--</div></td>
+                            <td><div id="res129">--</div></td>
+                            <td><div id="res130">--</div></td>
+                        </tr>
+                    </table>    
+            </div>       
         <!--FIM TABELA 4 ###################################################################################################-->
         
         <!--INICIO TABELA 5 ################################################################################################-->
-        <h4><img onclick="abreTb5()" title="Expandir Tabela" src="https://i.pinimg.com/736x/34/30/72/343072b13bb3caee0c642c653a03f888.jpg">
-            Dispositivos 
-            <img onclick="fecharTb5()" title="Retrair Tabela" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMwAAADACAMAAAB/Pny7AAAAVFBMVEX///8AAAC9vb0/Pz/IyMguLi5XV1cyMjKNjY0HBweUlJTd3d3Dw8Pj4+MdHR329vZNTU3S0tKCgoLt7e03NzegoKATExNcXFxSUlIYGBhERERxcXGF/cjMAAABG0lEQVR4nO3Y226CQBiFUVrKwbOoeHz/92y1vTFMbwaTn5i1nmB/ITMoRQEAAAAAAAAAAAAAAAAAAAAASYvlZ7jl4hUlq7YumypcU9btamxLu559TMRs3Y5K2VTRBc+qzYiW6PFD2TWbbfT0oW1uTRu9PCXz3HQTOzC/qi4rZhe9O22X07Kvo2en1fuMmOUhenbaYZkR0x+jZ6cd+4yYefTq/8zFTFROTH+JXp12yTkzb3Wb7U/Rs9NOOe+Zt/oFUCya6N0pTeb/50neZzl32cM5evnQObelKKKnD+W3/DybyXzOuJuNeC53fTmZd+elzHldPln1t/pahrvWt370d7NHT/cVrntJCQAAAAAAAAAAAAAAAAAAAAB/vgGZthoLQaIweAAAAABJRU5ErkJggg=="></h4>
-        <table id="tb5">
-            <th id="rowTitulo" colspan="12"></th>
-                <tr>
-                    <th>Ambu</th>
-                    <th>Lâmina laringo</th>
-                    <th colspan="2">Cânula traqueal</th>
-                    <th>Fixação</th>
-                    <th>Dreno de tórax</th>
-                    <th>S. aspiração</th>
-                    <th>SNG</th>
-                    <th>S. urinária</th>
-                    <th colspan="2">Intra-óssea</th>
-                </tr>
-                <tr>
-                    <td>Lactante</td>
-                    <td>Reta 0-1</td>
-                    <td>3-3,5 sem cuff</td>
-                    <td>3 com cuff</td>
-                    <td>9-9,5cm</td>
-                    <td>10F</td>
-                    <td>10F</td>
-                    
-                    <td>6-8F</td>
-                    <td>5-8F</td>
-                    <td>5F</td>
-                    <td colspan="2">18-15ga</td>
-                </tr>
-                <tr>
-                    <th colspan="2">Pás de desfibralação</th>
-                    <th colspan="5">Carga para desfibrilação</th>
-                    <th colspan="4">Carga para cardioversão</th>
-                </tr>
-                <tr>
-                    <td>Pás de lactante < 1ano</td>
-                    <td>1° Choque:</td>
-                    <td>0 J</td>
-                    <td>2° Choque:</td>
-                    <td>0 J</td>
-                    <td>Demais:</td>
-                    <td>4-10 j/kg (máx 200J)</td>
-                    <td>1° Carga:</td>
-                    <td>0 J</td>
-                    <td>2° Carga:</td>
-                    <td>0 J</td>
-                    
-                </tr>
-
-            
+        <h4>Dispositivos </h4>
+            <div id="btnsAnticonvulsivantes"> 
+                <input type="button" id="btnMed34" value=" Ambu ">  
+                    <table style="display: none">                  
+                            <td>Lactante</td>
+                    </table>
+                <input type="button" id="btnMed35" value=" Lâmina laringo ">  
+                    <table style="display: none">                  
+                        <td>Reta 0-1</td>
+                    </table>
+                <input type="button" id="btnMed36" value=" Cânula traqueal ">  
+                    <table style="display: none">
+                        <td>3-3,5 sem cuff</td>
+                        <td>3 com cuff</td>
+                    </table>                          
+                <input type="button" id="btnMed37" value=" Fixação ">  
+                    <table style="display: none">
+                        <td>9-9,5cm</td>    
+                    </table>
+                <input type="button" id="btnMed38" value=" Dreno de tórax ">  
+                    <table style="display: none">
+                        <td>10F</td>
+                    </table>
+                <input type="button" id="btnMed39" value=" S. aspiração ">  
+                    <table style="display: none">
+                        <td>6-8F</td>
+                    </table>    
+                <input type="button" id="btnMed40" value=" SNG ">  
+                    <table style="display: none">
+                        <td>5-8F</td>
+                    </table>
+                <input type="button" id="btnMed41" value=" S. urinária ">  
+                    <table style="display: none">
+                        <td>5F</td>
+                    </table>
+                <input type="button" id="btnMed42" value=" Intra-óssea ">  
+                    <table style="display: none">
+                        <td>18-15ga</td>
+                    </table>
+                <input type="button" id="btnMed43" value=" Pás de desfibralação ">  
+                    <table style="display: none">
+                        <td>Pás de lactante < 1ano</td>
+                    </table>
+                <input type="button" id="btnMed44" value=" Carga para desfibrilação ">  
+                    <table style="display: none">
+                        <tr>
+                            <td>1° Choque:</td> 
+                            <td>0 J</td>
+                            <td>2° Choque:</td>
+                            <td>0 J</td>
+                            <td>Demais:</td>
+                            <td>4-10 j/kg (máx 200J)</td>
+                        </tr>
+                    </table>
+                <input type="button" id="btnMed45" value=" Carga para cardioversão ">  
+                    <table style="display: none">
+                        </tr>
+                            <td>1° Carga:</td>
+                            <td>0 J</td>
+                            <td>2° Carga:</td>
+                            <td>0 J</td>
+                        </tr>
         </table>    
-        <!--FIM TABELA 5 ###################################################################################################-->
-        
-    <footer>
+        <!--FIM TABELA 5 ###################################################################################################-->    
+    <footer>        
         <h5>Versão 1.0. - 2024 &copy; Todos direitos reservados.</h5>
     </footer>
     </div>

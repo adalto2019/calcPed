@@ -17,11 +17,9 @@ body{background-image: url();
     background-size: cover; /*img se adequando a tela*/
     display: flex;
     justify-content: center;
-    align-items: center;
-    margin: 10px;}
+    align-items: center;}
     
-/*Botões ------------------------------------------------------------------*/
-
+/*BOTÕES ------------------------------------------------------------------*/
 #divBtn{margin: 8%;}
 #btn1, #btn2, #btn3 {padding: 15px;
     margin: 5px;
@@ -30,13 +28,52 @@ body{background-image: url();
     color: rgb(99, 11, 11);}
 
 
+#btnsParadaCardio, #btnsAnticonvulsivantes, #btnsAdenosina, #btnsAmiodaroma, #btnsSulfato, #btnsBicarbonato, #btnsGluconato, #btnsGlicose,
+#btnsDiazepam, #btnsFenitoina, #btnsFenobar
+{display: block; text-align: center;} 
+
+#btnMed1, #btnMed2, #btnMed3, #btnMed4, #btnMed5, #btnMed6, #btnMed7, #btnMed8 , #btnMed9, #btnMed10, 
+#btnMed11, #btnMed12, #btnMed13, #btnMed14, #btnMed15, #btnMed16, #btnMed17, #btnMed18, #btnMed19, #btnMed20, 
+#btnMed21, #btnMed22, #btnMed23, #btnMed24, #btnMed25, #btnMed26, #btnMed27, #btnMed28, #btnMed29, #btnMed30,
+#btnMed31, #btnMed32, #btnMed33, #btnMed34, #btnMed35, #btnMed36, #btnMed37, #btnMed38, #btnMed39, #btnMed40,
+#btnMed41, #btnMed42, #btnMed43, #btnMed44, #btnMed45
+    {margin: 8px;
+    border: none; 
+    border-radius: 10px; 
+    width: 170px;
+    height: 25px;
+    background-color: wheat;}
+
+/*TABELAS ------------------------------------------------------------------*/
+#tbAdrenalina, #tbAtropina, #tbAdenosina, #tbAmiodaroma, #tbSulfato, #tbBicarbonato, #tbGluconato, #tbGlicose
+{background-image: url();
+    background-size: cover; /*img se adequando a tela*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+    background-color: rgb(109, 64, 64);
+    color: wheat;}
+
+#tbDiazepam, #tbFenitoina, #tbFenobar
+    {background-image: url();
+    background-size: cover; /*img se adequando a tela*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+    background-color: rgb(109, 64, 64);
+    color: wheat;
+    font-size: 0.7rem;}
+    
+
  /*Corpo do app-------------------------------------------------------------*/   
 .link{display: flex;
     flex-direction: column;
     align-items: center;
     background-color: var(--cor-background); /*chamando as variáveis*/
     width: 400px;
-    border-radius: 20px;}
+    margin: 1px 0px;}
 
 .link img{width: 12px; /*Img dos icones*/
     height: 12px;
@@ -52,10 +89,12 @@ body{background-image: url();
     color: var(--cor-txt);
     font-family: var(--fonte);}
 
-.link h4{background-color: rgb(236, 214, 214); 
-    color: rgb(99, 11, 11); 
-    border-radius: 10px; 
-    margin: 5px 0px;}
+.link h4{background-color: rgb(99, 11, 11);
+    color: rgb(244, 245, 247);  
+    width: 400px;
+    text-align: center;
+    margin: 8px 0px;
+}
 
 .link fieldset{color: white;  text-align: center;}
 #peso{margin: 5px;
@@ -103,9 +142,7 @@ body{background-image: url();
     border-style:  groove;
     margin: auto; 
 }   
-              
-.link h5{margin: 15px; color: var(--cor-txt)}   
-
+            
 .link a{background-color: var(--cor-botões);
     color: var(--cor-background);
     text-align: center;
@@ -114,8 +151,12 @@ body{background-image: url();
     border-radius: 40px;
     width: 80%;
     padding: 20px;}
-
-.link footer{margin: 20px 0px;}
+    
+.link footer{margin: 20px 0px;
+    color: gray;
+    height: 60px;
+    padding: 50px 0px;
+    }
 
 
 

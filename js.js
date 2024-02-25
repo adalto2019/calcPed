@@ -706,50 +706,103 @@ function voltaCorBtn3(){var btn = document.getElementById('btn3'); btn.style.col
 
 
 //INICIO CONTRAIR E EXPANDIR TABELAS ****************************************
-function abreTb1(){
-    var tabela = window.document.getElementById("tb1")
-    tabela.style.display = 'block'
-}
-function fecharTb1(){
-    var tabela = window.document.getElementById("tb1")
-    tabela.style.display = 'none'
+function exibirAdrenalina(){
+    var ex = document.getElementById('tbAdrenalina')
+    ex.style.display = 'block'
+    var txt = document.getElementById('btnMed1')
+    txt.style.color = 'wheat'
+    txt.style.backgroundColor = 'rgb(109, 64, 64)'
+    txt.style.border = 'solid'}
+    
+function exibirAtropina(){
+    var ex = document.getElementById('tbAtropina')
+    ex.style.display = 'block'
+    var txt = document.getElementById('btnMed2')
+    txt.style.backgroundColor = 'rgb(109, 64, 64)'
+    txt.style.color = 'wheat'
+    txt.style.border = 'solid'}
+
+function exibirAdenosina(){
+    var ex = document.getElementById('tbAdenosina')
+    ex.style.display = 'block'
+    var txt = document.getElementById('btnMed3')
+    txt.style.backgroundColor = 'rgb(109, 64, 64)'
+    txt.style.color = 'wheat'
+    txt.style.border = 'solid'}
+
+function exibirAmiodaroma(){
+    var ex = document.getElementById('tbAmiodaroma')
+    ex.style.display = 'block'
+    var txt = document.getElementById('btnMed4')
+    txt.style.backgroundColor = 'rgb(109, 64, 64)'
+    txt.style.color = 'wheat'
+    txt.style.border = 'solid'}
+
+function exibirSulfato(){
+    var ex = document.getElementById('tbSulfato')
+    ex.style.display = 'block'
+    var txt = document.getElementById('btnMed5')
+    txt.style.backgroundColor = 'rgb(109, 64, 64)'
+    txt.style.color = 'wheat'
+    txt.style.border = 'solid'}    
+
+function exibirBicarbonato(){
+    var ex = document.getElementById('tbBicarbonato')
+    ex.style.display = 'block'
+    var txt = document.getElementById('btnMed6')
+    txt.style.backgroundColor = 'rgb(109, 64, 64)'
+    txt.style.color = 'wheat'
+    txt.style.border = 'solid'}    
+
+function exibirGluconato(){
+    var ex = document.getElementById('tbGluconato')
+    ex.style.display = 'block'
+    var txt = document.getElementById('btnMed7')
+    txt.style.backgroundColor = 'rgb(109, 64, 64)'
+    txt.style.color = 'wheat'
+    txt.style.border = 'solid'}    
+
+function exibirGlicose(){
+    var ex = document.getElementById('tbGlicose')
+    ex.style.display = 'block'
+    var txt = document.getElementById('btnMed8')
+    txt.style.backgroundColor = 'rgb(109, 64, 64)'
+    txt.style.color = 'wheat'
+    txt.style.border = 'solid'}    
+
+//INICIO DADOS TABELA #2
+function exibirDiazepam(){
+    var ex = document.getElementById('tbDiazepam')
+    ex.style.display = 'block'
+    var txt = document.getElementById('btnMed9')
+    txt.style.backgroundColor = 'rgb(109, 64, 64)'
+    txt.style.color = 'wheat'
+    txt.style.border = 'solid'}    
+
+function exibirFenitoina(){
+    var ex = document.getElementById('tbFenitoina')
+    ex.style.display = 'block'
+    var txt = document.getElementById('btnMed10')
+    txt.style.backgroundColor = 'rgb(109, 64, 64)'
+    txt.style.color = 'wheat'
+    txt.style.border = 'solid'}    
+
+function exibirFenobar(){
+    var ex = document.getElementById('tbFenobar')
+    ex.style.display = 'block'
+    var txt = document.getElementById('btnMed11')
+    txt.style.backgroundColor = 'rgb(109, 64, 64)'
+    txt.style.color = 'wheat'
+    txt.style.border = 'solid'}    
+        
+
+
+function fechaModal(){
+    var ex = document.getElementById()
+    ex.style.display = 'none'
 }
 
-function abreTb2(){
-    var tabela = window.document.getElementById("tb2")
-    tabela.style.display = 'block'
-}
-function fecharTb2(){
-    var tabela = window.document.getElementById("tb2")
-    tabela.style.display = 'none'
-}
 
-function abreTb3(){
-    var tabela = window.document.getElementById("tb3")
-    tabela.style.display = 'block'
-}
-function fecharTb3(){
-    var tabela = window.document.getElementById("tb3")
-    tabela.style.display = 'none'
-}
-
-function abreTb4(){
-    var tabela = window.document.getElementById("tb4")
-    tabela.style.display = 'block'
-}
-function fecharTb4(){
-    var tabela = window.document.getElementById("tb4")
-    tabela.style.display = 'none'
-}
-
-function abreTb5(){
-    var tabela = window.document.getElementById("tb5")
-    tabela.style.display = 'block'
-}
-function fecharTb5(){
-    var tabela = window.document.getElementById("tb5")
-    tabela.style.display = 'none'
-}
 //FIM CONTRAIR E EXPANDIR TABELAS ****************************************
 
 
