@@ -686,11 +686,6 @@ function limpar(){
     location.reload();
 }
 
-function imprimir(){
-    alert("Ops.. Função Imprimir ainda em desenvolvimento!")
-    
-}
-
 //Funções que mudam a cor dos botões ao passar o mouse sobre ele, e que volta ao estado anterior ao retirar o mouse sobre ele.
 function mudaCorBtn1(){
     var btn = document.getElementById('btn1'); btn.style.color = 'white', btn.style.backgroundColor = 'rgb(146, 130, 102)' }
@@ -711,14 +706,14 @@ function exibirAdrenalina(){
     ex.style.display = 'block'
     var txt = document.getElementById('btnMed1')
     txt.style.color = 'wheat'
-    txt.style.backgroundColor = 'rgb(109, 64, 64)'
+    txt.style.backgroundColor = 'rgb(152, 14, 14)'
     txt.style.border = 'solid'}
     
 function exibirAtropina(){
     var ex = document.getElementById('tbAtropina')
     ex.style.display = 'block'
     var txt = document.getElementById('btnMed2')
-    txt.style.backgroundColor = 'rgb(109, 64, 64)'
+    txt.style.backgroundColor = 'rgb(152, 14, 14)'
     txt.style.color = 'wheat'
     txt.style.border = 'solid'}
 
@@ -726,7 +721,7 @@ function exibirAdenosina(){
     var ex = document.getElementById('tbAdenosina')
     ex.style.display = 'block'
     var txt = document.getElementById('btnMed3')
-    txt.style.backgroundColor = 'rgb(109, 64, 64)'
+    txt.style.backgroundColor = 'rgb(152, 14, 14)'
     txt.style.color = 'wheat'
     txt.style.border = 'solid'}
 
@@ -734,7 +729,7 @@ function exibirAmiodaroma(){
     var ex = document.getElementById('tbAmiodaroma')
     ex.style.display = 'block'
     var txt = document.getElementById('btnMed4')
-    txt.style.backgroundColor = 'rgb(109, 64, 64)'
+    txt.style.backgroundColor = 'rgb(152, 14, 14)'
     txt.style.color = 'wheat'
     txt.style.border = 'solid'}
 
@@ -742,7 +737,7 @@ function exibirSulfato(){
     var ex = document.getElementById('tbSulfato')
     ex.style.display = 'block'
     var txt = document.getElementById('btnMed5')
-    txt.style.backgroundColor = 'rgb(109, 64, 64)'
+    txt.style.backgroundColor = 'rgb(152, 14, 14)'
     txt.style.color = 'wheat'
     txt.style.border = 'solid'}    
 
@@ -750,7 +745,7 @@ function exibirBicarbonato(){
     var ex = document.getElementById('tbBicarbonato')
     ex.style.display = 'block'
     var txt = document.getElementById('btnMed6')
-    txt.style.backgroundColor = 'rgb(109, 64, 64)'
+    txt.style.backgroundColor = 'rgb(152, 14, 14)'
     txt.style.color = 'wheat'
     txt.style.border = 'solid'}    
 
@@ -758,7 +753,7 @@ function exibirGluconato(){
     var ex = document.getElementById('tbGluconato')
     ex.style.display = 'block'
     var txt = document.getElementById('btnMed7')
-    txt.style.backgroundColor = 'rgb(109, 64, 64)'
+    txt.style.backgroundColor = 'rgb(152, 14, 14)'
     txt.style.color = 'wheat'
     txt.style.border = 'solid'}    
 
@@ -766,7 +761,7 @@ function exibirGlicose(){
     var ex = document.getElementById('tbGlicose')
     ex.style.display = 'block'
     var txt = document.getElementById('btnMed8')
-    txt.style.backgroundColor = 'rgb(109, 64, 64)'
+    txt.style.backgroundColor = 'rgb(152, 14, 14)'
     txt.style.color = 'wheat'
     txt.style.border = 'solid'}    
 
@@ -775,7 +770,7 @@ function exibirDiazepam(){
     var ex = document.getElementById('tbDiazepam')
     ex.style.display = 'block'
     var txt = document.getElementById('btnMed9')
-    txt.style.backgroundColor = 'rgb(109, 64, 64)'
+    txt.style.backgroundColor = 'rgb(152, 14, 14)'
     txt.style.color = 'wheat'
     txt.style.border = 'solid'}    
 
@@ -783,7 +778,7 @@ function exibirFenitoina(){
     var ex = document.getElementById('tbFenitoina')
     ex.style.display = 'block'
     var txt = document.getElementById('btnMed10')
-    txt.style.backgroundColor = 'rgb(109, 64, 64)'
+    txt.style.backgroundColor = 'rgb(152, 14, 14)'
     txt.style.color = 'wheat'
     txt.style.border = 'solid'}    
 
@@ -791,12 +786,91 @@ function exibirFenobar(){
     var ex = document.getElementById('tbFenobar')
     ex.style.display = 'block'
     var txt = document.getElementById('btnMed11')
-    txt.style.backgroundColor = 'rgb(109, 64, 64)'
+    txt.style.backgroundColor = 'rgb(152, 14, 14)'
     txt.style.color = 'wheat'
     txt.style.border = 'solid'}    
-        
 
+//INICIO DADOS TABELA #3
+function exibirMidazolam(){
+    var ex = document.getElementById('tbMidazolam')
+    ex.style.display = 'block'
+    var txt = document.getElementById('btnMed12')
+    txt.style.backgroundColor = 'rgb(152, 14, 14)'
+    txt.style.color = 'wheat'
+    txt.style.border = 'solid'}    
 
+function exibirFetanil(){
+    var ex = document.getElementById('tbFetanil')
+    ex.style.display = 'block'
+    var txt = document.getElementById('btnMed13')
+    txt.style.backgroundColor = 'rgb(152, 14, 14)'
+    txt.style.color = 'wheat'
+    txt.style.border = 'solid'}    
+
+function exibirMorfina(){
+    var ex = document.getElementById('tbMorfina')
+    ex.style.display = 'block'
+    var txt = document.getElementById('btnMed14')
+    txt.style.backgroundColor = 'rgb(152, 14, 14)'
+    txt.style.color = 'wheat'
+    txt.style.border = 'solid'}    
+
+function exibirDextrocetamina(){
+    var ex = document.getElementById('tbDextrocetamina')
+    ex.style.display = 'block'
+    var txt = document.getElementById('btnMed15')
+    txt.style.backgroundColor = 'rgb(152, 14, 14)'
+    txt.style.color = 'wheat'
+    txt.style.border = 'solid'}    
+
+function exibirAtracurio(){
+    var ex = document.getElementById('tbAtracurio')
+    ex.style.display = 'block'
+    var txt = document.getElementById('btnMed16')
+    txt.style.backgroundColor = 'rgb(152, 14, 14)'
+    txt.style.color = 'wheat'
+    txt.style.border = 'solid'}    
+
+function exibirRocuronio(){
+    var ex = document.getElementById('tbRocuronio')
+    ex.style.display = 'block'
+    var txt = document.getElementById('btnMed17')
+    txt.style.backgroundColor = 'rgb(152, 14, 14)'
+    txt.style.color = 'wheat'
+    txt.style.border = 'solid'}    
+
+function exibirLidocaina(){
+    var ex = document.getElementById('tbLidocaina')
+    ex.style.display = 'block'
+    var txt = document.getElementById('btnMed18')
+    txt.style.backgroundColor = 'rgb(152, 14, 14)'
+    txt.style.color = 'wheat'
+    txt.style.border = 'solid'}    
+
+function exibirTiopental(){
+    var ex = document.getElementById('tbTiopental')
+    ex.style.display = 'block'
+    var txt = document.getElementById('btnMed19')
+    txt.style.backgroundColor = 'rgb(152, 14, 14)'
+    txt.style.color = 'wheat'
+    txt.style.border = 'solid'}    
+
+function exibirFlumazenil(){
+    var ex = document.getElementById('tbFlumazenil')
+    ex.style.display = 'block'
+    var txt = document.getElementById('btnMed20')
+    txt.style.backgroundColor = 'rgb(152, 14, 14)'
+    txt.style.color = 'wheat'
+    txt.style.border = 'solid'}    
+
+function exibirNaloxone(){
+    var ex = document.getElementById('tbNaloxone')
+    ex.style.display = 'block'
+    var txt = document.getElementById('btnMed21')
+    txt.style.backgroundColor = 'rgb(152, 14, 14)'
+    txt.style.color = 'wheat'
+    txt.style.border = 'solid'}        
+    
 function fechaModal(){
     var ex = document.getElementById()
     ex.style.display = 'none'

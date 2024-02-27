@@ -14,13 +14,12 @@
             <fieldset>
              <legend>*Informe o Peso do Paciente:</legend>
              <!-- não permite auto-complete, e tamanho máximo 4 posições -->
-                <input id="peso" type="number" autocomplete="off" maxlength="4" placeholder=" ex. 0.0kg" title="Informe o peso do paciente. *Campo obrigatório."><br/>
+                <input id="peso" type="number" autocomplete="off" maxlength="4" placeholder=" Ex. 0.0kg" title="Informe o peso do paciente. *Campo obrigatório."><br/>
             </fieldset>
         </form>
         <div id="divBtn">
             <input id="btn1" type="reset"  value="Limpar" onclick="limpar()" onmouseenter="mudaCorBtn1('btn2')" onmouseout="voltaCorBtn1()" title=" Limpar a página">
             <input id="btn2" type="button" value="Calcular" onclick="calc()" onmouseenter="mudaCorBtn2()" onmouseout="voltaCorBtn2()" title=" Calcula a dosagem de medicação baseada no peso informado do paciente">
-            <input id="btn3" type="submit" value="Imprimir" onclick="imprimir()" onmouseenter="mudaCorBtn3()" onmouseout="voltaCorBtn3()" title=" Imprimir relatório">
         </div>
          <!-- Adrenalina ###################################################################################################-->
          <h4>Parada cardiorrespiratória/emergências</h4> 
@@ -217,8 +216,8 @@
         <!--INICIO TABELA 3 - Midazolam (5mg/mL) ################################################################################################-->
         <h4>Drogas para sedação / analgesia</h4>
         <div id="btnsAnticonvulsivantes"> 
-                <input type="button" id="btnMed12" value=" Midazolam (5mg/mL) ">  
-                    <table style="display: none">
+                <input type="button" onclick="exibirMidazolam()" id="btnMed12" value=" Midazolam (5mg/mL) ">  
+                    <table id="tbMidazolam" style="display: none">
                         <tr>
                             <td>0,1 a 0,5mg/kg:</td>
                             <td><div id="res45">0.0mg</div></td>
@@ -227,8 +226,8 @@
                             <td colspan="3">em bolus lento sem diluir. Repetir até 2x a cada 5 min.</td>
                         </tr>
                     </table>
-                <input type="button" id="btnMed13" value=" Fentanil (50mcg/mL) ">  
-                    <table style="display: none">
+                <input type="button" onclick="exibirFetanil()" id="btnMed13" value=" Fentanil (50mcg/mL) ">  
+                    <table id="tbFetanil" style="display: none">
                         <tr>
                             <td>1 a 5mcg/kg:</td>
                             <td><div id="res47">0.0mcg</div></td>
@@ -239,8 +238,8 @@
                             <td>de SF e infundir em bolus lento (dose: 2mcg/kg).</td>
                         </tr>
                     </table>
-                <input type="button" id="btnMed14" value=" Morfina (1mg/mL) ">  
-                    <table style="display: none">
+                <input type="button" onclick="exibirMorfina()" id="btnMed14" value=" Morfina (1mg/mL) ">  
+                    <table id="tbMorfina" style="display: none">
                         <tr>
                             <td>0,05 a 0,1mg/kg:</td>
                             <td><div id="res50">0.0mg</div></td>
@@ -251,8 +250,8 @@
                             <td>de SF e infundir em bolus lento (dose: 0,1mg/kg).</td>
                         </tr>
                     </table>    
-                <input type="button" id="btnMed15" value=" Dextrocetamina (50mg/mL) ">  
-                    <table style="display: none">
+                <input type="button" onclick="exibirDextrocetamina()" id="btnMed15" value=" Dextrocetamina (50mg/mL) ">  
+                    <table id="tbDextrocetamina" style="display: none">
                         <tr>
                             <td>0,5 a 4mg/kg:</td>
                             <td><div id="res53">0.0mg</div></td>
@@ -263,8 +262,8 @@
                             <td>de SF e infundir em bolus lento (dose: 2mg/kg).</td>
                         </tr>
                     </table>
-                <input type="button" id="btnMed16" value=" Atracúrio (10mg/mL) ">  
-                    <table style="display: none">
+                <input type="button" onclick="exibirAtracurio()" id="btnMed16" value=" Atracúrio (10mg/mL) ">  
+                    <table id="tbAtracurio" style="display: none">
                         <tr>
                             <td>0,3 a 0,7mg/kg:</td>
                             <td><div id="res56">0.0mg</div></td>
@@ -273,8 +272,8 @@
                             <td colspan="3">em bolus lento sem diluir (dose: 0,5mg/kg).</td>
                         </tr>
                     </table>
-                <input type="button" id="btnMed17" value=" Rocurônio (10mg/mL) ">  
-                    <table style="display: none">
+                <input type="button" onclick="exibirRocuronio()" id="btnMed17" value=" Rocurônio (10mg/mL) ">  
+                    <table id="tbRocuronio" style="display: none">
                         <tr>
                             <td>0,6 a 1,2mg/kg:</td>
                             <td><div id="res58">0.0mg</div></td>
@@ -283,8 +282,8 @@
                             <td colspan="3">em bolus lento sem diluir (dose: 1mg/kg).</td>
                         </tr>
                     </table>    
-                <input type="button" id="btnMed18" value=" Lidocaína 2% (20mg/mL) ">  
-                    <table style="display: none">
+                <input type="button" onclick="exibirLidocaina()" id="btnMed18" value=" Lidocaína 2% (20mg/mL) ">  
+                    <table id="tbLidocaina" style="display: none">
                         <tr>
                             <td>1 a 2mg/kg:</td>
                             <td><div id="res60">0.0mg</div></td>
@@ -293,8 +292,8 @@
                             <td colspan="3">em bolus lento sem diluir (dose: 1mg/kg).</td>
                         </tr>
                     </table>    
-                <input type="button" id="btnMed19" value=" Tiopental (Fr 500mg) ">  
-                    <table style="display: none">
+                <input type="button" onclick="exibirTiopental()" id="btnMed19" value=" Tiopental (Fr 500mg) ">  
+                    <table id="tbTiopental" style="display: none">
                         <tr>
                             <td>2 a 5mg/kg:</td>
                             <td><div id="res62">0.0mg</div></td>
@@ -303,8 +302,8 @@
                             <td colspan="3">em bolus lento (dose: 2mg/kg).</td>
                         </tr>
                     </table>
-                <input type="button" id="btnMed20" value=" Flumazenil (0,1mg/mL) ">  
-                    <table style="display: none">               
+                <input type="button" onclick="exibirFlumazenil()" id="btnMed20" value=" Flumazenil (0,1mg/mL) ">  
+                    <table id="tbFlumazenil" style="display: none">               
                         <tr>
                             <td>0,01mg/kg:</td>
                             <td><div id="res64">0.0mg</div></td>
@@ -313,8 +312,8 @@
                             <td colspan="3">em bolus lento. Repetir a cada 1min (Dose máx acumulada: 1mg).</td>
                         </tr>
                     </table>
-                <input type="button" id="btnMed21" value=" Naloxone (0,4mg/mL) ">  
-                    <table style="display: none">               
+                <input type="button" onclick="exibirNaloxone()" id="btnMed21" value=" Naloxone (0,4mg/mL) ">  
+                    <table id="tbNaloxone" style="display: none">               
                         <tr>
                             <td>0,1mg/kg:</td>
                             <td><div id="res66">0.0mg</div></td>
@@ -569,8 +568,9 @@
                         </tr>
         </table>    
         <!--FIM TABELA 5 ###################################################################################################-->    
-    <footer>        
-        <h5>Versão 1.0. - 2024 &copy; Todos direitos reservados.</h5>
+    <footer>
+        <a href="#">| Reportar um Problema</a>
+        <p>Versão 1.0. - 2024 &copy; Todos os Direitos Reservados.</p>
     </footer>
     </div>
     <script src="js.js"> </script>

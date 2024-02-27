@@ -9,8 +9,8 @@
 /*pré declaração de variáveis*/
 :root{
     --fonte: 'Caveat', arial;
-    --cor-background: rgb(158, 50, 50);
-    --cor-txt: rgb(249, 238, 233); 
+    --cor-background: white;
+    --cor-txt: rgb(239, 3, 3);
     --cor-hover: rgb(45, 59, 45);}
 
 body{background-image: url();
@@ -20,13 +20,16 @@ body{background-image: url();
     align-items: center;}
     
 /*BOTÕES ------------------------------------------------------------------*/
-#divBtn{margin: 8%;}
-#btn1, #btn2, #btn3 {padding: 15px;
+#divBtn{margin: 5%;}
+
+#btn1, #btn2{padding: 15px; /*BTNS CALCULAR e LIMPAR*/
     margin: 5px;
     border-radius: 10px;
     background-color: wheat;
-    color: rgb(99, 11, 11);}
-
+    color: rgb(99, 11, 11);
+    width: 100px;
+    border: none;
+    -webkit-box-shadow: 1px 1px 5px rgb(239, 3, 3);}
 
 #btnsParadaCardio, #btnsAnticonvulsivantes, #btnsAdenosina, #btnsAmiodaroma, #btnsSulfato, #btnsBicarbonato, #btnsGluconato, #btnsGlicose,
 #btnsDiazepam, #btnsFenitoina, #btnsFenobar
@@ -42,29 +45,31 @@ body{background-image: url();
     border-radius: 10px; 
     width: 170px;
     height: 25px;
-    background-color: wheat;}
+    background-color: wheat;
+    -webkit-box-shadow: 1px 1px 5px rgb(239, 3, 3);}
 
 /*TABELAS ------------------------------------------------------------------*/
-#tbAdrenalina, #tbAtropina, #tbAdenosina, #tbAmiodaroma, #tbSulfato, #tbBicarbonato, #tbGluconato, #tbGlicose
+#tbAdrenalina, #tbAtropina, #tbSulfato, #tbBicarbonato, #tbGluconato, #tbGlicose,
+#tbMidazolam, #tbFetanil, #tbMorfina, #tbDextrocetamina, #tbAtracurio, #tbRocuronio, #tbLidocaina, #tbTiopental, #tbFlumazenil, #tbNaloxone 
 {background-image: url();
     background-size: cover; /*img se adequando a tela*/
     display: flex;
     justify-content: center;
     align-items: center;
     margin: 10px;
-    background-color: rgb(109, 64, 64);
+    background-color: rgb(152, 14, 14);
     color: wheat;}
 
-#tbDiazepam, #tbFenitoina, #tbFenobar
+#tbAdenosina, #tbAmiodaroma, #tbDiazepam, #tbFenitoina, #tbFenobar
     {background-image: url();
     background-size: cover; /*img se adequando a tela*/
     display: flex;
     justify-content: center;
     align-items: center;
     margin: 10px;
-    background-color: rgb(109, 64, 64);
+    background-color: rgb(152, 14, 14);
     color: wheat;
-    font-size: 0.7rem;}
+    font-size: 0.65rem;}
     
 
  /*Corpo do app-------------------------------------------------------------*/   
@@ -73,7 +78,9 @@ body{background-image: url();
     align-items: center;
     background-color: var(--cor-background); /*chamando as variáveis*/
     width: 400px;
-    margin: 1px 0px;}
+    margin: 3px 0px;
+    border-radius: 12px;
+    -webkit-box-shadow: 0px 0px 10px rgb(99, 11, 11);}
 
 .link img{width: 12px; /*Img dos icones*/
     height: 12px;
@@ -81,29 +88,34 @@ body{background-image: url();
     margin: 0px 5px;}
 
 #logo{width: 40px; height: 40px; margin-top: 20px;
-    box-shadow: 0 0 20px rgb(42, 36, 33);
-    -webkit-box-shadow: 0 0 20px rgb(12, 7, 4);
+    box-shadow: 0 0 20px rgb(152, 14, 14);
+    -webkit-box-shadow: 5px 1px 8px rgb(239, 3, 3);
     }    
 
 .link h3{font-size: 3rem;
     color: var(--cor-txt);
     font-family: var(--fonte);}
 
-.link h4{background-color: rgb(99, 11, 11);
-    color: rgb(244, 245, 247);  
+.link h4{
+    color: black;  
     width: 400px;
     text-align: center;
     margin: 8px 0px;
+    padding: 3px 0px;
+    border: 1px solid black;
 }
 
-.link fieldset{color: white;  text-align: center;}
+.link p{margin-top: 30px;}
+
+.link fieldset{color: black;  text-align: center;}
+
 #peso{margin: 5px;
     width: 100px;
     height: 50px; 
     border-radius: 15px;
     text-align: center;
-    font-size: 18px;
-    background-color: wheat ;}
+    font-size: 15px;
+    background-color: wheat;}
 
 
 .link Form{color: aliceblue; 
@@ -143,23 +155,11 @@ body{background-image: url();
     margin: auto; 
 }   
             
-.link a{background-color: var(--cor-botões);
-    color: var(--cor-background);
-    text-align: center;
-    font-size: 1.3rem;
-    margin: 10px;
-    border-radius: 40px;
-    width: 80%;
-    padding: 20px;}
+.link a, p{color: black;
+    font-size: 0.8rem; 
+    color: white;
+    padding-left: 10px;}
     
-.link footer{margin: 20px 0px;
-    color: gray;
-    height: 60px;
-    padding: 50px 0px;
-    }
-
-
-
-
-
-
+.link footer{background-color: rgb(152, 14, 14);
+    padding: 12% 0%;
+    margin-top: 10%;}
