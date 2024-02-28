@@ -911,7 +911,7 @@ function exibirTiopental2(){
     var txt = document.getElementById('btnMed26')
     txt.style.backgroundColor = 'rgb(152, 14, 14)'
     txt.style.color = 'wheat'
-    txt.style.border = 'solid'} *//      
+    txt.style.border = 'solid'} */      
 
 /*function exibirAdrenalina2(){
     var ex = document.getElementById('tbAdrenalina2')
