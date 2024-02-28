@@ -32,7 +32,8 @@ body{background-image: url();
     -webkit-box-shadow: 1px 1px 5px rgb(239, 3, 3);}
 
 #btnsParadaCardio, #btnsAnticonvulsivantes, #btnsAdenosina, #btnsAmiodaroma, #btnsSulfato, #btnsBicarbonato, #btnsGluconato, #btnsGlicose,
-#btnsDiazepam, #btnsFenitoina, #btnsFenobar
+#btnsDiazepam, #btnsFenitoina, #btnsFenobar,
+#btnsMidazolam2, #btnsCetamina, #btnsAtracurio2, #btnsRocuronio2, #btnsTiopental2, #btnsAdrenalina2
 {display: block; text-align: center;} 
 
 #btnMed1, #btnMed2, #btnMed3, #btnMed4, #btnMed5, #btnMed6, #btnMed7, #btnMed8 , #btnMed9, #btnMed10, 
@@ -49,8 +50,8 @@ body{background-image: url();
     -webkit-box-shadow: 1px 1px 5px rgb(239, 3, 3);}
 
 /*TABELAS ------------------------------------------------------------------*/
-#tbAdrenalina, #tbAtropina, #tbSulfato, #tbBicarbonato, #tbGluconato, #tbGlicose,
-#tbMidazolam, #tbFetanil, #tbMorfina, #tbDextrocetamina, #tbAtracurio, #tbRocuronio, #tbLidocaina, #tbTiopental, #tbFlumazenil, #tbNaloxone 
+#tbAdrenalina, #tbAtropina, #tbBicarbonato, #tbGluconato, #tbGlicose,
+#tbMidazolam, #tbFetanil, #tbMorfina, #tbDextrocetamina, #tbAtracurio, #tbRocuronio, #tbLidocaina, #tbTiopental, #tbFlumazenil, #tbNaloxone
 {background-image: url();
     background-size: cover; /*img se adequando a tela*/
     display: flex;
@@ -60,7 +61,8 @@ body{background-image: url();
     background-color: rgb(152, 14, 14);
     color: wheat;}
 
-#tbAdenosina, #tbAmiodaroma, #tbDiazepam, #tbFenitoina, #tbFenobar
+#tbAdenosina, #tbSulfato, #tbAmiodaroma, #tbDiazepam, #tbFenitoina, #tbFenobar,
+#tbMidazolam2, #tbCetamina, #tbAtracurio2, #tbRocuronio2, #tbTiopental2, #tbAdrenalina2
     {background-image: url();
     background-size: cover; /*img se adequando a tela*/
     display: flex;

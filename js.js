@@ -365,7 +365,7 @@ function calc(){
         res68.innerHTML = Math.ceil((0.2*peso*24/5)).toFixed(1) + 'ml'  //Midazolam (5mg/mL) e Fentanil (50mcg/mL)
             res68.style.backgroundColor = 'black'
 
-        res69.innerHTML = Math.ceil((2*peso*24/50)).toFixed(1) + 'ml'
+        res69.innerHTML = Math.ceil((2*peso*24/50)).toFixed(1) + 'ml' 
             res69.style.backgroundColor = 'black'
             
         res70.innerHTML = 
@@ -407,18 +407,18 @@ function calc(){
         Math.round((0.2*peso*24/5))+Math.round((2*peso*24/50)) < 216 ? 216-Math.round((0.2*peso*24/5))-Math.round((2*peso*24/50)): 0)  == 24 ? '(Preparar 2x)' : '(Preparar 1.5x)'
             res72.style.backgroundColor = 'black'
         //_____________________________________________________________________________________________________________
-        res73.innerHTML = (((10*peso)*1.44)/50) < 1 ? 1 + 'ml' : Math.round((((10*peso)*1.44)/50)) + 'ml'
+        res73.innerHTML = (((10*peso)*1.44)/50) < 1 ? 1 + 'ml' : Math.ceil((((10*peso)*1.44)/50)) + 'ml' //Cetamina
             res73.style.backgroundColor = 'black'
         
-        res74.innerHTML = Math.round(((((10*peso)*1.44))/50) < 1 ? (24*50)/((10*peso)*1.44):
-        ((((10*peso)*1.44)/50) < 1 ? 1 : Math.round((((10*peso)*1.44)/50))) < 14 ? (24 - ((((10*peso)*1.44)/50) < 1 ? 1 : Math.round((((10*peso)*1.44)/50)))):
-        ((((10*peso)*1.44)/50) < 1 ? 1 : Math.round((((10*peso)*1.44)/50))) < 24 ? (48 - ((((10*peso)*1.44)/50) < 1 ? 1 : Math.round((((10*peso)*1.44)/50)))):
-        ((((10*peso)*1.44)/50) < 1 ? 1 : Math.round((((10*peso)*1.44)/50))) < 52 ? (72 - ((((10*peso)*1.44)/50) < 1 ? 1 : Math.round((((10*peso)*1.44)/50)))):
-        ((((10*peso)*1.44)/50) < 1 ? 1 : Math.round((((10*peso)*1.44)/50))) < 76 ? (96 - ((((10*peso)*1.44)/50) < 1 ? 1 : Math.round((((10*peso)*1.44)/50)))):
-        ((((10*peso)*1.44)/50) < 1 ? 1 : Math.round((((10*peso)*1.44)/50))) < 100 ? (120 - ((((10*peso)*1.44)/50) < 1 ? 1 : Math.round((((10*peso)*1.44)/50)))):
-        ((((10*peso)*1.44)/50) < 1 ? 1 : Math.round((((10*peso)*1.44)/50))) < 124 ? (144 - ((((10*peso)*1.44)/50) < 1 ? 1 : Math.round((((10*peso)*1.44)/50)))):
-        ((((10*peso)*1.44)/50) < 1 ? 1 : Math.round((((10*peso)*1.44)/50))) < 148 ? (168 - ((((10*peso)*1.44)/50) < 1 ? 1 : Math.round((((10*peso)*1.44)/50)))):
-        ((((10*peso)*1.44)/50) < 1 ? 1 : Math.round((((10*peso)*1.44)/50))) < 172 ? (192 - ((((10*peso)*1.44)/50) < 1 ? 1 : Math.round((((10*peso)*1.44)/50)))):0.5).toFixed(1) + 'ml'
+        res74.innerHTML = Math.ceil(((((10*peso)*1.44))/50) < 1 ? (24*50)/((10*peso)*1.44):
+        ((((10*peso)*1.44)/50) < 1 ? 1 : Math.ceil((((10*peso)*1.44)/50))) < 14 ? (24 - ((((10*peso)*1.44)/50) < 1 ? 1 : Math.ceil((((10*peso)*1.44)/50)))):
+        ((((10*peso)*1.44)/50) < 1 ? 1 : Math.ceil((((10*peso)*1.44)/50))) < 24 ? (48 - ((((10*peso)*1.44)/50) < 1 ? 1 : Math.ceil((((10*peso)*1.44)/50)))):
+        ((((10*peso)*1.44)/50) < 1 ? 1 : Math.ceil((((10*peso)*1.44)/50))) < 52 ? (72 - ((((10*peso)*1.44)/50) < 1 ? 1 : Math.ceil((((10*peso)*1.44)/50)))):
+        ((((10*peso)*1.44)/50) < 1 ? 1 : Math.ceil((((10*peso)*1.44)/50))) < 76 ? (96 - ((((10*peso)*1.44)/50) < 1 ? 1 : Math.ceil((((10*peso)*1.44)/50)))):
+        ((((10*peso)*1.44)/50) < 1 ? 1 : Math.ceil((((10*peso)*1.44)/50))) < 100 ? (120 - ((((10*peso)*1.44)/50) < 1 ? 1 : Math.ceil((((10*peso)*1.44)/50)))):
+        ((((10*peso)*1.44)/50) < 1 ? 1 : Math.ceil((((10*peso)*1.44)/50))) < 124 ? (144 - ((((10*peso)*1.44)/50) < 1 ? 1 : Math.ceil((((10*peso)*1.44)/50)))):
+        ((((10*peso)*1.44)/50) < 1 ? 1 : Math.ceil((((10*peso)*1.44)/50))) < 148 ? (168 - ((((10*peso)*1.44)/50) < 1 ? 1 : Math.ceil((((10*peso)*1.44)/50)))):
+        ((((10*peso)*1.44)/50) < 1 ? 1 : Math.ceil((((10*peso)*1.44)/50))) < 172 ? (192 - ((((10*peso)*1.44)/50) < 1 ? 1 : Math.ceil((((10*peso)*1.44)/50)))):0.5).toFixed(1) + 'ml'
             res74.style.backgroundColor = 'black'
         
         res75.innerHTML = ((((10*peso)*1.44)/50) < 1 ? 1 : (((((10*peso)*1.44)/50) < 1 ? 1 : Math.round((((10*peso)*1.44)/50)))*50) /
@@ -434,16 +434,17 @@ function calc(){
         ((((10*peso)*1.44)/50) < 1 ? 1 : Math.round((((10*peso)*1.44)/50))) < 172 ? (192 - ((((10*peso)*1.44)/50) < 1 ? 1 : Math.round((((10*peso)*1.44)/50)))):0.5)))*24))).toFixed(1) + 'ml/h' 
             res75.style.backgroundColor = 'black'
         
-        res76.innerHTML = ( (((10*peso)*1,44)/50) < 1 ? 1 + 'ml' : Math.round((((10*peso)*1,44)/50)) + 
-        (((((10*peso)*1.44))/50) < 1 ? (24*50)/((10*peso)*1.44):
-        res73.innerHTML < 14 ? (24 - res73.innerHTML):
-        res73.innerHTML < 24 ? (48 - res73.innerHTML):
-        res73.innerHTML < 52 ? (72 - res73.innerHTML):
-        res73.innerHTML < 76 ? (96 - res73.innerHTML):
-        res73.innerHTML < 100 ? (120 - res73.innerHTML):
-        res73.innerHTML < 124 ? (144 - res73.innerHTML):
-        res73.innerHTML < 148 ? (168 - res73.innerHTML):
-        res73.innerHTML < 172 ? (192 - res73.innerHTML):0.5)) == 24 ? '(Preparar 2x)' : '(Preparar 1.5x)'
+        res76.innerHTML = (((10*peso)*1.44)/50) < 1 ? 1 : Math.ceil((((10*peso)*1.44)/50)) + 
+        (Math.ceil(((((10*peso)*1.44))/50) < 1 ? (24*50)/((10*peso)*1.44):
+        ((((10*peso)*1.44)/50) < 1 ? 1 : Math.ceil((((10*peso)*1.44)/50))) < 14 ? (24 - ((((10*peso)*1.44)/50) < 1 ? 1 : Math.ceil((((10*peso)*1.44)/50)))):
+        ((((10*peso)*1.44)/50) < 1 ? 1 : Math.ceil((((10*peso)*1.44)/50))) < 24 ? (48 - ((((10*peso)*1.44)/50) < 1 ? 1 : Math.ceil((((10*peso)*1.44)/50)))):
+        ((((10*peso)*1.44)/50) < 1 ? 1 : Math.ceil((((10*peso)*1.44)/50))) < 52 ? (72 - ((((10*peso)*1.44)/50) < 1 ? 1 : Math.ceil((((10*peso)*1.44)/50)))):
+        ((((10*peso)*1.44)/50) < 1 ? 1 : Math.ceil((((10*peso)*1.44)/50))) < 76 ? (96 - ((((10*peso)*1.44)/50) < 1 ? 1 : Math.ceil((((10*peso)*1.44)/50)))):
+        ((((10*peso)*1.44)/50) < 1 ? 1 : Math.ceil((((10*peso)*1.44)/50))) < 100 ? (120 - ((((10*peso)*1.44)/50) < 1 ? 1 : Math.ceil((((10*peso)*1.44)/50)))):
+        ((((10*peso)*1.44)/50) < 1 ? 1 : Math.ceil((((10*peso)*1.44)/50))) < 124 ? (144 - ((((10*peso)*1.44)/50) < 1 ? 1 : Math.ceil((((10*peso)*1.44)/50)))):
+        ((((10*peso)*1.44)/50) < 1 ? 1 : Math.ceil((((10*peso)*1.44)/50))) < 148 ? (168 - ((((10*peso)*1.44)/50) < 1 ? 1 : Math.ceil((((10*peso)*1.44)/50)))):
+        ((((10*peso)*1.44)/50) < 1 ? 1 : Math.ceil((((10*peso)*1.44)/50))) < 172 ? (192 - ((((10*peso)*1.44)/50) < 1 ? 1 : Math.ceil((((10*peso)*1.44)/50)))):0.5)) == 24
+        ? '(Preparar 2x)' : '(Preparar 1.5x)'
             res76.style.backgroundColor = 'black'
         //_____________________________________________________________________________________________________________
         res77.innerHTML =  Math.ceil(((0.3*peso)*24)/10) + 'ml' // Atracúrio (10mg/mL)
@@ -485,20 +486,20 @@ function calc(){
         res81.innerHTML = Math.ceil((((0.6*peso)*24)/10)).toFixed(1) + 'ml' //Rocurônio (10mg/mL)
             res81.style.backgroundColor = 'black'    
         
-        res82.innerHTML = Math.round((((10*peso*1.44)/50) < 1 ? 24*50/((10*peso)*1.44):  
-        ((((10*peso)*1,44)/50) < 1 ? 1 + 'ml' : Math.round((((10*peso)*1,44)/50))) < 
-        14 ? (24-((((10*peso)*1.44)/50) < 1 ? 1 + 'ml' : Math.round((((10*peso)*1.44)/50)))):
-        28 ? (48-((((10*peso)*1.44)/50) < 1 ? 1 + 'ml' : Math.round((((10*peso)*1.44)/50)))):
-        52 ? (72-((((10*peso)*1.44)/50) < 1 ? 1 + 'ml' : Math.round((((10*peso)*1.44)/50)))):
-        76 ? (96-((((10*peso)*1.44)/50) < 1 ? 1 + 'ml' : Math.round((((10*peso)*1.44)/50)))):
-        100 ? (120-((((10*peso)*1.44)/50) < 1 ? 1 + 'ml' : Math.round((((10*peso)*1.44)/50)))):
-        124 ? (144-((((10*peso)*1.44)/50) < 1 ? 1 + 'ml' : Math.round((((10*peso)*1.44)/50)))):
-        148 ? (168-((((10*peso)*1.44)/50) < 1 ? 1 + 'ml' : Math.round((((10*peso)*1.44)/50)))):
-        172 ? (192-((((10*peso)*1.44)/50) < 1 ? 1 + 'ml' : Math.round((((10*peso)*1.44)/50)))):0.5)).toFixed(1) + 'ml'
+        res82.innerHTML = Math.ceil((((10*peso)*1.44)/50) < 1 ? 24*50/((10*peso)*1.44):
+        ((((10*peso)*1.44)/50) < 1 ? 1 + 'ml' : Math.ceil((((10*peso)*1.44)/50))) < 
+        28 ? 48-(((10*peso)*1.44)/50) < 1 ? 1 + 'ml' : Math.ceil((((10*peso)*1.44)/50)):
+        52 ? 72-(((10*peso)*1.44)/50) < 1 ? 1 + 'ml' : Math.ceil((((10*peso)*1.44)/50)):
+        76 ? 96-(((10*peso)*1.44)/50) < 1 ? 1 + 'ml' : Math.ceil((((10*peso)*1.44)/50)):
+        100 ? 120-(((10*peso)*1.44)/50) < 1 ? 1 + 'ml' : Math.ceil((((10*peso)*1.44)/50)):
+        124 ? 144-(((10*peso)*1.44)/50) < 1 ? 1 + 'ml' : Math.ceil((((10*peso)*1.44)/50)):
+        148 ? 168-(((10*peso)*1.44)/50) < 1 ? 1 + 'ml' : Math.ceil((((10*peso)*1.44)/50)):
+        172 ? 192-(((10*peso)*1.44)/50) < 1 ? 1 + 'ml' : Math.ceil((((10*peso)*1.44)/50)):0.5)
+        
             res82.style.backgroundColor = 'black'    
         
         res83.innerHTML = 
-        ((Math.round((((0.6*peso)*24)/10))*10) /
+        ((Math.ceil((((0.6*peso)*24)/10))*10) /
         (((10*(Math.round(((0.6*peso)*24)/10))) / ((Math.round((((0.6*peso)*24)/10)) + 
         (Math.round((((10*peso*1.44)/50) < 1 ? 24*50/((10*peso)*1.44):  
         ((((10*peso)*1,44)/50) < 1 ? 1 + 'ml' : Math.round((((10*peso)*1,44)/50))) < 
@@ -870,7 +871,56 @@ function exibirNaloxone(){
     txt.style.backgroundColor = 'rgb(152, 14, 14)'
     txt.style.color = 'wheat'
     txt.style.border = 'solid'}        
-    
+
+//INICIO DADOS TABELA #4
+function exibirMidazolam2(){
+    var ex = document.getElementById('tbMidazolam2')
+    ex.style.display = 'block'
+    var txt = document.getElementById('btnMed22')
+    txt.style.backgroundColor = 'rgb(152, 14, 14)'
+    txt.style.color = 'wheat'
+    txt.style.border = 'solid'}        
+
+function exibirCetamina(){
+    var ex = document.getElementById('tbCetamina')
+    ex.style.display = 'block'
+    var txt = document.getElementById('btnMed23')
+    txt.style.backgroundColor = 'rgb(152, 14, 14)'
+    txt.style.color = 'wheat'
+    txt.style.border = 'solid'}        
+
+function exibirAtracurio2(){
+    var ex = document.getElementById('tbAtracurio2')
+    ex.style.display = 'block'
+    var txt = document.getElementById('btnMed24')
+    txt.style.backgroundColor = 'rgb(152, 14, 14)'
+    txt.style.color = 'wheat'
+    txt.style.border = 'solid'}        
+
+/*function exibirRocuronio2(){
+    var ex = document.getElementById('tbRocuronio2')
+    ex.style.display = 'block'
+    var txt = document.getElementById('btnMed25')
+    txt.style.backgroundColor = 'rgb(152, 14, 14)'
+    txt.style.color = 'wheat'
+    txt.style.border = 'solid'}        
+
+function exibirTiopental2(){
+    var ex = document.getElementById('tbTiopental2')
+    ex.style.display = 'block'
+    var txt = document.getElementById('btnMed26')
+    txt.style.backgroundColor = 'rgb(152, 14, 14)'
+    txt.style.color = 'wheat'
+    txt.style.border = 'solid'} */       
+
+/*function exibirAdrenalina2(){
+    var ex = document.getElementById('tbAdrenalina2')
+    ex.style.display = 'block'
+    var txt = document.getElementById('btnMed27')
+    txt.style.backgroundColor = 'rgb(152, 14, 14)'
+    txt.style.color = 'wheat'
+    txt.style.border = 'solid'}    */    
+
 function fechaModal(){
     var ex = document.getElementById()
     ex.style.display = 'none'
