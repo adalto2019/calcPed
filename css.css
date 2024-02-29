@@ -51,7 +51,8 @@ body{background-image: url();
 
 /*TABELAS ------------------------------------------------------------------*/
 #tbAdrenalina, #tbAtropina, #tbBicarbonato, #tbGluconato, #tbGlicose,
-#tbMidazolam, #tbFetanil, #tbMorfina, #tbDextrocetamina, #tbAtracurio, #tbRocuronio, #tbLidocaina, #tbTiopental, #tbFlumazenil, #tbNaloxone
+#tbMidazolam, #tbFetanil, #tbMorfina, #tbDextrocetamina, #tbAtracurio, #tbRocuronio, #tbLidocaina, #tbTiopental, #tbFlumazenil, #tbNaloxone,
+#tbCetamina, #tbAtracurio2, #tbRocuronio2, #tbTiopental2, #tbAdrenalina2, #tbNoradrenalina
 {background-image: url();
     background-size: cover; /*img se adequando a tela*/
     display: flex;
@@ -62,7 +63,7 @@ body{background-image: url();
     color: wheat;}
 
 #tbAdenosina, #tbSulfato, #tbAmiodaroma, #tbDiazepam, #tbFenitoina, #tbFenobar,
-#tbMidazolam2, #tbCetamina, #tbAtracurio2, #tbRocuronio2, #tbTiopental2, #tbAdrenalina2
+#tbMidazolam2
     {background-image: url();
     background-size: cover; /*img se adequando a tela*/
     display: flex;
