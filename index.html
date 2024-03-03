@@ -431,8 +431,8 @@
                             <td><div id="res100">--</div></td>
                         </tr>
                     </table>
-                <input type="button" id="btnMed29" value=" Dobutamina (250mg/20mL):  ">  
-                    <table style="display: none">          
+                <input type="button" onclick="exibirDobutamina()" id="btnMed29" value=" Dobutamina (250mg/20mL):  ">  
+                    <table id="tbDobutamina" style="display: none">          
                         <tr>
                             <td><div id="res101">0.0ml</div></td>
                             <td>+</td>
@@ -445,8 +445,8 @@
                             <td><div id="res106">--</div></td>
                         </tr>
                     </table>
-                <input type="button" id="btnMed30" value=" Milrinone (1mg/mL):  ">  
-                    <table style="display: none">                  
+                <input type="button" onclick="exibirMilrinone()" id="btnMed30" value=" Milrinone (1mg/mL):  ">  
+                    <table id="tbMilrinone" style="display: none">                  
                         <tr>
                             <td><div id="res107">0.0ml</div></td>
                             <td>+</td>
@@ -459,8 +459,8 @@
                             <td><div id="res112">--</div></td>
                         </tr>
                     </table> 
-                <input type="button" id="btnMed31" value=" Nitroprussiato (25mg/mL):  ">  
-                    <table style="display: none">                          
+                <input type="button" onclick="exibirNitroprussiato()" id="btnMed31" value=" Nitroprussiato (25mg/mL):  ">  
+                    <table id="tbNitroprussiato" style="display: none">                          
                         <tr>
                             <td><div id="res113">0.0ml</div></td>
                             <td>+</td>
@@ -473,8 +473,8 @@
                             <td><div id="res118">--</div></td>
                         </tr>
                     </table>
-                <input type="button" id="btnMed32" value=" Vasopressina (20 UI/mL):  ">  
-                    <table style="display: none">                                    
+                <input type="button" onclick="exibirVasopressina()" id="btnMed32" value=" Vasopressina (20 UI/mL):  ">  
+                    <table id="tbVasopressina" style="display: none">                                    
                         <tr>
                             <td><div id="res119">0.0ml</div></td>
                             <td>+</td>
@@ -487,8 +487,8 @@
                             <td><div id="res124">--</div></td>
                         </tr>
                     </table>
-                <input type="button" id="btnMed33" value=" Terbutalina (0,5mg/mL):  ">  
-                    <table style="display: none">                                                
+                <input type="button" onclick="exibirTerbutalina()" id="btnMed33" value=" Terbutalina (0,5mg/mL):  ">  
+                    <table id="tbTerbutalina" style="display: none">                                                
                         <tr>
                             <td><div id="res125">0.0ml</div></td>
                             <td>+</td>
@@ -507,65 +507,65 @@
         <!--INICIO TABELA 5 ################################################################################################-->
         <h4>Dispositivos </h4>
             <div id="btnsAnticonvulsivantes"> 
-                <input type="button" id="btnMed34" value=" Ambu ">  
-                    <table style="display: none">                  
-                            <td>Lactante</td>
+                <input type="button" onclick="exibirAmbu()" id="btnMed34" value=" Ambu ">  
+                    <table id="tbAmbu" style="display: none">                  
+                            <td><div id="res131">--</div></td>
                     </table>
-                <input type="button" id="btnMed35" value=" Lâmina laringo ">  
-                    <table style="display: none">                  
-                        <td>Reta 0-1</td>
+                <input type="button" onclick="exibirLaminaLaringo()" id="btnMed35" value=" Lâmina laringo ">  
+                    <table id="tbLaminaLaringo" style="display: none">                  
+                        <td><div id="res132">Reta --</div></td>
                     </table>
-                <input type="button" id="btnMed36" value=" Cânula traqueal ">  
-                    <table style="display: none">
-                        <td>3-3,5 sem cuff</td>
-                        <td>3 com cuff</td>
+                <input type="button" onclick="exibirCanulaTraqueal()" id="btnMed36" value=" Cânula traqueal ">  
+                    <table id="tbCanulaTraqueal" style="display: none">
+                        <td><div id="res133">--</div></td>
+                        <td><div id="res134">--</div></td>
                     </table>                          
-                <input type="button" id="btnMed37" value=" Fixação ">  
-                    <table style="display: none">
-                        <td>9-9,5cm</td>    
+                <input type="button" onclick="exibirFixacao()" id="btnMed37" value=" Fixação ">  
+                    <table id="tbFixacao" style="display: none">
+                        <td><div id="res135">--</div></td>    
                     </table>
-                <input type="button" id="btnMed38" value=" Dreno de tórax ">  
-                    <table style="display: none">
-                        <td>10F</td>
+                <input type="button" onclick="exibirDrenoTorax()" id="btnMed38" value=" Dreno de tórax ">  
+                    <table id="tbDrenoTorax" style="display: none">
+                        <td><div id="res136">--</div></td>
                     </table>
-                <input type="button" id="btnMed39" value=" S. aspiração ">  
-                    <table style="display: none">
-                        <td>6-8F</td>
+                <input type="button" onclick="exibirAspiracao()" id="btnMed39" value=" S. aspiração ">  
+                    <table id="tbAspiracao" style="display: none">
+                        <td><div id="res137">--</div></td>
                     </table>    
-                <input type="button" id="btnMed40" value=" SNG ">  
-                    <table style="display: none">
-                        <td>5-8F</td>
+                <input type="button" onclick="exibirSNG()" id="btnMed40" value=" SNG ">  
+                    <table id="tbSNG" style="display: none">
+                        <td><div id="res138">--</div></td>
                     </table>
-                <input type="button" id="btnMed41" value=" S. urinária ">  
-                    <table style="display: none">
-                        <td>5F</td>
+                <input type="button" onclick="exibirUrinaria()" id="btnMed41" value=" S. urinária ">  
+                    <table id="tbUrinaria" style="display: none">
+                        <td><div id="res139">--</div></td>
                     </table>
-                <input type="button" id="btnMed42" value=" Intra-óssea ">  
-                    <table style="display: none">
-                        <td>18-15ga</td>
+                <input type="button" onclick="exibirIntraOssea()" id="btnMed42" value=" Intra-óssea ">  
+                    <table id="tbIntraOssea" style="display: none">
+                        <td><div id="res140">--</div></td>
                     </table>
-                <input type="button" id="btnMed43" value=" Pás de desfibralação ">  
-                    <table style="display: none">
-                        <td>Pás de lactante < 1ano</td>
+                <input type="button" onclick="exibirPasDesfibrilacao()" id="btnMed43" value=" Pás de desfibrilação ">  
+                    <table id="tbPasDesfibrilacao" style="display: none">
+                        <td><div id="res141">--</div></td>
                     </table>
-                <input type="button" id="btnMed44" value=" Carga para desfibrilação ">  
-                    <table style="display: none">
+                <input type="button" onclick="exibirCargaDesfibrilacao()" id="btnMed44" value=" Carga para desfibrilação ">  
+                    <table id="tbCargaDesfibrilacao" style="display: none">
                         <tr>
-                            <td>1° Choque:</td> 
-                            <td>0 J</td>
-                            <td>2° Choque:</td>
-                            <td>0 J</td>
-                            <td>Demais:</td>
-                            <td>4-10 j/kg (máx 200J)</td>
+                            <td><div id="res142">1° Choque:</div></td> 
+                            <td><div id="res143">--</div></td>
+                            <td><div id="res144">2° Choque:</div></td>
+                            <td><div id="res145">--</div></td>
+                            <td><div id="res146">Demais:</div></td>
+                            <td><div id="res147">4-10 j/kg (máx 200J)</div></td>
                         </tr>
                     </table>
-                <input type="button" id="btnMed45" value=" Carga para cardioversão ">  
-                    <table style="display: none">
+                <input type="button" onclick="exibirCargaCardioversao()" id="btnMed45" value=" Carga para cardioversão ">  
+                    <table id="tbCargaCardioversao" style="display: none">
                         </tr>
-                            <td>1° Carga:</td>
-                            <td>0 J</td>
-                            <td>2° Carga:</td>
-                            <td>0 J</td>
+                            <td><div id="res148">1° Carga:</div></td>
+                            <td><div id="res149">--</div></td>
+                            <td><div id="res150">2° Carga:</div></td>
+                            <td><div id="res151">--</div></td>
                         </tr>
         </table>    
         <!--FIM TABELA 5 ###################################################################################################-->    

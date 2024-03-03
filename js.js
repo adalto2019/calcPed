@@ -129,7 +129,27 @@ var res127 = window.document.getElementById('res127')
 var res128 = window.document.getElementById('res128')
 var res129 = window.document.getElementById('res129')
 var res130 = window.document.getElementById('res130')
-
+var res131 = window.document.getElementById('res131')
+var res132 = window.document.getElementById('res132')
+var res133 = window.document.getElementById('res133')
+var res134 = window.document.getElementById('res134')
+var res135 = window.document.getElementById('res135')
+var res136 = window.document.getElementById('res136')
+var res137 = window.document.getElementById('res137')
+var res138 = window.document.getElementById('res138')
+var res139 = window.document.getElementById('res139')
+var res140 = window.document.getElementById('res140')
+var res141 = window.document.getElementById('res141')
+var res142 = window.document.getElementById('res142')
+var res143 = window.document.getElementById('res143')
+var res144 = window.document.getElementById('res144')
+var res145 = window.document.getElementById('res145')
+var res146 = window.document.getElementById('res146')
+var res147 = window.document.getElementById('res147')
+var res148 = window.document.getElementById('res148')
+var res149 = window.document.getElementById('res149')
+var res150 = window.document.getElementById('res150')
+var res151 = window.document.getElementById('res151')
 
 var peso = window.document.getElementById('peso')
 
@@ -486,7 +506,7 @@ function calc(){
         res81.innerHTML = Math.ceil((((0.6*peso)*24)/10)).toFixed(1) + 'ml' //Rocurônio (10mg/mL)
             res81.style.backgroundColor = 'black'    
         
-        res82.innerHTML = Math.ceil((((10*peso)*1.44)/50) < 1 ? 24*50/((10*peso)*1.44):
+        /*res82.innerHTML = Math.ceil((((10*peso)*1.44)/50) < 1 ? 24*50/((10*peso)*1.44):
         ((((10*peso)*1.44)/50) < 1 ? 1 + 'ml' : Math.ceil((((10*peso)*1.44)/50))) < 
         28 ? 48-(((10*peso)*1.44)/50) < 1 ? 1 + 'ml' : Math.ceil((((10*peso)*1.44)/50)):
         52 ? 72-(((10*peso)*1.44)/50) < 1 ? 1 + 'ml' : Math.ceil((((10*peso)*1.44)/50)):
@@ -495,10 +515,9 @@ function calc(){
         124 ? 144-(((10*peso)*1.44)/50) < 1 ? 1 + 'ml' : Math.ceil((((10*peso)*1.44)/50)):
         148 ? 168-(((10*peso)*1.44)/50) < 1 ? 1 + 'ml' : Math.ceil((((10*peso)*1.44)/50)):
         172 ? 192-(((10*peso)*1.44)/50) < 1 ? 1 + 'ml' : Math.ceil((((10*peso)*1.44)/50)):0.5)
+            res82.style.backgroundColor = 'black' */   
         
-            res82.style.backgroundColor = 'black'    
-        
-        res83.innerHTML = 
+        /*res83.innerHTML = 
         ((Math.ceil((((0.6*peso)*24)/10))*10) /
         (((10*(Math.round(((0.6*peso)*24)/10))) / ((Math.round((((0.6*peso)*24)/10)) + 
         (Math.round((((10*peso*1.44)/50) < 1 ? 24*50/((10*peso)*1.44):  
@@ -511,7 +530,7 @@ function calc(){
         124 ? (144-((((10*peso)*1.44)/50) < 1 ? 1 + 'ml' : Math.round((((10*peso)*1.44)/50)))):
         148 ? (168-((((10*peso)*1.44)/50) < 1 ? 1 + 'ml' : Math.round((((10*peso)*1.44)/50)))):
         172 ? (192-((((10*peso)*1.44)/50) < 1 ? 1 + 'ml' : Math.round((((10*peso)*1.44)/50)))):0.5)))))*24))).toFixed(1) + 'ml/h' 
-            res83.style.backgroundColor = 'black'    
+            res83.style.backgroundColor = 'black' */  
         
         /*res84.innerHTML = (Math.round((((0.6*peso)*24)/10))) +
         ((((10*peso*1.44)/50) < 1 ? 24*50/((10*peso)*1.44):  
@@ -559,25 +578,56 @@ function calc(){
         ? 'Preparar 2x' : 'Preparar 1.5x'
             res88.style.backgroundColor = 'black' */  
          //_____________________________________________________________________________________________________________
-        res89.innerHTML = (((0.1*peso)*1.44) < 1 ? 1 :
-        Math.ceil(((0.1*peso)*1.44))).toFixed(1) + 'ml'//Adrenalina2 (1mg/mL):
+        res89.innerHTML = (((0.1*peso)*1.44) < 1 ? 1 : //Adrenalina2 (1mg/mL):
+        (((0.1*peso)*1.44))).toFixed(1) + 'ml'
             res89.style.backgroundColor = 'black'    
             
-        res90.innerHTML =  + 'ml'
-            res90.style.backgroundColor = 'black'    
+        /*res90.innerHTML = (((0.1*peso)*1.44) < 1 ? (24/(0.1*peso)*1.44):
+        (((0.1*peso)*1.44) < 1 ? 1 : (((0.1*peso)*1.44))) < 14 ? (24 - (((0.1*peso)*1.44) < 1 ? 1 : (((0.1*peso)*1.44)))):
+        (((0.1*peso)*1.44) < 1 ? 1 : (((0.1*peso)*1.44))) < 28 ? 48 - ((((0.1*peso)*1.44) < 1 ? 1 : (((0.1*peso)*1.44)))):
+        (((0.1*peso)*1.44) < 1 ? 1 : (((0.1*peso)*1.44))) < 52 ? 72 - ((((0.1*peso)*1.44) < 1 ? 1 : (((0.1*peso)*1.44)))):
+        (((0.1*peso)*1.44) < 1 ? 1 : (((0.1*peso)*1.44))) < 76 ? 96 - ((((0.1*peso)*1.44) < 1 ? 1 : (((0.1*peso)*1.44)))):
+        (((0.1*peso)*1.44) < 1 ? 1 : (((0.1*peso)*1.44))) < 100 ? 120 - ((((0.1*peso)*1.44) < 1 ? 1 : (((0.1*peso)*1.44)))):
+        (((0.1*peso)*1.44) < 1 ? 1 : (((0.1*peso)*1.44))) < 124 ? 144 - ((((0.1*peso)*1.44) < 1 ? 1 : (((0.1*peso)*1.44)))):
+        (((0.1*peso)*1.44) < 1 ? 1 : (((0.1*peso)*1.44))) < 148 ? 168 - ((((0.1*peso)*1.44) < 1 ? 1 : (((0.1*peso)*1.44)))):
+        (((0.1*peso)*1.44) < 1 ? 1 : (((0.1*peso)*1.44))) < 172 ? 192 - ((((0.1*peso)*1.44) < 1 ? 1 : (((0.1*peso)*1.44)))):0.5).toFixed(1)+ 'ml' 
+            res90.style.backgroundColor = 'black'  */
         
-        res91.innerHTML =  + 'ml'
+        res91.innerHTML = Math.round(((0.1*peso)*1.44) < 1 ? 1 : (((0.1*peso)*1.44) < 1 ? 1 : (((0.1*peso)*1.44))) / 
+        ((((((0.1*peso)*1.44) < 1 ? 1 : (((0.1*peso)*1.44))) / ((((0.1*peso)*1.44) < 1 ? 1 : (((0.1*peso)*1.44))) + 
+        (((0.1*peso)*1.44) < 1 ? (24/(0.1*peso)*1.44):
+        (((0.1*peso)*1.44) < 1 ? 1 : (((0.1*peso)*1.44))) < 14 ? (24 - (((0.1*peso)*1.44) < 1 ? 1 : (((0.1*peso)*1.44)))):
+        (((0.1*peso)*1.44) < 1 ? 1 : (((0.1*peso)*1.44))) < 28 ? 48 - ((((0.1*peso)*1.44) < 1 ? 1 : (((0.1*peso)*1.44)))):
+        (((0.1*peso)*1.44) < 1 ? 1 : (((0.1*peso)*1.44))) < 52 ? 72 - ((((0.1*peso)*1.44) < 1 ? 1 : (((0.1*peso)*1.44)))):
+        (((0.1*peso)*1.44) < 1 ? 1 : (((0.1*peso)*1.44))) < 76 ? 96 - ((((0.1*peso)*1.44) < 1 ? 1 : (((0.1*peso)*1.44)))):
+        (((0.1*peso)*1.44) < 1 ? 1 : (((0.1*peso)*1.44))) < 100 ? 120 - ((((0.1*peso)*1.44) < 1 ? 1 : (((0.1*peso)*1.44)))):
+        (((0.1*peso)*1.44) < 1 ? 1 : (((0.1*peso)*1.44))) < 124 ? 144 - ((((0.1*peso)*1.44) < 1 ? 1 : (((0.1*peso)*1.44)))):
+        (((0.1*peso)*1.44) < 1 ? 1 : (((0.1*peso)*1.44))) < 148 ? 168 - ((((0.1*peso)*1.44) < 1 ? 1 : (((0.1*peso)*1.44)))):
+        (((0.1*peso)*1.44) < 1 ? 1 : (((0.1*peso)*1.44))) < 172 ? 192 - ((((0.1*peso)*1.44) < 1 ? 1 : (((0.1*peso)*1.44)))):0.5)
+        )) * 24))).toFixed(1) + 'ml'
             res91.style.backgroundColor = 'black'    
         
-        res92.innerHTML =  + 'ml'
-            res92.style.backgroundColor = 'black'    
-        
-        res93.innerHTML =  + 'ml'
+        //res92.innerHTML =  + 'ml'
+        //    res92.style.backgroundColor = 'black'    
+
+        res93.innerHTML = Math.round(((0.1*peso)*1.44) < 1 ? 1 : (((0.1*peso)*1.44) < 1 ? 1 : (((0.1*peso)*1.44))) / 
+        ((((((0.1*peso)*1.44) < 1 ? 1 : (((0.1*peso)*1.44))) / ((((0.1*peso)*1.44) < 1 ? 1 : (((0.1*peso)*1.44))) + 
+        (((0.1*peso)*1.44) < 1 ? (24/(0.1*peso)*1.44):
+        (((0.1*peso)*1.44) < 1 ? 1 : (((0.1*peso)*1.44))) < 14 ? (24 - (((0.1*peso)*1.44) < 1 ? 1 : (((0.1*peso)*1.44)))): 
+        (((0.1*peso)*1.44) < 1 ? 1 : (((0.1*peso)*1.44))) < 28 ? 48 - ((((0.1*peso)*1.44) < 1 ? 1 : (((0.1*peso)*1.44)))):
+        (((0.1*peso)*1.44) < 1 ? 1 : (((0.1*peso)*1.44))) < 52 ? 72 - ((((0.1*peso)*1.44) < 1 ? 1 : (((0.1*peso)*1.44)))):
+        (((0.1*peso)*1.44) < 1 ? 1 : (((0.1*peso)*1.44))) < 76 ? 96 - ((((0.1*peso)*1.44) < 1 ? 1 : (((0.1*peso)*1.44)))):
+        (((0.1*peso)*1.44) < 1 ? 1 : (((0.1*peso)*1.44))) < 100 ? 120 - ((((0.1*peso)*1.44) < 1 ? 1 : (((0.1*peso)*1.44)))):
+        (((0.1*peso)*1.44) < 1 ? 1 : (((0.1*peso)*1.44))) < 124 ? 144 - ((((0.1*peso)*1.44) < 1 ? 1 : (((0.1*peso)*1.44)))):
+        (((0.1*peso)*1.44) < 1 ? 1 : (((0.1*peso)*1.44))) < 148 ? 168 - ((((0.1*peso)*1.44) < 1 ? 1 : (((0.1*peso)*1.44)))):
+        (((0.1*peso)*1.44) < 1 ? 1 : (((0.1*peso)*1.44))) < 172 ? 192 - ((((0.1*peso)*1.44) < 1 ? 1 : (((0.1*peso)*1.44)))):0.5)
+        )) * 24))).toFixed(1) + 'ml/h ='
             res93.style.backgroundColor = 'black'    
-         //_____________________________________________________________________________________________________________
-        res94.innerHTML =  + 'ml'
-            res94.style.backgroundColor = 'black'    
         
+        /*res94.innerHTML = + 'ml'
+            res94.style.backgroundColor = 'black'    
+         //_____________________________________________________________________________________________________________
+        //Dobutamina (250mg/20mL):
         res95.innerHTML =  + 'ml'
             res95.style.backgroundColor = 'black'    
         
@@ -592,7 +642,8 @@ function calc(){
         
         res99.innerHTML =  + 'ml'
             res99.style.backgroundColor = 'black'    
-        
+         //_____________________________________________________________________________________________________________
+        //Milrinone (1mg/mL):
         res100.innerHTML =  + 'ml'
             res100.style.backgroundColor = 'black'    
         
@@ -607,7 +658,8 @@ function calc(){
         
         res103.innerHTML =  + 'ml'
             res103.style.backgroundColor = 'black'    
-        
+         //_____________________________________________________________________________________________________________
+        //Nitroprussiato (25mg/mL):
         res104.innerHTML =  + 'ml'
             res104.style.backgroundColor = 'black'    
             
@@ -622,7 +674,8 @@ function calc(){
         
         res108.innerHTML =  + 'ml'
             res108.style.backgroundColor = 'black'    
-        
+         //_____________________________________________________________________________________________________________
+        //Vasopressina (20 UI/mL):
         res109.innerHTML =  + 'ml'
             res109.style.backgroundColor = 'black'    
         
@@ -634,10 +687,11 @@ function calc(){
         
         res112.innerHTML =  + 'ml'
             res112.style.backgroundColor = 'black'    
-        
+        //_____________________________________________________________________________________________________________
+        //Terbutalina (0,5mg/mL):
         res113.innerHTML =  + 'ml'
             res113.style.backgroundColor = 'black'    
-        
+
         res114.innerHTML =  + 'ml'
             res114.style.backgroundColor = 'black'    
         
@@ -649,10 +703,11 @@ function calc(){
             
         res117.innerHTML =  + 'ml'
             res117.style.backgroundColor = 'black'    
-            
+        
         res118.innerHTML =  + 'ml'
             res118.style.backgroundColor = 'black'    
-        
+        //_____________________________________________________________________________________________________________    
+        //
         res119.innerHTML =  + 'ml'
             res119.style.backgroundColor = 'black'    
             
@@ -672,11 +727,164 @@ function calc(){
             res124.style.backgroundColor = 'black'    
             
         res125.innerHTML =  + 'ml'
-            res125.style.backgroundColor = 'black'    
+            res125.style.backgroundColor = 'black'
+            
+        res126.innerHTML =  + 'ml'
+            res126.style.backgroundColor = 'black'    
+            
+        res127.innerHTML =  + 'ml'
+            res127.style.backgroundColor = 'black'    
         
-            //FIM DA TABELA 4 ****************************************************************************************
+        res128.innerHTML =  + 'ml'
+            res128.style.backgroundColor = 'black'    
+        
+        res129.innerHTML =  + 'ml'
+            res129.style.backgroundColor = 'black'    
+        
+        res130.innerHTML =  + 'ml'
+            res130.style.backgroundColor = 'black'    */
+            
+        //FIM DA TABELA 4 ****************************************************************************************
 
-            //INICIO TABELA 5 ****************************************************************************************
+        //INICIO TABELA 5 ****************************************************************************************
+        //Ambu
+        res131.innerHTML = peso <= 5 ? 'Lactante' :
+        peso <= 5 ? 'Lactante' :
+        peso <= 9 ? 'Lactante/Criança' :
+        peso <= 23 ? 'Criança' :
+        peso <= 29 ? 'Criança/Adulto' : 
+        peso > 29 ? 'Adulto' : + ''
+            res131.style.backgroundColor = 'black'    
+        
+        res132.innerHTML =
+        peso <= 5 ? 'Reta 0 - 1 ' :
+        peso <= 11 ? 'Reta 1' :
+        peso <= 18 ? 'Reta 2' :
+        peso <= 23 ? 'Reta 2 ou Curva' : 
+        peso <= 29 ? 'Reta 2-3 ou Curva' :
+        peso > 29 ? 'Reta 3 ou Curva' : + ''
+            res132.style.backgroundColor = 'black'    
+        
+        res133.innerHTML = 
+        peso <= 5 ? '3-3.5 sem cuff' :
+        peso <= 9 ? '3.5 sem cuff' :
+        peso <= 11 ? '4 sem cuff' :
+        peso <= 14 ? '4.5 sem cuff' : 
+        peso <= 18 ? '5 sem cuff' :
+        peso <= 23 ? '5.5 sem cuff' :
+        peso > 23 ? '-' : + ''
+            res133.style.backgroundColor = 'black'    
+            
+        res134.innerHTML = 
+        peso <= 9 ? '3 com cuff' :
+        peso <= 11 ? '3.5 com cuff' :
+        peso <= 14 ? '4 com cuff' :
+        peso <= 18 ? '4.5 com cuff' : 
+        peso <= 23 ? '5 com cuff' :
+        peso <= 29 ? '6 com cuff' :
+        peso > 29 ? '6.5 com cuff' : + ''
+            res134.style.backgroundColor = 'black'    
+        
+        //Fixação
+        res135.innerHTML = 
+        peso <= 3 ? '9-9.5 cm' :
+        peso <= 4 ? '9.5-10 cm' :
+        peso <= 5 ? '10-10.5 cm' :
+        peso <= 9 ? '10.5-11 cm' : 
+        peso <= 11 ? '11-12 cm' :
+        peso <= 14 ? '12.5-13.5 cm' :
+        peso <= 18 ? '14-15 cm' :
+        peso <= 23 ? '15.5-16.5 cm' :
+        peso <= 29 ? '17-18 cm' :
+        peso > 29 ? '18.5-19.5 cm' : '-'
+            res135.style.backgroundColor = 'black'    
+            
+        res136.innerHTML = 
+        peso <= 5 ? '10F' :
+        peso <= 9 ? '10-12F' :
+        peso <= 11 ? '16-20F' :
+        peso <= 18 ? '20-24F' : 
+        peso <= 23 ? '23-24F' :
+        peso <= 29 ? '28-32F' :
+        peso > 29 ? '32-38F' : '-' 
+            res136.style.backgroundColor = 'black'    
+        
+        //Aspiração    
+        res137.innerHTML =
+        peso <= 7 ? '6-8F' :
+        peso <= 9 ? '8F' :
+        peso <= 11 ? '8-10F' :
+        peso <= 29 ? '10F' : 
+        peso > 29 ? '12F' : '-' 
+            res137.style.backgroundColor = 'black'    
+            
+        res138.innerHTML =
+        peso <= 9 ? '5-8F' :
+        peso <= 11 ? '8-10F' :
+        peso <= 18 ? '10F' :
+        peso <= 23 ? '12-14F' : 
+        peso <= 29 ? '14-18F' :
+        peso > 29 ? '16-18F' : '-' 
+            res138.style.backgroundColor = 'black'    
+        
+        //S. urinária    
+        res139.innerHTML = 
+        peso <= 5 ? '5F' :
+        peso <= 9 ? '5-8F' :
+        peso <= 11 ? '8-10F' :
+        peso <= 18 ? '10F' : 
+        peso <= 23 ? '12-14F' :
+        peso <= 29 ? '14-18F' :
+        peso > 29 ? '16-18F' : '-' 
+            res139.style.backgroundColor = 'black'    
+            
+        res140.innerHTML =
+        peso <= 9 ? '18/15ga' :
+        peso > 9 ? '15ga' : + ''
+            res140.style.backgroundColor = 'black'    
+         
+        //Pás de Desfibrilação    
+        res141.innerHTML = 
+        peso <= 7 ? 'Pás de Lactante < 1ano' :
+        peso <= 9 ? 'Pás de Lactante < 1ano ou 10kg' :
+        peso <= 11 ? 'Pás de Adulto se >= 1ano ou >= 10kg' :
+        peso > 11 ? 'Pás de Adulto' : + ''
+            res141.style.backgroundColor = 'black'    
+        
+        //1° Choque:
+        //res142.innerHTML =  + 'ml'
+        //    res142.style.backgroundColor = 'black'    
+        
+        res143.innerHTML =  Math.round(peso >= 100 ? 200 : 2*peso) + ' J'
+            res143.style.backgroundColor = 'black'    
+        
+        //2° Choque:  
+        //res144.innerHTML =  + 'ml'
+        //    res144.style.backgroundColor = 'black'    
+            
+        res145.innerHTML = Math.round(peso >= 50 ? 200 : 4*peso) + ' J'
+            res145.style.backgroundColor = 'black'    
+        
+        //Demais:    
+        //res146.innerHTML =  + 'ml'
+        //    res146.style.backgroundColor = 'black'    
+            
+        res147.innerHTML = '4-10 J/Kg (Máx 200J)'
+            res147.style.backgroundColor = 'black'    
+        
+        //1° Carga:    
+        //res148.innerHTML =  + 'ml'
+        //    res148.style.backgroundColor = 'black'    
+            
+        res149.innerHTML = Math.round(peso >= 200 ? 200 : peso) + ' J'
+            res149.style.backgroundColor = 'black'    
+        
+        //2° Carga:    
+        //res150.innerHTML =  + 'ml'
+        //    res150.style.backgroundColor = 'black'    
+            
+        res151.innerHTML = Math.round(peso >= 100 ? 200 : 2*peso) + ' J'
+            res151.style.backgroundColor = 'black'    
 
             //FIM DA TABELA 5 ****************************************************************************************
      }
@@ -767,7 +975,7 @@ function exibirGlicose(){
     txt.style.color = 'wheat'
     txt.style.border = 'solid'}    
 
-//INICIO DADOS TABELA #2
+// INICIO DADOS TABELA #2 ////////////////////////////////////////////////////   
 function exibirDiazepam(){
     var ex = document.getElementById('tbDiazepam')
     ex.style.display = 'block'
@@ -792,7 +1000,7 @@ function exibirFenobar(){
     txt.style.color = 'wheat'
     txt.style.border = 'solid'}    
 
-//INICIO DADOS TABELA #3
+// INICIO DADOS TABELA #3 ////////////////////////////////////////////////////   
 function exibirMidazolam(){
     var ex = document.getElementById('tbMidazolam')
     ex.style.display = 'block'
@@ -873,7 +1081,7 @@ function exibirNaloxone(){
     txt.style.color = 'wheat'
     txt.style.border = 'solid'}        
 
-//INICIO DADOS TABELA #4
+// INICIO DADOS TABELA #4 ////////////////////////////////////////////////////   
 function exibirMidazolam2(){
     var ex = document.getElementById('tbMidazolam2')
     ex.style.display = 'block'
@@ -914,7 +1122,7 @@ function exibirTiopental2(){
     txt.style.color = 'wheat'
     txt.style.border = 'solid'}
 
-/*function exibirAdrenalina2(){
+function exibirAdrenalina2(){
     var ex = document.getElementById('tbAdrenalina2')
     ex.style.display = 'block'
     var txt = document.getElementById('btnMed27')
@@ -925,19 +1133,154 @@ function exibirTiopental2(){
 function exibirNoradrenalina(){
     var ex = document.getElementById('tbNoradrenalina')
     ex.style.display = 'block'
-    var txt = document.getElementById('btnMed27')
+    var txt = document.getElementById('btnMed28')
     txt.style.backgroundColor = 'rgb(152, 14, 14)'
     txt.style.color = 'wheat'
-    txt.style.border = 'solid'}*/
+    txt.style.border = 'solid'}
 
+function exibirDobutamina(){
+    var ex = document.getElementById('tbDobutamina')
+    ex.style.display = 'block'
+    var txt = document.getElementById('btnMed29')
+    txt.style.backgroundColor = 'rgb(152, 14, 14)'
+    txt.style.color = 'wheat'
+    txt.style.border = 'solid'}
+
+function exibirMilrinone(){
+    var ex = document.getElementById('tbMilrinone')
+    ex.style.display = 'block'
+    var txt = document.getElementById('btnMed30')
+    txt.style.backgroundColor = 'rgb(152, 14, 14)'
+    txt.style.color = 'wheat'
+    txt.style.border = 'solid'}
+
+function exibirNitroprussiato(){
+    var ex = document.getElementById('tbNitroprussiato')
+    ex.style.display = 'block'
+    var txt = document.getElementById('btnMed31')
+    txt.style.backgroundColor = 'rgb(152, 14, 14)'
+    txt.style.color = 'wheat'
+    txt.style.border = 'solid'}
+
+function exibirVasopressina(){
+    var ex = document.getElementById('tbVasopressina')
+    ex.style.display = 'block'
+    var txt = document.getElementById('btnMed32')
+    txt.style.backgroundColor = 'rgb(152, 14, 14)'
+    txt.style.color = 'wheat'
+    txt.style.border = 'solid'}
+
+function exibirTerbutalina(){
+    var ex = document.getElementById('tbTerbutalina')
+    ex.style.display = 'block'
+    var txt = document.getElementById('btnMed33')
+    txt.style.backgroundColor = 'rgb(152, 14, 14)'
+    txt.style.color = 'wheat'
+    txt.style.border = 'solid'}    
+    
+// INICIO DADOS TABELA #5 ////////////////////////////////////////////////////   
+function exibirAmbu(){
+    var ex = document.getElementById('tbAmbu')
+    ex.style.display = 'block'
+    var txt = document.getElementById('btnMed34')
+    txt.style.backgroundColor = 'rgb(152, 14, 14)'
+    txt.style.color = 'wheat'
+    txt.style.border = 'solid'}
+
+function exibirLaminaLaringo(){
+    var ex = document.getElementById('tbLaminaLaringo')
+    ex.style.display = 'block'
+    var txt = document.getElementById('btnMed35')
+    txt.style.backgroundColor = 'rgb(152, 14, 14)'
+    txt.style.color = 'wheat'
+    txt.style.border = 'solid'}
+
+function exibirCanulaTraqueal(){
+    var ex = document.getElementById('tbCanulaTraqueal')
+    ex.style.display = 'block'
+    var txt = document.getElementById('btnMed36')
+    txt.style.backgroundColor = 'rgb(152, 14, 14)'
+    txt.style.color = 'wheat'
+    txt.style.border = 'solid'}
+
+function exibirFixacao(){
+    var ex = document.getElementById('tbFixacao')
+    ex.style.display = 'block'
+    var txt = document.getElementById('btnMed37')
+    txt.style.backgroundColor = 'rgb(152, 14, 14)'
+    txt.style.color = 'wheat'
+    txt.style.border = 'solid'}
+
+function exibirDrenoTorax(){
+    var ex = document.getElementById('tbDrenoTorax')
+    ex.style.display = 'block'
+    var txt = document.getElementById('btnMed38')
+    txt.style.backgroundColor = 'rgb(152, 14, 14)'
+    txt.style.color = 'wheat'
+    txt.style.border = 'solid'}
+
+function exibirAspiracao(){
+    var ex = document.getElementById('tbAspiracao')
+    ex.style.display = 'block'
+    var txt = document.getElementById('btnMed39')
+    txt.style.backgroundColor = 'rgb(152, 14, 14)'
+    txt.style.color = 'wheat'
+    txt.style.border = 'solid'}
+
+function exibirSNG(){
+    var ex = document.getElementById('tbSNG')
+    ex.style.display = 'block'
+    var txt = document.getElementById('btnMed40')
+    txt.style.backgroundColor = 'rgb(152, 14, 14)'
+    txt.style.color = 'wheat'
+    txt.style.border = 'solid'}
+
+function exibirUrinaria(){
+    var ex = document.getElementById('tbUrinaria')
+    ex.style.display = 'block'
+    var txt = document.getElementById('btnMed41')
+    txt.style.backgroundColor = 'rgb(152, 14, 14)'
+    txt.style.color = 'wheat'
+    txt.style.border = 'solid'}
+
+function exibirIntraOssea(){
+    var ex = document.getElementById('tbIntraOssea')
+    ex.style.display = 'block'
+    var txt = document.getElementById('btnMed42')
+    txt.style.backgroundColor = 'rgb(152, 14, 14)'
+    txt.style.color = 'wheat'
+    txt.style.border = 'solid'}
+    
+function exibirPasDesfibrilacao(){
+    var ex = document.getElementById('tbPasDesfibrilacao')
+    ex.style.display = 'block'
+    var txt = document.getElementById('btnMed43')
+    txt.style.backgroundColor = 'rgb(152, 14, 14)'
+    txt.style.color = 'wheat'
+    txt.style.border = 'solid'}
+
+function exibirCargaDesfibrilacao(){
+    var ex = document.getElementById('tbCargaDesfibrilacao')
+    ex.style.display = 'block'
+    var txt = document.getElementById('btnMed44')
+    txt.style.backgroundColor = 'rgb(152, 14, 14)'
+    txt.style.color = 'wheat'
+    txt.style.border = 'solid'}
+
+function exibirCargaCardioversao(){
+    var ex = document.getElementById('tbCargaCardioversao')
+    ex.style.display = 'block'
+    var txt = document.getElementById('btnMed45')
+    txt.style.backgroundColor = 'rgb(152, 14, 14)'
+    txt.style.color = 'wheat'
+    txt.style.border = 'solid'}
+    
 function fechaModal(){
     var ex = document.getElementById()
     ex.style.display = 'none'
 }
 
-
 //FIM CONTRAIR E EXPANDIR TABELAS ****************************************
-
 
 //Função configurando o input de recebimento do peso do pct
 const kg = window.document.getElementById("peso")
