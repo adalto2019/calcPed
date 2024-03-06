@@ -454,8 +454,8 @@ function calc(){
         ((((10*peso)*1.44)/50) < 1 ? 1 : Math.round((((10*peso)*1.44)/50))) < 172 ? (192 - ((((10*peso)*1.44)/50) < 1 ? 1 : Math.round((((10*peso)*1.44)/50)))):0.5)))*24))).toFixed(1) + 'ml/h' 
             res75.style.backgroundColor = 'black'
         
-        res76.innerHTML = 'Dose: 10mcg/kg/min'
-            res76.style.backgroundColor = 'black'
+        //res76.innerHTML = 'Dose: 10mcg/kg/min'
+        //    res76.style.backgroundColor = 'black'
         //_____________________________________________________________________________________________________________
         res77.innerHTML =  Math.ceil(((0.3*peso)*24)/10) + 'ml' // Atracúrio (10mg/mL)
             res77.style.backgroundColor = 'black'    
@@ -482,13 +482,13 @@ function calc(){
         Math.round(((0.3*peso)*24)/10) < 172 ? 192-(Math.round(((0.3*peso)*24)/10)):0))) *24)).toFixed(1) + 'ml/h'
             res79.style.backgroundColor = 'black'    
         
-        res80.innerHTML = 'Dose: 0,3mg/kg/h'
-            res80.style.backgroundColor = 'black'
+        //res80.innerHTML = 'Dose: 0,3mg/kg/h'
+        //    res80.style.backgroundColor = 'black'
         //_____________________________________________________________________________________________________________
         res81.innerHTML = Math.ceil((((0.6*peso)*24)/10)).toFixed(1) + 'ml' //Rocurônio (10mg/mL)
             res81.style.backgroundColor = 'black'    
          
-        res82.innerHTML = (((10*peso)*1.44) / 50) < 1 ? 24*50/((10*peso)*1.44):
+        res82.innerHTML = ((((10*peso)*1.44) / 50) < 1 ? 24*50/((10*peso)*1.44):
         ((((10*peso)*1.44)/50) < 1 ? 1 + 'ml' : Math.ceil((((10*peso)*1.44)/50)) < 14 ? (24 - (((10*peso)*1.44)/50) < 1 ? 1 + 'ml' : Math.ceil((((10*peso)*1.44)/50))):
         (((10*peso)*1.44)/50) < 1 ? 1 + 'ml' : Math.ceil((((10*peso)*1.44)/50)) < 28 ? (48 - (((10*peso)*1.44)/50) < 1 ? 1 + 'ml' : Math.ceil((((10*peso)*1.44)/50))):
         (((10*peso)*1.44)/50) < 1 ? 1 + 'ml' : Math.ceil((((10*peso)*1.44)/50)) < 52 ? (72 - (((10*peso)*1.44)/50) < 1 ? 1 + 'ml' : Math.ceil((((10*peso)*1.44)/50))):
@@ -496,7 +496,7 @@ function calc(){
         (((10*peso)*1.44)/50) < 1 ? 1 + 'ml' : Math.ceil((((10*peso)*1.44)/50)) < 100 ? (120 - (((10*peso)*1.44)/50) < 1 ? 1 + 'ml' : Math.ceil((((10*peso)*1.44)/50))):
         (((10*peso)*1.44)/50) < 1 ? 1 + 'ml' : Math.ceil((((10*peso)*1.44)/50)) < 124 ? (144 - (((10*peso)*1.44)/50) < 1 ? 1 + 'ml' : Math.ceil((((10*peso)*1.44)/50))):
         (((10*peso)*1.44)/50) < 1 ? 1 + 'ml' : Math.ceil((((10*peso)*1.44)/50)) < 148 ? (168 - (((10*peso)*1.44)/50) < 1 ? 1 + 'ml' : Math.ceil((((10*peso)*1.44)/50))):
-        (((10*peso)*1.44)/50) < 1 ? 1 + 'ml' : Math.ceil((((10*peso)*1.44)/50)) < 172 ? (192 - (((10*peso)*1.44)/50) < 1 ? 1 + 'ml' : Math.ceil((((10*peso)*1.44)/50))): 0.5).toFixed(1) + 'ml'
+        (((10*peso)*1.44)/50) < 1 ? 1 + 'ml' : Math.ceil((((10*peso)*1.44)/50)) < 172 ? (192 - (((10*peso)*1.44)/50) < 1 ? 1 + 'ml' : Math.ceil((((10*peso)*1.44)/50))): 0.5)).toFixed(1) + 'ml'
         res82.style.backgroundColor = 'gray' 
             
         res83.innerHTML = ((Math.ceil((((0.6*peso)*24)/10))*10) / (( (10*Math.ceil((((0.6*peso)*24)/10))) /
@@ -512,8 +512,8 @@ function calc(){
         (((10*peso)*1.44)/50) < 1 ? 1 + 'ml' : Math.ceil((((10*peso)*1.44)/50)) < 172 ? (192 - (((10*peso)*1.44)/50) < 1 ? 1 + 'ml' : Math.ceil((((10*peso)*1.44)/50))):0.5))) *24)).toFixed(1) + 'ml/h' 
             res83.style.backgroundColor = 'black'  
         
-        res84.innerHTML = 'Dose: 0,6mg/kg/h'
-            res84.style.backgroundColor = 'black' 
+        //res84.innerHTML = 'Dose: 0,6mg/kg/h'
+        //    res84.style.backgroundColor = 'black' 
          //_____________________________________________________________________________________________________________
         res85.innerHTML = (((10*peso)*1.44)/25) < 1 ? 1 : Math.ceil(((10*peso)*1.44/25)) + 'ml' // Tiopental (25mg/mL)
             res85.style.backgroundColor = 'black'    
@@ -543,8 +543,8 @@ function calc(){
         )) * 24)).toFixed(0) + '.0ml'
             res87.style.backgroundColor = 'gray'    
         
-        res88.innerHTML = 'Dose: 10mcg/kg/min'
-            res88.style.backgroundColor = 'black'
+        //res88.innerHTML = 'Dose: 10mcg/kg/min'
+        //    res88.style.backgroundColor = 'black'
          //_____________________________________________________________________________________________________________
         res89.innerHTML = (((0.1*peso)*1.44) < 1 ? 1 : //Adrenalina2 (1mg/mL):
         (((0.1*peso)*1.44))).toFixed(1) + 'ml'
