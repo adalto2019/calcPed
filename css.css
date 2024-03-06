@@ -111,7 +111,7 @@ body{background-image: url();
     -webkit-box-shadow: 5px 1px 8px rgb(239, 3, 3);
     }    
 
-.link h3{font-size: 3rem;
+.link h3{font-size: 2.5rem;
     color: var(--cor-txt);
     font-family: var(--fonte);}
 
