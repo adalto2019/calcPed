@@ -975,16 +975,17 @@ function limpar(){
 
 //Funções que mudam a cor dos botões ao passar o mouse sobre ele, e que volta ao estado anterior ao retirar o mouse sobre ele.
 function mudaCorBtn1(){
-    var btn = document.getElementById('btn1'); btn.style.color = 'white', btn.style.backgroundColor = 'rgb(146, 130, 102)' }
+    var btn = document.getElementById('btn1'); btn.style.color = 'white', btn.style.backgroundColor = ' rgb(152, 14, 14)' }
 function voltaCorBtn1(){var btn = document.getElementById('btn1'); btn.style.color = 'rgb(99, 11, 11)', btn.style.backgroundColor = 'wheat'}
 
 function mudaCorBtn2(){
-    var btn = document.getElementById('btn2'); btn.style.color = 'white' , btn.style.backgroundColor = 'rgb(146, 130, 102)'}
+    var btn = document.getElementById('btn2'); btn.style.color = 'white' , btn.style.backgroundColor = 'rgb(152, 14, 14)'}
 function voltaCorBtn2(){var btn = document.getElementById('btn2'); btn.style.color = 'rgb(99, 11, 11)', btn.style.backgroundColor = 'wheat'}
 
-function mudaCorBtn3(){
-    var btn = document.getElementById('btn3'); btn.style.color = 'white' , btn.style.backgroundColor = 'rgb(146, 130, 102)'}
-function voltaCorBtn3(){var btn = document.getElementById('btn3'); btn.style.color = 'rgb(99, 11, 11)', btn.style.backgroundColor = 'wheat'}
+function mudaCorFooter(){
+    var btn = document.getElementById('footer'); btn.style.color = 'gray'}
+function voltaCorFooter(){
+    var btn = document.getElementById('footer'); btn.style.color = 'white'}
 
 
 //INICIO CONTRAIR E EXPANDIR TABELAS ****************************************
