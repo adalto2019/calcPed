@@ -19,6 +19,11 @@ body{background-image: url();
     justify-content: center;
     align-items: center;}
 
+footer{background-color: rgb(152, 14, 14);
+    padding: 12% 0%;
+    margin-top: 20%;
+    width: 390px;}    
+
 /*BOTÕES ------------------------------------------------------------------*/
 #divBtn{margin: 5%;}
 
@@ -64,9 +69,7 @@ body{background-image: url();
 
 #tbAdrenalina, #tbAtropina, #tbBicarbonato, #tbGluconato, #tbGlicose,
 #tbMidazolam, #tbFetanil, #tbMorfina, #tbDextrocetamina, #tbAtracurio, #tbRocuronio, #tbLidocaina, #tbTiopental, #tbFlumazenil, #tbNaloxone,
-#tbCargaDesfibrilacao, #tbCargaCardioversao,
-#tbAdrenalina2, #tbNoradrenalina, #tbDobutamina, #tbMilrinone, #tbNitroprussiato,
-#tbVasopressina, #tbTerbutalina
+#tbCargaDesfibrilacao, #tbCargaCardioversao
 {background-image: url();
     background-size: cover; /*img se adequando a tela*/
     display: flex;
@@ -77,7 +80,8 @@ body{background-image: url();
     color: wheat;}
 
 #tbAdenosina, #tbSulfato, #tbAmiodaroma, #tbDiazepam, #tbFenitoina, #tbFenobar,
-#tbMidazolam2, #tbCetamina, #tbAtracurio2, #tbRocuronio2, #tbTiopental2
+#tbMidazolam2, #tbCetamina, #tbAtracurio2, #tbRocuronio2, #tbTiopental2,
+#tbAdrenalina2, #tbNoradrenalina, #tbDobutamina, #tbMilrinone, #tbNitroprussiato, #tbVasopressina, #tbTerbutalina
     {background-image: url();
     background-size: cover; /*img se adequando a tela*/
     display: flex;
@@ -94,7 +98,7 @@ body{background-image: url();
     flex-direction: column;
     align-items: center;
     background-color: var(--cor-background); /*chamando as variáveis*/
-    width: 400px;
+    width: 390px;
     margin: 3px 0px;
     border-radius: 12px;
     -webkit-box-shadow: 0px 0px 30px rgb(99, 11, 11);}
@@ -115,7 +119,7 @@ body{background-image: url();
 
 .link h4{
     color: black;  
-    width: 400px;
+    width: 390px;
     text-align: center;
     margin: 8px 0px;
     padding: 3px 0px;
@@ -177,6 +181,3 @@ body{background-image: url();
     color: white;
     padding-left: 10px;}
     
-.link footer{background-color: rgb(152, 14, 14);
-    padding: 12% 0%;
-    margin-top: 10%;}

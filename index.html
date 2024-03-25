@@ -14,51 +14,47 @@
     <meta charset="pt-br">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css.css">
+    <link rel="stylesheet" href="dropDown.css">
     <link rel="icon" href=""/>
 </head>
 <body>
     <div class="link">
         <img id="logo" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSWwOXmYmX_gbrFn03udSnVYl5PnGOu9-InTQ&usqp=CAU" alt="Img de Perfil">
         <h3>myCalcPed</h3>
-        <form>
+        <!--<form>
             <fieldset>
              <legend>*Informe o Peso do Paciente:</legend>
-             <!-- não permite auto-complete, e tamanho máximo 4 posições -->
+              não permite auto-complete, e tamanho máximo 4 posições 
                 <input id="peso" type="number" autocomplete="off" maxlength="4" placeholder=" Ex. 0.0kg" title="Informe o peso do paciente. *Campo obrigatório."><br/>
             </fieldset>
         </form>
         <div id="divBtn">
             <input id="btn1" type="reset"  value="Limpar" onclick="limpar()" onmouseenter="mudaCorBtn1()" onmouseout="voltaCorBtn1()" title=" Limpar a página">
             <input id="btn2" type="button" value="Calcular" onclick="calc()" onmouseenter="mudaCorBtn2()" onmouseout="voltaCorBtn2()" title=" Calcula a dosagem de medicação baseada no peso informado do paciente">
-        </div>
+        </div>-->
          <!-- Adrenalina ###################################################################################################-->
-         <h4>Parada cardiorrespiratória/emergências</h4> 
-         <div id="btnsParadaCardio">   
-            <input type="button" onclick="exibirAdrenalina()" id="btnMed1" value=" Adrenalina (1:1000) ">  
-                <table id="tbAdrenalina" style="display: none;">
-                    <tr>
-                        <td>EV / IO (0,01mg/kg):</td>
-                        <td><div id="res1">0.00mg</div></td>
-                        <td id="col4">Diluir 1 amp em 9mL de AD e fazer:</td>
-                        <td><div id="res2">0.0ml</div></td>
-                        <td colspan="4">a cada 3 a 5 minutos.</td>
-                    </tr>
-                        <tr>    
-                        <td>ET (0,1mg/kg):</td>
-                        <td><div id="res3">0.0mg</div></td>
-                        <td>Administrar:</td>
-                        <td><div id="res4">0.00ml</div></td>
-                        <td colspan="4">sem diluir a cada 3 a 5 minutos se ausência de acesso.</td>
-                    </tr>
-                    <tr>
-                        <td>Anafilaxia (0,01mg/kg):</td>
-                        <td><div id="res5">0.00mg</div></td>
-                        <td>Administrar:</td>
-                        <td><div id="res6">0.00ml</div></td>
-                        <td colspan="4">IM, sem diluir, a cada 15 minutos (dose máxima: 0,3mg).</td>
-                    </tr>
-            </table>    
-            <!-- Atropina ###################################################################################################-->
+         <h4>Parada Cardiorrespiratória/Emergências</h4> 
+         <div id="btnsParadaCardio">  
+         
+            <div class="dropdown">
+                <button onclick="myFunction()" class="dropbtn">Adrenalina</button>
+                <div id="myDropdown" class="dropdown-content">
+                  <a id="line" onclick="peso2e5a3Kg()" >Idade: 0/1 Mês | Peso: 2.5/3.0 Kg | Tam: 48/52 Cm</a>
+                  <a href="#">Idade: 1/2 Meses | Peso: 4.0 Kg | Tam: 52/56 Cm</a>
+                  <a id="line" href="#">Idade: 3/4 Meses | Peso: 5.0 Kg | Tam: 56/59 Cm</a>
+                  <a href="#">Idade: 4/5 Meses | Peso: 6.0 Kg | Tam: 59/67 Cm</a>
+                  <a id="line" href="#">Idade: 5/11 Meses | Peso: 8.0/9.0 Kg | Tam: 67/74 Cm</a>
+                  <a href="#">Idade: 11/19 Meses | Peso: 10/11 Kg | Tam: 74/84 Cm</a>
+                  <a id="line" href="#">Idade: 19/30 Meses | Peso: 12/14 Kg | Tam: 84/96 Cm</a>
+                  <a href="#">Idade: 2.5/3.5 Anos | Peso: 15/18 Kg | Tam: 96/106 Cm</a>
+                  <a id="line" href="#">Idade: 3.5/5 Anos | Peso: 19/23 Kg | Tam: 96/106 Cm</a>
+                  <a href="#">Idade: 5/8 Anos | Peso: 24/29 Kg | Tam: 122/131 Cm</a>
+                  <a id="line" href="#">Idade: 8/10 Anos | Peso: -- Kg | Tam: 101/140 Cm</a>
+                </div>
+            </div>
+            
+            
+            <!-- Atropina ###################################################################################################
             <input type="button" onclick="exibirAtropina()" id="btnMed2" value=" Atropina 0,25mg/ml ">  
                 <table id="tbAtropina" style="display: none;">
                     <td>EV/IO/ET (0,02mg/kg):</td>
@@ -67,7 +63,7 @@
                     <td><div id="res8">0.0ml</div></td>
                     <td colspan="4">por dose. Mínimo de 0,1mg e máximo de 0,5mg/dose.</td>
                 </table>
-            <!-- Adenosina ###################################################################################################-->
+            Adenosina ###################################################################################################
             <input type="button" onclick="exibirAdenosina()" id="btnMed3" value=" Adenosina (6mg/2mL) ">  
                 <table id="tbAdenosina" style="display: none;">
                     <tr>
@@ -85,7 +81,7 @@
                         <td colspan="4">EV em bolus rápido, seguido por flush de 5 a 10mL de SF.</td>
                     </tr>
                 </table>
-            <!-- Amiodarona (50mg/mL) ###################################################################################################-->
+            Amiodarona (50mg/mL) ###################################################################################################
             <input type="button" onclick="exibirAmiodaroma()" id="btnMed4" value=" Amiodarona (50mg/mL) ">  
                 <table id="tbAmiodaroma" style="display: none;">
                     <tr>
@@ -105,8 +101,8 @@
                         <td>de SF e infundir em 20 a 60 minutos.</td>
                     </tr>
                 </table>
-            <!-- Sulfato de magnésio 10%
-                    (100mg/mL ou 0,8mEq/mL) ###################################################################################################-->
+            <Sulfato de magnésio 10%
+                    (100mg/mL ou 0,8mEq/mL) ###################################################################################################
             <input type="button" onclick="exibirSulfato()" id="btnMed5" value=" Sulfato de magnésio 10% ">  
                 <table id="tbSulfato" style="display: none;">
                     <tr>
@@ -133,7 +129,7 @@
                         <td>de SF e infundir em 30 min na asma grave.</td>    
                     </tr>
                 </table>
-            <!-- Bicarbonato de sódio 8,4% ###################################################################################################-->
+            Bicarbonato de sódio 8,4% ###################################################################################################
             <input type="button" onclick="exibirBicarbonato()" id="btnMed6" value=" Bicarbonato de sódio 8,4% ">  
                 <table id="tbBicarbonato" style="display: none;">
                     <tr>
@@ -144,7 +140,7 @@
                         <td colspan="4">em bolus lento..</td>
                     </tr>
                 </table>   
-            <!-- Gluconato de cálcio 10% ###################################################################################################-->
+            Gluconato de cálcio 10% ###################################################################################################
             <input type="button" onclick="exibirGluconato()" id="btnMed7" value=" Gluconato de cálcio 10% ">  
                 <table id="tbGluconato" style="display: none;">
                     <tr>
@@ -155,7 +151,7 @@
                         <td colspan="4">em bolus lento na PCR e em 20min na hipocalcemia sintomática.</td>
                      </tr>
                 </table>
-            <!-- Glicose 50% ###################################################################################################-->
+            Glicose 50% ###################################################################################################
             <input type="button" onclick="exibirGlicose()" id="btnMed8" value=" Glicose 50% ">  
                 <table id="tbGlicose" style="display: none">
                     <tr>
@@ -177,9 +173,9 @@
                     </tr>
                 </table>
         </div>
-        <!--FIM TABELA 1 ###################################################################################################-->
+        FIM TABELA 1 ###################################################################################################
          
-        <!--INICIO TABELA 2 -Diazepam (5mg/mL) ################################################################################################-->
+        INICIO TABELA 2 -Diazepam (5mg/mL) ################################################################################################
         <h4>Anticonvulsivantes</h4>
             <div id="btnsAnticonvulsivantes"> 
                 <input type="button" onclick="exibirDiazepam()" id="btnMed9" value=" Diazepam (5mg/mL) ">  
@@ -195,7 +191,7 @@
                 <input type="button" onclick="exibirFenitoina()" id="btnMed10" value=" Fenitoína (50mg/mL) ">
                     <table id="tbFenitoina" style="display: none">
                         <tr>
-                            <td>15mg/kg:</td>
+                            <td>15mg/kg:</td>https://www.w3schools.com/howto/howto_css_fixed_menu.asp
                             <td><div id="res37">0.0mg</div></td>
                             <td>Diluir:</td>
                             <td><div id="res38">0.0ml</div></td>
@@ -221,9 +217,9 @@
                         </tr>
                     </table>
             </div>        
-        <!--FIM TABELA 2 ###################################################################################################-->
+        FIM TABELA 2 ###################################################################################################
          
-        <!--INICIO TABELA 3 - Midazolam (5mg/mL) ################################################################################################-->
+        INICIO TABELA 3 - Midazolam (5mg/mL) ################################################################################################
         <h4>Drogas para sedação / analgesia</h4>
         <div id="btnsAnticonvulsivantes"> 
                 <input type="button" onclick="exibirMidazolam()" id="btnMed12" value=" Midazolam (5mg/mL) ">  
@@ -334,9 +330,9 @@
                     </table>    
         </table>    
         </div>
-        <!--FIM TABELA 3 ###################################################################################################-->
+        FIM TABELA 3 ###################################################################################################
         
-        <!--INICIO TABELA 4 ################################################################################################-->
+        INICIO TABELA 4 ################################################################################################
         <h4>Drogas para infusão contínua</h4>
             <div id="btnsAnticonvulsivantes"> 
                 <input type="button" onclick="exibirMidazolam2()" id="btnMed22" value=" Midazolam / Fentanil">  
@@ -351,7 +347,7 @@
                             <td rowspan="2"><div id="res70">0.0ml</div></td>
                             <td rowspan="2">infundir a:</td>
                             <td rowspan="2"><div id="res71">0.0ml/h</div></td>
-                            <!--<td rowspan="2"><div id="res72">--</div></td>-->
+                            <td rowspan="2"><div id="res72">--</div></td>
                         </tr>
                         <tr>
                             <td>1 a 5mcg/kg/h:</td>
@@ -367,7 +363,7 @@
                             <td><div id="res74">0.0ml</div></td>
                             <td>infundir a:</td>
                             <td><div id="res75">0.0ml/h</div></td>
-                            <!-- <td><div id="res76">--</div></td> -->
+                         <td><div id="res76">--</div></td>
                         </tr>
                     </table>
                 <input type="button" onclick="exibirAtracurio2()" id="btnMed24" value=" Atracúrio (10mg/mL) ">  
@@ -380,7 +376,7 @@
                             <td><div id="res78">0.0ml</div></td>
                             <td>infundir a:</td>
                             <td><div id="res79">0.0ml</div></td>
-                            <!-- <td><div id="res80">--</div></td> -->
+                            <td><div id="res80">--</div></td>
                         </tr>
                     </table>
                 <input type="button" onclick="exibirRocuronio2()" id="btnMed25" value=" Rocurônio (10mg/mL) ">  
@@ -393,7 +389,7 @@
                             <td><div id="res82">0.0ml</div></td>
                             <td>infundir a:</td>
                             <td><div id="res83">0.0ml/h</div></td>
-                            <!-- <td><div id="res84">--</div></td> -->
+                            <td><div id="res84">--</div></td>
                         </tr>
                     </table>
                 <input type="button" onclick="exibirTiopental2()" id="btnMed26" value=" Tiopental (25mg/mL) ">  
@@ -406,7 +402,7 @@
                             <td><div id="res86">0.0ml</div></td>
                             <td>infundir a:</td>
                             <td><div id="res87">0.0ml/h</div></td>
-                            <!-- <td><div id="res88">--</div></td> -->
+                            <td><div id="res88">--</div></td>
                         </tr>
                     </table>    
                 <input type="button" onclick="exibirAdrenalina2()" id="btnMed27" value=" Adrenalina (1mg/mL): ">  
@@ -418,9 +414,9 @@
                             <td><div id="res90">0.0ml</div></td>
                             <td>infundir a:</td>
                             <td><div id="res91">0.0ml/h</div></td>
-                            <!-- <td><div id="res92">--</div></td> 
+                            <td><div id="res92">--</div></td> 
                             <td><div id="res93">--</div></td>
-                            <td><div id="res94">--</div></td> -->
+                            <td><div id="res94">--</div></td>
                         </tr>
                     </table> 
                 <input type="button" onclick="exibirNoradrenalina()" id="btnMed28" value=" Noradrenalina (1mg/mL):  ">  
@@ -432,20 +428,23 @@
                             <td><div id="res96">0.0ml</div></td>
                             <td>infundir a:</td>
                             <td><div id="res97">0.0ml/h</div></td>
-                            <!-- <td><div id="res98">--</div></td>
-                            <td><div id="res99">--</div></td> -->
+                            <td><div id="res970">--</div></td>
+                            <td><div id="res98">--</div></td>
+                            <td><div id="res99">--</div></td>
                         </tr>
                     </table>
                 <input type="button" onclick="exibirDobutamina()" id="btnMed29" value=" Dobutamina (250mg/20mL):  ">  
                     <table id="tbDobutamina" style="display: none">          
                         <tr>
                             <td><div id="res100">0.0ml</div></td>
-                            <td><div id="res101">+</div></td>
-                            <td><div id="res102"></div>SF ou SG 5%:</td>
-                            <td><div id="res103">0.0ml</div></td>
-                            <td><div id="res104">infundir a:</div></td>
-                            <td><div id="res105">ml/h</div></td>
-                            <!-- <td><div id="res106">--</div></td> -->
+                            <td><div>+</div></td>
+                            <td><div></div>SF ou SG 5%:</td>
+                            <td><div id="res101">0.0ml</div></td>
+                            <td><div id="res102">infundir a:</div></td>
+                            <td><div id="res103">ml/h</div></td>
+                            <td><div id="res104">--</div></td>
+                            <td><div id="res105">--</div></td>
+                            <td><div id="res106">--</div></td>
                         </tr>
                     </table>
                 <input type="button" onclick="exibirMilrinone()" id="btnMed30" value=" Milrinone (1mg/mL):  ">  
@@ -457,9 +456,9 @@
                             <td><div id="res108">0.0ml</div></td>
                             <td>infundir a:</td>
                             <td><div id="res109">0.0ml/h</div></td>
-                            <!-- <td><div id="res110">--</div></td>
+                            <td><div id="res110">--</div></td>
                             <td><div id="res111">--</div></td>
-                            <td><div id="res112">--</div></td> -->
+                            <td><div id="res112">--</div></td>
                         </tr>
                     </table> 
                 <input type="button" onclick="exibirNitroprussiato()" id="btnMed31" value=" Nitroprussiato (25mg/mL):  ">  
@@ -471,9 +470,9 @@
                             <td><div id="res114">0.0ml</div></td>
                             <td>infundir a:</td>
                             <td><div id="res115">0.0ml/h</div></td>
-                            <!-- <td><div id="res116">--</div></td>
+                            <td><div id="res116">--</div></td>
                             <td><div id="res117">--</div></td>
-                            <td><div id="res118">--</div></td> -->
+                            <td><div id="res118">--</div></td>
                         </tr>
                     </table>
                 <input type="button" onclick="exibirVasopressina()" id="btnMed32" value=" Vasopressina (20 UI/mL):  ">  
@@ -485,9 +484,9 @@
                             <td><div id="res120">0.0ml</div></td>
                             <td>infundir a:</td>
                             <td><div id="res121">0.0ml/h</div></td>
-                            <!-- <td><div id="res122">--</div></td>
+                            <td><div id="res122">--</div></td>
                             <td><div id="res123">--</div></td>
-                            <td><div id="res124">--</div></td> -->
+                            <td><div id="res124">--</div></td>
                         </tr>
                     </table>
                 <input type="button" onclick="exibirTerbutalina()" id="btnMed33" value=" Terbutalina (0,5mg/mL):  ">  
@@ -499,15 +498,15 @@
                             <td><div id="res126">0.0ml</div></td>
                             <td>infundir a:</td>
                             <td><div id="res127">0.0ml/h</div></td>
-                            <!-- <td><div id="res128">--</div></td>
+                            <td><div id="res128">--</div></td>
                             <td><div id="res129">--</div></td>
-                            <td><div id="res130">--</div></td> -->
+                            <td><div id="res130">--</div></td>
                         </tr>
                     </table>    
             </div>       
-        <!--FIM TABELA 4 ###################################################################################################-->
+        FIM TABELA 4 ###################################################################################################
         
-        <!--INICIO TABELA 5 ################################################################################################-->
+        INICIO TABELA 5 ################################################################################################
         <h4>Dispositivos </h4>
             <div id="btnsAnticonvulsivantes"> 
                 <input type="button" onclick="exibirAmbu()" id="btnMed34" value=" Ambu ">  
@@ -571,12 +570,13 @@
                             <td><div id="res151">--</div></td>
                         </tr>
         </table>    
-        <!--FIM TABELA 5 ###################################################################################################-->    
+        <FIM TABELA 5 ###################################################################################################-->   
     <footer>
         <a id="footer" onmouseenter="mudaCorFooter()" onmouseout="voltaCorFooter()" href="https://lemonchiffon-mosquito-565952.builder-preview.com/">| Reportar um Problema</a>
         <p>Versão 1.0. - 2024 &copy; Todos os Direitos Reservados.</p>
     </footer>
     </div>
     <script src="js.js"> </script>
+    <script src="dropDown.js"></script>
     </body>
 </html>
