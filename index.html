@@ -9,7 +9,6 @@
 
   gtag('config', 'G-LLW3FVXNS7');
 </script>
-
     <title>myCalPed</title>
     <meta charset="pt-br">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -19,14 +18,16 @@
 </head>
 <body>
     <div class="link">
+    <header>
         <img id="logo" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSWwOXmYmX_gbrFn03udSnVYl5PnGOu9-InTQ&usqp=CAU" alt="Img de Perfil">
         <h3>myCalcPed</h3>
-        <h4>Parada Cardiorrespiratória/Emergências</h4> 
-        <div id="btnsParadaCardio">  
+    </header>    
+        <h4>Parada Cardiorrespiratória/Emergências</h4>
+    
             <div class="dropdown">
                 <button onclick="functionAdrenalina()" class="dropbtn">Adrenalina</button>
                 <div id="myDropdownAdrenalina" class="dropdown-content">
-                    <!-- Adrenalina ###################################################################################################-->
+                <!-- Adrenalina ###################################################################################################-->
                     <a onclick="adrenalinaL1()" id="line" >Idade: 0/1 Mês | Peso: 2.5/3.0 Kg | Tam: 48/52cm</a>
                     <a onclick="adrenalinaL2()">Idade: 1/2 Meses | Peso: 4.0 Kg | Tam: 52/56cm</a>
                     <a onclick="adrenalinaL3()"id="line">Idade: 3/4 Meses | Peso: 5.0 Kg | Tam: 56/59cm</a>
@@ -39,8 +40,21 @@
                     <a onclick="adrenalinaL10()">Idade: 5/8 Anos | Peso: 24/29 Kg | Tam: 122/131cm</a>
                     <a onclick="adrenalinaL11()" id="line">Idade: 8/10 Anos | Peso: -- Kg | Tam: 101/140cm</a>
                 </div>
-                    <!-- Atropina ###################################################################################################-->    
-                    <!-- Adenosina ###################################################################################################-->    
+                <!-- Atropina ###################################################################################################-->
+                <button onclick="functionAtropina()" class="dropbtn">Atropina</button>
+                <div id="myDropdownAtropina" class="dropdown-content">        
+                    <a onclick="atropina1()" id="line" >Idade: 0/1 Mês | Peso: 2.5/3.0 Kg | Tam: 48/52cm</a>
+                    <a onclick="atropina2()">Idade: 1/2 Meses | Peso: 4.0 Kg | Tam: 52/56cm</a>
+                    <a onclick="atropina3()"id="line">Idade: 3/4 Meses | Peso: 5.0 Kg | Tam: 56/59cm</a>
+                    <a onclick="atropina4()">Idade: 4/5 Meses | Peso: 6.0 Kg | Tam: 59/67cm</a>
+                    <a onclick="atropina5()" id="line">Idade: 5/11 Meses | Peso: 8.0/9.0 Kg | Tam: 67/74cm</a>
+                    <a onclick="atropina6()">Idade: 11/19 Meses | Peso: 10/11 Kg | Tam: 74/84cm</a>
+                    <a onclick="atropina7()" id="line">Idade: 19/30 Meses | Peso: 12/14 Kg | Tam: 84/96cm</a>
+                    <a onclick="atropina8()">Idade: 2.5/3.5 Anos | Peso: 15/18 Kg | Tam: 96/106cm</a>
+                    <a onclick="atropina9()" id="line">Idade: 3.5/5 Anos | Peso: 19/23 Kg | Tam: 96/106cm</a>
+                    <a onclick="atropina10()">Idade: 5/8 Anos | Peso: 24/29 Kg | Tam: 122/131cm</a>
+                    <a onclick="atropina11()" id="line">Idade: 8/10 Anos | Peso: -- Kg | Tam: 101/140cm</a>
+                </div>        
                 <!-- Amiodaroma ###################################################################################################-->
                 <button onclick="functionAmiodarona()" class="dropbtn">Amiodarona</button>
                 <div id="myDropdownAmiodarona" class="dropdown-content">        
@@ -55,12 +69,56 @@
                     <a onclick="amiodarona9()" id="line">Idade: 3.5/5 Anos | Peso: 19/23 Kg | Tam: 96/106cm</a>
                     <a onclick="amiodarona10()">Idade: 5/8 Anos | Peso: 24/29 Kg | Tam: 122/131cm</a>
                     <a onclick="amiodarona11()" id="line">Idade: 8/10 Anos | Peso: -- Kg | Tam: 101/140cm</a>
-                </div> 
-            </div> 
-          
+                </div>
+                <button onclick="functionAdenosina()" class="dropbtn">Adenosina</button>
+                <div id="myDropdownAdenosina" class="dropdown-content">
+                <!-- Adenosina ###################################################################################################-->
+                    <a onclick="adenosina1()" id="line" >Idade: 0/1 Mês | Peso: 2.5/3.0 Kg | Tam: 48/52cm</a>
+                    <a onclick="adenosina2()">Idade: 1/2 Meses | Peso: 4.0 Kg | Tam: 52/56cm</a>
+                    <a onclick="adenosina3()"id="line">Idade: 3/4 Meses | Peso: 5.0 Kg | Tam: 56/59cm</a>
+                    <a onclick="adenosina4()">Idade: 4/5 Meses | Peso: 6.0 Kg | Tam: 59/67cm</a>
+                    <a onclick="adenosina5()" id="line">Idade: 5/11 Meses | Peso: 8.0/9.0 Kg | Tam: 67/74cm</a>
+                    <a onclick="adenosina6()">Idade: 11/19 Meses | Peso: 10/11 Kg | Tam: 74/84cm</a>
+                    <a onclick="adenosina7()" id="line">Idade: 19/30 Meses | Peso: 12/14 Kg | Tam: 84/96cm</a>
+                    <a onclick="adenosina8()">Idade: 2.5/3.5 Anos | Peso: 15/18 Kg | Tam: 96/106cm</a>
+                    <a onclick="adenosina9()" id="line">Idade: 3.5/5 Anos | Peso: 19/23 Kg | Tam: 96/106cm</a>
+                    <a onclick="adenosina10()">Idade: 5/8 Anos | Peso: 24/29 Kg | Tam: 122/131cm</a>
+                    <a onclick="adenosina11()" id="line">Idade: 8/10 Anos | Peso: -- Kg | Tam: 101/140cm</a>
+                </div>
+                <!-- Bicarbonato de Sódio #######################################################################################-->
+                <button onclick="functionBicarbonatoSodio()" class="dropbtn">Bicarbonato Sódio 8,4%</button>
+                <div id="myDropdownBicarbonatoSodio" class="dropdown-content">        
+                    <a onclick="bicarbonatoSodio1()" id="line" >Idade: 0/1 Mês | Peso: 2.5/3.0 Kg | Tam: 48/52cm</a>
+                    <a onclick="bicarbonatoSodio2()">Idade: 1/2 Meses | Peso: 4.0 Kg | Tam: 52/56cm</a>
+                    <a onclick="bicarbonatoSodio3()"id="line">Idade: 3/4 Meses | Peso: 5.0 Kg | Tam: 56/59cm</a>
+                    <a onclick="bicarbonatoSodio4()">Idade: 4/5 Meses | Peso: 6.0 Kg | Tam: 59/67cm</a>
+                    <a onclick="bicarbonatoSodio5()" id="line">Idade: 5/11 Meses | Peso: 8.0/9.0 Kg | Tam: 67/74cm</a>
+                    <a onclick="bicarbonatoSodio6()">Idade: 11/19 Meses | Peso: 10/11 Kg | Tam: 74/84cm</a>
+                    <a onclick="bicarbonatoSodio7()" id="line">Idade: 19/30 Meses | Peso: 12/14 Kg | Tam: 84/96cm</a>
+                    <a onclick="bicarbonatoSodio8()">Idade: 2.5/3.5 Anos | Peso: 15/18 Kg | Tam: 96/106cm</a>
+                    <a onclick="bicarbonatoSodio9()" id="line">Idade: 3.5/5 Anos | Peso: 19/23 Kg | Tam: 96/106cm</a>
+                    <a onclick="bicarbonatoSodio10()">Idade: 5/8 Anos | Peso: 24/29 Kg | Tam: 122/131cm</a>
+                    <a onclick="bicarbonatoSodio11()" id="line">Idade: 8/10 Anos | Peso: -- Kg | Tam: 101/140cm</a>
+                </div>        
+                <!-- Glicose a 50% ###############################################################################################-->
+                <button onclick="functionGlicose()" class="dropbtn">Glicose a 50%</button>
+                <div id="myDropdownGlicose" class="dropdown-content">        
+                    <a onclick="glicose1()" id="line" >Idade: 0/1 Mês | Peso: 2.5/3.0 Kg | Tam: 48/52cm</a>
+                    <a onclick="glicose2()">Idade: 1/2 Meses | Peso: 4.0 Kg | Tam: 52/56cm</a>
+                    <a onclick="glicose3()"id="line">Idade: 3/4 Meses | Peso: 5.0 Kg | Tam: 56/59cm</a>
+                    <a onclick="glicose4()">Idade: 4/5 Meses | Peso: 6.0 Kg | Tam: 59/67cm</a>
+                    <a onclick="glicose5()" id="line">Idade: 5/11 Meses | Peso: 8.0/9.0 Kg | Tam: 67/74cm</a>
+                    <a onclick="glicose6()">Idade: 11/19 Meses | Peso: 10/11 Kg | Tam: 74/84cm</a>
+                    <a onclick="glicose7()" id="line">Idade: 19/30 Meses | Peso: 12/14 Kg | Tam: 84/96cm</a>
+                    <a onclick="glicose8()">Idade: 2.5/3.5 Anos | Peso: 15/18 Kg | Tam: 96/106cm</a>
+                    <a onclick="glicose9()" id="line">Idade: 3.5/5 Anos | Peso: 19/23 Kg | Tam: 96/106cm</a>
+                    <a onclick="glicose10()">Idade: 5/8 Anos | Peso: 24/29 Kg | Tam: 122/131cm</a>
+                    <a onclick="glicose11()" id="line">Idade: 8/10 Anos | Peso: -- Kg | Tam: 101/140cm</a>
+                </div>
+            </div>            
     <footer>
         <a id="footer" onmouseenter="mudaCorFooter()" onmouseout="voltaCorFooter()" href="https://lemonchiffon-mosquito-565952.builder-preview.com/">| Reportar um Problema</a>
-        <p>Versão 1.0. - 2024 &copy; Todos os Direitos Reservados.</p>
+        <p>Versão 1.1. - 2024 &copy; Todos os Direitos Reservados.</p>
     </footer>
     </div>
     <script src="js.js"> </script>
