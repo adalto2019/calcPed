@@ -25,70 +25,6 @@ footer{background-color:  rgb(187, 71, 71);
     width: 390px;
     text-align: center;}    
 
-/*BOTÕES ------------------------------------------------------------------*/
-#divBtn{margin: 5%;}
-
-#btn1, #btn2{padding: 15px; /*BTNS CALCULAR e LIMPAR*/
-    margin: 5px;
-    border-radius: 10px;
-    background-color: wheat;
-    color: rgb(99, 11, 11);
-    width: 100px;
-    border: none;
-    box-shadow: 1px 1px 5px rgb(239, 3, 3);} 
-
-#btnMed1, #btnMed2, #btnMed3, #btnMed4, #btnMed5, #btnMed6, #btnMed7, #btnMed8 , #btnMed9, #btnMed10, 
-#btnMed11, #btnMed12, #btnMed13, #btnMed14, #btnMed15, #btnMed16, #btnMed17, #btnMed18, #btnMed19, #btnMed20, 
-#btnMed21, #btnMed22, #btnMed23, #btnMed24, #btnMed25, #btnMed26, #btnMed27, #btnMed28, #btnMed29, #btnMed30,
-#btnMed31, #btnMed32, #btnMed33, #btnMed34, #btnMed35, #btnMed36, #btnMed37, #btnMed38, #btnMed39, #btnMed40,
-#btnMed41, #btnMed42, #btnMed43, #btnMed44, #btnMed45
-    {margin: 8px;
-    border: none; 
-    border-radius: 10px; 
-    width: 170px;
-    height: 25px;
-    background-color: wheat;
-    box-shadow: 1px 1px 5px rgb(239, 3, 3);}
-
-/*TABELAS ------------------------------------------------------------------*/
-#tbAmbu, #tbLaminaLaringo, #tbCanulaTraqueal, #tbFixacao, #tbDrenoTorax, #tbAspiracao, #tbSNG, #tbUrinaria, #tbIntraOssea,
-#tbPasDesfibrilacao
-{background-image: url();
-    background-size: cover; /*img se adequando a tela*/
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 10px;
-    background-color: rgb(152, 14, 14);
-    color: wheat;
-    font-size: 3rem;}
-
-#tbAdrenalina, #tbAtropina, #tbBicarbonato, #tbGluconato, #tbGlicose,
-#tbMidazolam, #tbFetanil, #tbMorfina, #tbDextrocetamina, #tbAtracurio, #tbRocuronio, #tbLidocaina, #tbTiopental, #tbFlumazenil, #tbNaloxone,
-#tbCargaDesfibrilacao, #tbCargaCardioversao
-{background-image: url();
-    background-size: cover; /*img se adequando a tela*/
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 10px;
-    background-color: rgb(152, 14, 14);
-    color: wheat;}
-
-#tbAdenosina, #tbSulfato, #tbAmiodaroma, #tbDiazepam, #tbFenitoina, #tbFenobar,
-#tbMidazolam2, #tbCetamina, #tbAtracurio2, #tbRocuronio2, #tbTiopental2,
-#tbAdrenalina2, #tbNoradrenalina, #tbDobutamina, #tbMilrinone, #tbNitroprussiato, #tbVasopressina, #tbTerbutalina
-    {background-image: url();
-    background-size: cover; /*img se adequando a tela*/
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 10px;
-    background-color: rgb(152, 14, 14);
-    color: wheat;
-    font-size: 0.65rem;}
-    
-
  /*Corpo do app-------------------------------------------------------------*/   
 .link{display: flex;
     flex-direction: column;
@@ -108,7 +44,7 @@ footer{background-color:  rgb(187, 71, 71);
     box-shadow: 0 0 20px rgb(249, 248, 248);
     -webkit-box-shadow: 0px 0px 15px rgb(171, 8, 8);
     }    
-
+/*Titulo 'myCalcPed' -------------------------------------------------------------*/   
 .link h3{font-size: 2.5rem;
     color: var(--cor-txt);
     font-family: var(--fonte);
@@ -126,53 +62,11 @@ footer{background-color:  rgb(187, 71, 71);
 .link p{margin-top: 30px;}
 
 .link fieldset{color: black;  text-align: center;}
-    
-#peso{margin: 5px;
-    width: 100px;
-    height: 50px; 
-    border-radius: 15px;
-    text-align: center;
-    font-size: 15px;
-    background-color: wheat;}
-
 
 .link Form{color: aliceblue; 
     margin: 3px;
     }
 
-.link #tb1, #tb3{border: solid black 1px;
-    border-collapse: collapse;
-    border-style:  groove;
-    margin: auto;
-    font-size: 11px;
-    color: wheat;
-    text-align: center;
-    } 
-
-.link #tb2{border: solid black 1px;
-    border-collapse: collapse;
-    border-style:  groove;
-    margin: auto;
-    font-size: 9.5px;
-    color: wheat;
-    text-align: center;
-    }
-
-.link #tb4, #tb5{border: solid black 1px;
-    border-collapse: collapse;
-    border-style:  groove;
-    margin: auto;
-    font-size: 8.7px;
-    color: wheat;
-    text-align: center;
-    }    
-
-.link th, td, tr{border: solid black 1px;
-    border-collapse: collapse;
-    border-style:  groove;
-    margin: auto; 
-}   
-            
 .link a, p{color: black;
     font-size: 0.8rem; 
     color: white;

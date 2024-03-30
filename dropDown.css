@@ -33,7 +33,6 @@ header{text-align: center;
 /* Modal exibido ao clicar no btn medicação */
 .dropdown-content {
   display: none;
-  position: absolute;
   background-color: #1a7dbf;
   color: white;
   min-width: 390px;

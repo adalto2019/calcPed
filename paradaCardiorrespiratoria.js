@@ -1,23 +1,25 @@
 /* Adrenalina */
 function functionAdrenalina() {
-    document.getElementById("myDropdownAdrenalina").classList.toggle("show");
-  }
+  document.getElementById("myDropdownAdrenalina").classList.toggle("show");
+}
 function functionAtropina() {
-    document.getElementById("myDropdownAtropina").classList.toggle("show");
-  }
+  document.getElementById("myDropdownAtropina").classList.toggle("show");
+}
 function functionAmiodarona() {
-    document.getElementById("myDropdownAmiodarona").classList.toggle("show");
-  }
-function functionAdenosina() {
-    document.getElementById("myDropdownAdenosina").classList.toggle("show");
-  }  
+  document.getElementById("myDropdownAmiodarona").classList.toggle("show");
+}
+function functionGluconato() {
+  document.getElementById("myDropdownGluconato").classList.toggle("show");
+}    
 function functionBicarbonatoSodio(){
   document.getElementById("myDropdownBicarbonatoSodio").classList.toggle("show");
 }
 function functionGlicose(){
   document.getElementById("myDropdownGlicose").classList.toggle("show");
 }
-
+function functionAdenosina() {
+  document.getElementById("myDropdownAdenosina").classList.toggle("show");
+}  
   // Close the dropdown menu if the user clicks outside of it
   window.onclick = function(event) {
     if (!event.target.matches('.dropbtn')) {
@@ -200,61 +202,61 @@ function functionGlicose(){
     "\nPrescrição: Diluir uma ampola (3ml) em 17ml de ABD e administrar os 20.0ml (diluição inteira) em 5-10 minutos.\n"+
     "\nCálculo: Essa é a dose máxima.")
   }
-  // Adenosina ###################################################################################################
-  function adenosina1(){
-    alert("ADENOSINA - Ampola: (2ml): 6mg\n"+
-    "\nPrescrição: Administrar 0.2ml EV seguida de flush com soro fisiológico. Se necessário repetir uma vez com dose dobrada (0.18ml).\n"+
-    "\nCálculo: Dose mínima Peso x 0.6.")
+  // Gluconato de Cálcio a 10% ###################################################################################################
+  function gluconato1(){
+    alert("GLUCONATO DE CÁLCIO A 10% - Cada ml tem 9mg de cálcio-elemento\n"+
+    "\nPrescrição: Diluir 3ml de gluconato de cálcio em 3ml de ABD e administrar EV lento sob ausculta ou monitorização cardíaca.\n"+
+    "\nCálculo: Peso x 1.")
   }
-  function adenosina2(){
-    alert("ADENOSINA - Ampola: (2ml): 6mg\n"+
-    "\nPrescrição: Administrar 0.2ml EV seguida de flush com soro fisiológico. Se necessário repetir uma vez com dose dobrada (0.24ml).\n"+
-    "\nCálculo: Dose mínima Peso x 0.6.")
+  function gluconato2(){
+    alert("GLUCONATO DE CÁLCIO A 10% - Cada ml tem 9mg de cálcio-elemento\n"+
+    "\nPrescrição: Diluir 4ml de gluconato de cálcio em 4ml de ABD e administrar EV lento sob ausculta ou monitorização cardíaca.\n"+
+    "\nCálculo: Peso x 1.")
   }
-  function adenosina3(){
-    alert("ADENOSINA - Ampola: (2ml): 6mg\n"+
-    "\nPrescrição: Administrar 0.15ml EV seguida de flush com soro fisiológico. Se necessário repetir uma vez com dose dobrada (0.3ml).\n"+
-    "\nCálculo: Peso x 0.3 | Peso x 0.06")
+  function gluconato3(){
+    alert("GLUCONATO DE CÁLCIO A 10% - Cada ml tem 9mg de cálcio-elemento\n"+
+    "\nPrescrição: Diluir 5ml de gluconato de cálcio em 5ml de ABD e administrar EV lento sob ausculta ou monitorização cardíaca.\n"+
+    "\nCálculo: Peso x 1.")
   }
-  function adenosina4(){
-    alert("ADENOSINA - Ampola: (2ml): 6mg\n"+
-    "\nPrescrição: Administrar 0.2ml EV seguida de flush com soro fisiológico. Se necessário repetir uma vez com dose dobrada (0.4ml).\n"+
-    "\nCálculo: Peso x 0.3 | Peso x 0.06")
+  function gluconato4(){
+    alert("GLUCONATO DE CÁLCIO A 10% - Cada ml tem 9mg de cálcio-elemento\n"+
+    "\nPrescrição: Diluir 6ml de gluconato de cálcio em 6ml de ABD e administrar EV lento sob ausculta ou monitorização cardíaca.\n"+
+    "\nCálculo: Peso x 1.")
   }
-  function adenosina5(){
-    alert("ADENOSINA - Ampola: (2ml): 6mg\n"+
-    "\nPrescrição: Administrar 0.25ml EV seguida de flush com soro fisiológico. Se necessário repetir uma vez com dose dobrada (0.5ml).\n"+
-    "\nCálculo: Peso x 0.3 | Peso x 0.06.")
+  function gluconato5(){
+    alert("GLUCONATO DE CÁLCIO A 10% - Cada ml tem 9mg de cálcio-elemento\n"+
+    "\nPrescrição: Diluir 8ml de gluconato de cálcio em 8ml de ABD e administrar EV lento sob ausculta ou monitorização cardíaca.\n"+
+    "\nCálculo: Peso x 1.")
   }
-  function adenosina6(){
-    alert("ADENOSINA - Ampola: (2ml): 6mg\n"+
-    "\nPrescrição: Administrar 0.3ml EV seguida de flush com soro fisiológico. Se necessário repetir uma vez com dose dobrada (0.6ml).\n"+
-    "\nCálculo: Peso x 0.3 | Peso x 0.06.")
+  function gluconato6(){
+    alert("GLUCONATO DE CÁLCIO A 10% - Cada ml tem 9mg de cálcio-elemento\n"+
+    "\nPrescrição: Diluir 10ml de gluconato de cálcio em 10ml de ABD e administrar EV lento sob ausculta ou monitorização cardíaca.\n"+
+    "\nCálculo: Peso x 1.")
   }
-  function adenosina7(){
-    alert("ADENOSINA - Ampola: (2ml): 6mg\n"+
-    "\nPrescrição: Administrar 0.4ml EV seguida de flush com soro fisiológico. Se necessário repetir uma vez com dose dobrada (0.7ml).\n"+
-    "\nCálculo: Peso x 0.3 | Peso x 0.06.")
+  function gluconato7(){
+    alert("GLUCONATO DE CÁLCIO A 10% - Cada ml tem 9mg de cálcio-elemento\n"+
+    "\nPrescrição: Diluir 12ml de gluconato de cálcio em 12ml de ABD e administrar EV lento sob ausculta ou monitorização cardíaca.\n"+
+    "\nCálculo: Peso x 1.")
   }
-  function adenosina8(){
-    alert("ADENOSINA - Ampola: (2ml): 6mg\n"+
-    "\nPrescrição: Administrar 0.5ml EV seguida de flush com soro fisiológico. Se necessário repetir uma vez com dose dobrada (1.0ml).\n"+
-    "\nCálculo: Peso x 0.3 | Peso x 0.06.")
+  function gluconato8(){
+    alert("GLUCONATO DE CÁLCIO A 10% - Cada ml tem 9mg de cálcio-elemento\n"+
+    "\nPrescrição: Diluir 16ml de gluconato de cálcio em 16ml de ABD e administrar EV lento sob ausculta ou monitorização cardíaca.\n"+
+    "\nCálculo: Peso x 1.")
   }
-  function adenosina9(){
-    alert("ADENOSINA - Ampola: (2ml): 6mg\n"+
-    "\nPrescrição: Administrar 0.6ml EV seguida de flush com soro fisiológico. Se necessário repetir uma vez com dose dobrada (1.2ml).\n"+
-    "\nCálculo: Peso x 0.3 | Peso x 0.06.")
+  function gluconato9(){
+    alert("GLUCONATO DE CÁLCIO A 10% - Cada ml tem 9mg de cálcio-elemento\n"+
+    "\nPrescrição: Diluir 20ml de gluconato de cálcio em 20ml de ABD e administrar EV lento sob ausculta ou monitorização cardíaca.\n"+
+    "\nCálculo: Peso x 1.")
   }
-  function adenosina10(){
-    alert("ADENOSINA - Ampola: (2ml): 6mg\n"+
-    "\nPrescrição: Administrar 0.8ml EV seguida de flush com soro fisiológico. Se necessário repetir uma vez com dose dobrada (1.5ml).\n"+
-    "\nCálculo: Peso x 0.3 | Peso x 0.06.")
+  function gluconato10(){
+    alert("GLUCONATO DE CÁLCIO A 10% - Cada ml tem 9mg de cálcio-elemento\n"+
+    "\nPrescrição: Diluir 25ml de gluconato de cálcio em 25ml de ABD e administrar EV lento sob ausculta ou monitorização cardíaca.\n"+
+    "\nCálculo: Peso x 1.")
   }
-  function adenosina11(){
-    alert("ADENOSINA - Ampola: (2ml): 6mg\n"+
-    "\nPrescrição: Administrar 1.0ml EV seguida de flush com soro fisiológico. Se necessário repetir uma vez com dose dobrada (2.0ml).\n"+
-    "\nCálculo: Peso x 0.3 | Peso x 0.06.")
+  function gluconato11(){
+    alert("GLUCONATO DE CÁLCIO A 10% - Cada ml tem 9mg de cálcio-elemento\n"+
+    "\nPrescrição: Diluir 30ml de gluconato de cálcio em 30ml de ABD e administrar EV lento sob ausculta ou monitorização cardíaca.\n"+
+    "\nCálculo: Essa é a dose máxima.")
   }
 // Bicarbonaro de Sódio ###################################################################################################
 function bicarbonatoSodio1(){
@@ -368,4 +370,59 @@ function glicose11(){
   "\nPrescrição: Diluir 35ml de glicose a 50% 35ml de ABD e administrar EV em bolus (Equivale a 0.5g/Kg). Pode usar o dobro se preciso.\n"+
   "\nCálculo: Peso x 0.1.")
 }
-// Gluconato de Cálcio a 10% ###################################################################################################
+// Adenosina ###################################################################################################
+function adenosina1(){
+  alert("ADENOSINA - Ampola: (2ml): 6mg\n"+
+  "\nPrescrição: Administrar 0.2ml EV seguida de flush com soro fisiológico. Se necessário repetir uma vez com dose dobrada (0.18ml).\n"+
+  "\nCálculo: Dose mínima Peso x 0.6.")
+}
+function adenosina2(){
+  alert("ADENOSINA - Ampola: (2ml): 6mg\n"+
+  "\nPrescrição: Administrar 0.2ml EV seguida de flush com soro fisiológico. Se necessário repetir uma vez com dose dobrada (0.24ml).\n"+
+  "\nCálculo: Dose mínima Peso x 0.6.")
+}
+function adenosina3(){
+  alert("ADENOSINA - Ampola: (2ml): 6mg\n"+
+  "\nPrescrição: Administrar 0.15ml EV seguida de flush com soro fisiológico. Se necessário repetir uma vez com dose dobrada (0.3ml).\n"+
+  "\nCálculo: Peso x 0.3 | Peso x 0.06")
+}
+function adenosina4(){
+  alert("ADENOSINA - Ampola: (2ml): 6mg\n"+
+  "\nPrescrição: Administrar 0.2ml EV seguida de flush com soro fisiológico. Se necessário repetir uma vez com dose dobrada (0.4ml).\n"+
+  "\nCálculo: Peso x 0.3 | Peso x 0.06")
+}
+function adenosina5(){
+  alert("ADENOSINA - Ampola: (2ml): 6mg\n"+
+  "\nPrescrição: Administrar 0.25ml EV seguida de flush com soro fisiológico. Se necessário repetir uma vez com dose dobrada (0.5ml).\n"+
+  "\nCálculo: Peso x 0.3 | Peso x 0.06.")
+}
+function adenosina6(){
+  alert("ADENOSINA - Ampola: (2ml): 6mg\n"+
+  "\nPrescrição: Administrar 0.3ml EV seguida de flush com soro fisiológico. Se necessário repetir uma vez com dose dobrada (0.6ml).\n"+
+  "\nCálculo: Peso x 0.3 | Peso x 0.06.")
+}
+function adenosina7(){
+  alert("ADENOSINA - Ampola: (2ml): 6mg\n"+
+  "\nPrescrição: Administrar 0.4ml EV seguida de flush com soro fisiológico. Se necessário repetir uma vez com dose dobrada (0.7ml).\n"+
+  "\nCálculo: Peso x 0.3 | Peso x 0.06.")
+}
+function adenosina8(){
+  alert("ADENOSINA - Ampola: (2ml): 6mg\n"+
+  "\nPrescrição: Administrar 0.5ml EV seguida de flush com soro fisiológico. Se necessário repetir uma vez com dose dobrada (1.0ml).\n"+
+  "\nCálculo: Peso x 0.3 | Peso x 0.06.")
+}
+function adenosina9(){
+  alert("ADENOSINA - Ampola: (2ml): 6mg\n"+
+  "\nPrescrição: Administrar 0.6ml EV seguida de flush com soro fisiológico. Se necessário repetir uma vez com dose dobrada (1.2ml).\n"+
+  "\nCálculo: Peso x 0.3 | Peso x 0.06.")
+}
+function adenosina10(){
+  alert("ADENOSINA - Ampola: (2ml): 6mg\n"+
+  "\nPrescrição: Administrar 0.8ml EV seguida de flush com soro fisiológico. Se necessário repetir uma vez com dose dobrada (1.5ml).\n"+
+  "\nCálculo: Peso x 0.3 | Peso x 0.06.")
+}
+function adenosina11(){
+  alert("ADENOSINA - Ampola: (2ml): 6mg\n"+
+  "\nPrescrição: Administrar 1.0ml EV seguida de flush com soro fisiológico. Se necessário repetir uma vez com dose dobrada (2.0ml).\n"+
+  "\nCálculo: Peso x 0.3 | Peso x 0.06.")
+}
