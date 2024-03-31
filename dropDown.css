@@ -27,7 +27,7 @@ header{text-align: center;
 .dropdown {
   position: relative;
   text-align: center;
-  margin-top: 10px;
+  margin-bottom: 12px;
 }
 
 /* Modal exibido ao clicar no btn medicação */
