@@ -21,12 +21,22 @@
     <header>
         <img id="logo" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSWwOXmYmX_gbrFn03udSnVYl5PnGOu9-InTQ&usqp=CAU" alt="Img de Perfil">
         <h3>myCalcPed</h3>
+        <form>
+             <!-- não permite auto-complete, e tamanho máximo 4 posições -->
+            <span>Digite o peso do paciente:</span><br>
+            <input id="peso" type="number" autocomplete="off" maxlength="4" placeholder=" 0Kg" 
+            title="Informe o peso do paciente. *Campo obrigatório.">
+            <div id="divBtn">
+                <input id="limpar" type="reset"  value="Limpar" onclick="limpar()" title=" Limpar a página">
+                <input id="calc" type="button" value="Informações" onclick="info()" title=" Calcula a dosagem de medicação baseada no peso informado do paciente">
+            </div>
+        </form>
     </header>    
         <h4>Parada Cardiorrespiratória / Emergências</h4>
             <div class="dropdown">
                  <!-- Adrenalina ###################################################################################################-->
-                <button onclick="functionAdrenalina()" class="dropbtn">Adrenalina</button>
-                <div id="myDropdownAdrenalina" class="dropdown-content">
+                <button onclick="fAdrenalina()" class="dropbtn">Adrenalina</button>
+                <!-- <div id="myDropdownAdrenalina" class="dropdown-content">
                     <a onclick="adrenalinaL1()" id="line" >Idade: 0/1 Mês | Peso: 2.5/3.0 Kg | Tam: 48/52cm</a>
                     <a onclick="adrenalinaL2()">Idade: 1/2 Meses | Peso: 4.0 Kg | Tam: 52/56cm</a>
                     <a onclick="adrenalinaL3()"id="line">Idade: 3/4 Meses | Peso: 5.0 Kg | Tam: 56/59cm</a>
@@ -38,9 +48,9 @@
                     <a onclick="adrenalinaL9()" id="line">Idade: 3.5/5 Anos | Peso: 19/23 Kg | Tam: 96/106cm</a>
                     <a onclick="adrenalinaL10()">Idade: 5/8 Anos | Peso: 24/29 Kg | Tam: 122/131cm</a>
                     <a onclick="adrenalinaL11()" id="line">Idade: 8/10 Anos | Peso: -- Kg | Tam: 101/140cm</a>
-                </div>
+                </div>-->
                 <!-- Atropina ###################################################################################################-->
-                <button onclick="functionAtropina()" class="dropbtn">Atropina</button>
+                <button onclick="functiontropina()" class="dropbtn">Button</button>
                 <div id="myDropdownAtropina" class="dropdown-content">        
                     <a onclick="atropina1()" id="line" >Idade: 0/1 Mês | Peso: 2.5/3.0 Kg | Tam: 48/52cm</a>
                     <a onclick="atropina2()">Idade: 1/2 Meses | Peso: 4.0 Kg | Tam: 52/56cm</a>
@@ -55,7 +65,7 @@
                     <a onclick="atropina11()" id="line">Idade: 8/10 Anos | Peso: -- Kg | Tam: 101/140cm</a>
                 </div>        
                 <!-- Amiodaroma ###################################################################################################-->
-                <button onclick="functionAmiodarona()" class="dropbtn">Amiodarona</button>
+                <button onclick="functionAiodarona()" class="dropbtn">Button</button>
                 <div id="myDropdownAmiodarona" class="dropdown-content">        
                     <a onclick="amiodarona1()" id="line" >Idade: 0/1 Mês | Peso: 2.5/3.0 Kg | Tam: 48/52cm</a>
                     <a onclick="amiodarona2()">Idade: 1/2 Meses | Peso: 4.0 Kg | Tam: 52/56cm</a>
@@ -70,7 +80,7 @@
                     <a onclick="amiodarona11()" id="line">Idade: 8/10 Anos | Peso: -- Kg | Tam: 101/140cm</a>
                 </div>
                 <!-- Adenosina ###################################################################################################-->
-                <button onclick="functionGluconato()" class="dropbtn">Gluconato Cálcio 10%</button>
+                <button onclick="functionGuconato()" class="dropbtn">Button</button>
                 <div id="myDropdownGluconato" class="dropdown-content">
                      <a onclick="gluconato1()" id="line" >Idade: 0/1 Mês | Peso: 2.5/3.0 Kg | Tam: 48/52cm</a>
                     <a onclick="gluconato2()">Idade: 1/2 Meses | Peso: 4.0 Kg | Tam: 52/56cm</a>
@@ -85,7 +95,7 @@
                     <a onclick="gluconato11()" id="line">Idade: 8/10 Anos | Peso: -- Kg | Tam: 101/140cm</a>
                 </div>
                 <!-- Bicarbonato de Sódio #######################################################################################-->
-                <button onclick="functionBicarbonatoSodio()" class="dropbtn">Bicarbonato Sódio 8,4%</button>
+                <button onclick="functionBicarbnatoSodio()" class="dropbtn">Button</button>
                 <div id="myDropdownBicarbonatoSodio" class="dropdown-content">        
                     <a onclick="bicarbonatoSodio1()" id="line" >Idade: 0/1 Mês | Peso: 2.5/3.0 Kg | Tam: 48/52cm</a>
                     <a onclick="bicarbonatoSodio2()">Idade: 1/2 Meses | Peso: 4.0 Kg | Tam: 52/56cm</a>
@@ -100,7 +110,7 @@
                     <a onclick="bicarbonatoSodio11()" id="line">Idade: 8/10 Anos | Peso: -- Kg | Tam: 101/140cm</a>
                 </div>        
                 <!-- Glicose a 50% ###############################################################################################-->
-                <button onclick="functionGlicose()" class="dropbtn">Glicose a 50%</button>
+                <button onclick="functionGliose()" class="dropbtn">Button</button>
                 <div id="myDropdownGlicose" class="dropdown-content">        
                     <a onclick="glicose1()" id="line" >Idade: 0/1 Mês | Peso: 2.5/3.0 Kg | Tam: 48/52cm</a>
                     <a onclick="glicose2()">Idade: 1/2 Meses | Peso: 4.0 Kg | Tam: 52/56cm</a>
@@ -115,7 +125,7 @@
                     <a onclick="glicose11()" id="line">Idade: 8/10 Anos | Peso: -- Kg | Tam: 101/140cm</a>
                 </div>
                 <!-- Adenosina ###################################################################################################-->
-                <button onclick="functionAdenosina()" class="dropbtn">Adenosina</button>
+                <button onclick="functionAdensina()" class="dropbtn">Button</button>
                 <div id="myDropdownAdenosina" class="dropdown-content">
                      <a onclick="adenosina1()" id="line" >Idade: 0/1 Mês | Peso: 2.5/3.0 Kg | Tam: 48/52cm</a>
                     <a onclick="adenosina2()">Idade: 1/2 Meses | Peso: 4.0 Kg | Tam: 52/56cm</a>
@@ -133,7 +143,7 @@
     <h4>Anticonvulsivantes</h4>
             <div class="dropdown">
                 <!-- Diazepam ###################################################################################################-->
-                <button onclick="functionDiazepam()" class="dropbtn">Diazepam</button>
+                <button onclick="functionDiaepam()" class="dropbtn">Button</button>
                 <div id="myDropdownDiazepam" class="dropdown-content">
                     <a onclick="diazepam1()" id="line" >Idade: 0/1 Mês | Peso: 2.5/3.0 Kg | Tam: 48/52cm</a>
                     <a onclick="diazepam2()">Idade: 1/2 Meses | Peso: 4.0 Kg | Tam: 52/56cm</a>
@@ -151,7 +161,7 @@
     <h4>Drogas para sedação / Analgesia</h4>
             <div class="dropdown">
                 <!-- Fentanil ###################################################################################################-->
-                <button onclick="functionFentanil()" class="dropbtn">Fentanil</button>
+                <button onclick="functionFntanil()" class="dropbtn">Button</button>
                 <div id="myDropdownFentanil" class="dropdown-content">
                     <a onclick="fentanil1()" id="line" >Idade: 0/1 Mês | Peso: 2.5/3.0 Kg | Tam: 48/52cm</a>
                     <a onclick="fentanil2()">Idade: 1/2 Meses | Peso: 4.0 Kg | Tam: 52/56cm</a>
@@ -166,7 +176,7 @@
                     <a onclick="fentanil11()" id="line">Idade: 8/10 Anos | Peso: -- Kg | Tam: 101/140cm</a>
                 </div>
                 <!-- Lidocaína ###################################################################################################-->
-                <button onclick="functionLidocaina()" class="dropbtn">Lidocaíca</button>
+                <button onclick="functionLidoaina()" class="dropbtn">Button</button>
                 <div id="myDropdownLidocaina" class="dropdown-content">        
                     <a onclick="lidocaina1()" id="line" >Idade: 0/1 Mês | Peso: 2.5/3.0 Kg | Tam: 48/52cm</a>
                     <a onclick="lidocaina2()">Idade: 1/2 Meses | Peso: 4.0 Kg | Tam: 52/56cm</a>
@@ -181,7 +191,7 @@
                     <a onclick="lidocaina1()" id="line">Idade: 8/10 Anos | Peso: -- Kg | Tam: 101/140cm</a>
                 </div>        
                 <!-- Morfina ###################################################################################################-->
-                <button onclick="functionMorfina()" class="dropbtn">Morfina</button>
+                <button onclick="functionMofina()" class="dropbtn">Button</button>
                 <div id="myDropdownMorfina" class="dropdown-content">        
                     <a onclick="morfina1()" id="line" >Idade: 0/1 Mês | Peso: 2.5/3.0 Kg | Tam: 48/52cm</a>
                     <a onclick="morfina2()">Idade: 1/2 Meses | Peso: 4.0 Kg | Tam: 52/56cm</a>
@@ -196,7 +206,7 @@
                     <a onclick="morfina11()" id="line">Idade: 8/10 Anos | Peso: -- Kg | Tam: 101/140cm</a>
                 </div>
                 <!-- Adenosina ###################################################################################################-->
-                <button onclick="functionGlucnato()" class="dropbtn">button</button>
+                <button onclick="functionGlunato()" class="dropbtn">Button</button>
                 <div id="myDropdownGluconato" class="dropdown-content">
                     <a onclick="gluconato()" id="line" >Idade: 0/1 Mês | Peso: 2.5/3.0 Kg | Tam: 48/52cm</a>
                     <a onclick="gluconat2()">Idade: 1/2 Meses | Peso: 4.0 Kg | Tam: 52/56cm</a>
@@ -211,7 +221,7 @@
                     <a onclick="gluonato11()" id="line">Idade: 8/10 Anos | Peso: -- Kg | Tam: 101/140cm</a>
                 </div>
                 <!-- Bicarbonato de Sódio #######################################################################################-->
-                <button onclick="functionBicarbonatoSdio()" class="dropbtn">button</button>
+                <button onclick="functionBicarbonaoSdio()" class="dropbtn">button</button>
                 <div id="myDropdownBicarbonatoSodio" class="dropdown-content">        
                     <a onclick="bicarbonatoSodo1()" id="line" >Idade: 0/1 Mês | Peso: 2.5/3.0 Kg | Tam: 48/52cm</a>
                     <a onclick="bicarbonatoSoio2()">Idade: 1/2 Meses | Peso: 4.0 Kg | Tam: 52/56cm</a>
@@ -226,7 +236,7 @@
                     <a onclick="bicabonatoSodio11()" id="line">Idade: 8/10 Anos | Peso: -- Kg | Tam: 101/140cm</a>
                 </div>        
                 <!-- Glicose a 50% ###############################################################################################-->
-                <button onclick="functinGlicose()" class="dropbtn">button</button>
+                <button onclick="functinGlcose()" class="dropbtn">button</button>
                 <div id="myDropdownGlicose" class="dropdown-content">        
                     <a onclick="glicos1()" id="line" >Idade: 0/1 Mês | Peso: 2.5/3.0 Kg | Tam: 48/52cm</a>
                     <a onclick="glicoe2()">Idade: 1/2 Meses | Peso: 4.0 Kg | Tam: 52/56cm</a>
@@ -241,7 +251,7 @@
                     <a onclick="gicose11()" id="line">Idade: 8/10 Anos | Peso: -- Kg | Tam: 101/140cm</a>
                 </div>
                 <!-- Adenosina ###################################################################################################-->
-                <button onclick="functionAdensina()" class="dropbtn">button</button>
+                <button onclick="functionAdnsina()" class="dropbtn">button</button>
                 <div id="myDropdownAdenosina" class="dropdown-content">
                     <a onclick="adenosia1()" id="line" >Idade: 0/1 Mês | Peso: 2.5/3.0 Kg | Tam: 48/52cm</a>
                     <a onclick="adenosin2()">Idade: 1/2 Meses | Peso: 4.0 Kg | Tam: 52/56cm</a>
@@ -262,7 +272,7 @@
         <p>Versão 1.1. - 2024 &copy; Todos os Direitos Reservados.</p>
     </footer>
     </div>
-    <script src="js.js"> </script>
+    <script src="body.js"></script>
     <script src="paradaCardiorrespiratoria.js"></script>
     <script src="anticonvulsionantes.js"></script>
     <script src="drogas.js"></script>
