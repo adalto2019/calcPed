@@ -24,24 +24,6 @@ footer{background-color:  rgb(187, 71, 71);  /*Usando*/
     width: 390px;
     text-align: center;}   
     
- /*BTN Calc e Limpar-------------------------------------------------------*/       
-#calc, #limpar{
-    background-color: white;
-    color:  rgb(187, 71, 71);
-    padding: 10px;
-    border-radius: 10px;
-    font-size: 14px;
-    border: none;
-    cursor: pointer;
-    width: 100px;
-    margin-top: 10px;}
-
-#calc:hover, #limpar:hover, .dropbtn:focus {
-    background-color: #1a7dbf;
-    color: white;
-    border-radius: 10px;}    
-    
-
  /*Corpo do app-------------------------------------------------------------*/   
 .link{display: flex;  /*Usando*/   
     flex-direction: column;
@@ -61,9 +43,9 @@ footer{background-color:  rgb(187, 71, 71);  /*Usando*/
     box-shadow: 0 0 20px rgb(249, 248, 248);
     -webkit-box-shadow: 0px 0px 15px rgb(171, 8, 8);}
     
-#peso{height: 60px;
-    width: 60px;
-    border-radius: 50%;
+#peso{height: 35px;
+    width: 90px;
+    border-radius: 10px;
     text-align: center;
     margin: 10px 0px;
     font-size: 20px;
