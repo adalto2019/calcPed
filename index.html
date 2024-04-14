@@ -19,15 +19,16 @@
 <body>
     <div class="link">
     <header>
+        <div class="spinner is-animating"></div>
         <img id="logo" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSWwOXmYmX_gbrFn03udSnVYl5PnGOu9-InTQ&usqp=CAU" alt="Img de Perfil">
         <h3>myCalcPed</h3>
          <a id="info" href="#"><img id="info" title="Informações de Utilização" onclick="info()"
             src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSnrJnb1eJpWu2V9LIo-gwbu6r0wYMovaqhKw&s"></a>
         <form>
              <!-- não permite auto-complete, e tamanho máximo 4 posições -->
-            <span>Digite o peso do paciente:</span><br>
+            <span>Informe o peso do paciente:</span><br>
             <input id="peso" type="number" autocomplete="off" maxlength="4" placeholder=" 0.0Kg" 
-            title="Informe o peso do paciente. *Campo obrigatório.">
+            title="Digite o peso do paciente para obter o cálculo. *Campo obrigatório.">
             <div id="divBtn">
                 <input id="limpar" type="reset"  value="Limpar" title=" Limpar a página">
             </div>
@@ -67,7 +68,7 @@
             <div class="dropdown">
                 <button onclick="ambu()" class="btnConfig">Ambu</button>
                 <button onclick="intraOssea()" class="btnConfig">Intra-Óssea</button>
-                <button onclick="fixacao()" class="btnConfig">Ficação</button>
+                <button onclick="fixacao()" class="btnConfig">Fixação</button>
                 <button onclick="cargaD()" class="btnConfig">Carga Desfibrilação</button>
                 <button onclick="canulaT()" class="btnConfig">Cânula Traqueal</button>
                 <button onclick="cargaC()" class="btnConfig">Carga Cardioversão</button>

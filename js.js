@@ -1,15 +1,18 @@
 var p = document.querySelector("#peso")
+var peso = p.value; 
 
 function info(){
-    alert("Informações de utilização do aplicativo.\n"+
+    alert("Informações de utilização da plataforma.\n"+
     "\n"+
     "Olá usuário, muito obrigado por utilzar a ferramenta myCalcPed.\n"+
     "Para verificar as dosagens de diluições medicamentosas, basta informar o peso do paciente "+
-    "no campo 'Informe o peso do paciente'. E em seguida, selecionar o botão referente a medicação desejada. O cálculo e feito automáticamente. "+
-    "Para inserir um novo cálculo, clique no botão 'LIMPAR' e repita o processo.\n"+
+    "no campo '*Informe o peso do paciente', e em seguida selecione o botão referente a medicação "+
+    "desejada. O cálculo e feito automáticamente. Para inserir um novo cálculo, clique no botão "+
+    "'LIMPAR' e repita o processo.\n"+
     "\n"+
     "Caso deseje entrar em contato conosco - para elógios, sugestões, ou para relatar algum problema, "+
-    "acesso o formulário no rodapé da plataforma em: 'Relatar um Problema'. Ficaremos muito felizes em 'ouvi-lo'."+
+    "acesso o formulário no rodapé da plataforma em: 'Relatar um Problema' e faça à sua interação. \n"+
+    "Ficaremos muito felizes em 'ouvi-lo'."+
     "\n"+
     "\n"+
     "Atenciosamente:\n"+
@@ -19,7 +22,7 @@ function info(){
 // NOVA SESSÃO - Parada Cardiorrespiratória ###################################################################################################
 function fAdrenalina(){ 
     var peso = p.value; 
-    if(peso == 0){
+    if(peso <= 0 || peso > 150){
         alert("Ação inválida! Informe um peso válido para prosseguir.")
         location.reload();
     }else{
@@ -30,7 +33,7 @@ function fAdrenalina(){
 }
 function fAntropina(){ 
     var peso = p.value; 
-    if(peso == 0){
+    if(peso <= 0 || peso > 150){
         alert("Ação inválida! Informe um peso válido para prosseguir.")
         location.reload();
     }else{
@@ -41,7 +44,7 @@ function fAntropina(){
 }
 function fAmiodarona(){ 
     var peso = p.value; 
-    if(peso == 0){
+    if(peso <= 0 || peso > 150){
         alert("Ação inválida! Informe um peso válido para prosseguir.")
         location.reload();
     }else{
@@ -52,7 +55,7 @@ function fAmiodarona(){
 }
 function fGluconato(){ 
     var peso = p.value; 
-    if(peso == 0){
+    if(peso <= 0 || peso > 150){
         alert("Ação inválida! Informe um peso válido para prosseguir.")
         location.reload();
     }else{
@@ -63,7 +66,7 @@ function fGluconato(){
 }
 function fBicarbonatoSodio(){ 
     var peso = p.value; 
-    if(peso == 0){
+    if(peso <= 0 || peso > 150){
         alert("Ação inválida! Informe um peso válido para prosseguir.")
         location.reload();
     }else{
@@ -74,7 +77,7 @@ function fBicarbonatoSodio(){
 }
 function fGlicose(){ 
     var peso = p.value; 
-    if(peso == 0){
+    if(peso <= 0 || peso > 150){
         alert("Ação inválida! Informe um peso válido para prosseguir.")
         location.reload();
         }else if(peso >= 0 && peso <= 5){
@@ -90,7 +93,7 @@ function fGlicose(){
 }
 function fAdenosina(){ 
     var peso = p.value; 
-    if(peso == 0){
+    if(peso <= 0 || peso > 150){
         alert("Ação inválida! Informe um peso válido para prosseguir.")
         location.reload();
         }else if(peso >= 0 && peso <= 4){
@@ -109,7 +112,7 @@ function fAdenosina(){
 // NOVA SESSÃO - Anticonvulsionantes ###################################################################################################
 function fDiazepam(){ 
     var peso = p.value; 
-    if(peso == 0){
+    if(peso <= 0 || peso > 150){
         alert("Ação inválida! Informe um peso válido para prosseguir.")
         location.reload();
     }else{
@@ -123,7 +126,7 @@ function fDiazepam(){
 // NOVA SESSÃO - Drogas Para Sedação ###################################################################################################
 function fFentanil(){ 
     var peso = p.value; 
-    if(peso == 0){
+    if(peso <= 0 || peso > 150){
         alert("Ação inválida! Informe um peso válido para prosseguir.")
         location.reload();
     }else{
@@ -134,7 +137,7 @@ function fFentanil(){
 } 
 function fLidocaina(){ 
     var peso = p.value; 
-    if(peso == 0){
+    if(peso <= 0 || peso > 150){
         alert("Ação inválida! Informe um peso válido para prosseguir.")
         location.reload();
     }else{
@@ -146,7 +149,7 @@ function fLidocaina(){
 } 
 function fMorfina(){ 
     var peso = p.value; 
-    if(peso == 0){
+    if(peso <= 0 || peso > 150){
         alert("Ação inválida! Informe um peso válido para prosseguir.")
         location.reload();
     }else{
@@ -157,7 +160,7 @@ function fMorfina(){
 }
 function fMidazolam(){ 
     var peso = p.value; 
-    if(peso == 0){
+    if(peso <= 0 || peso > 150){
         alert("Ação inválida! Informe um peso válido para prosseguir.")
         location.reload();
     }else if(peso >= 0 && peso <= 6){
@@ -173,7 +176,7 @@ function fMidazolam(){
 }
 function fRocurônio(){ 
     var peso = p.value; 
-    if(peso == 0){
+    if(peso <= 0 || peso > 150){
         alert("Ação inválida! Informe um peso válido para prosseguir.")
         location.reload();
     }else{
@@ -187,7 +190,7 @@ function fRocurônio(){
 // NOVA SESSÃO - Drogas Para Infusão ###################################################################################################
 function fAdrenalinaI(){ 
     var peso = p.value; 
-    if(peso == 0){
+    if(peso <= 0 || peso > 150){
         alert("Ação inválida! Informe um peso válido para prosseguir.")
         location.reload();
         }else if(peso >= 0 && peso <= 3){
@@ -216,7 +219,7 @@ function fAdrenalinaI(){
 }
 function fFentanil(){ 
     var peso = p.value; 
-    if(peso == 0){
+    if(peso <= 0 || peso > 150){
         alert("Ação inválida! Informe um peso válido para prosseguir.")
         location.reload();
     }else{
@@ -228,7 +231,7 @@ function fFentanil(){
 }
 function fDobutamina(){ 
     var peso = p.value; 
-    if(peso == 0){
+    if(peso <= 0 || peso > 150){
         alert("Ação inválida! Informe um peso válido para prosseguir.")
         location.reload();
     }else if(peso >= 0 && peso <= 3){
@@ -271,7 +274,7 @@ function fDobutamina(){
         alert("DOBUTAMINA - Ampola de 20ml com 12.5mg/ml.\n"+
         "\nPrescrição: Diluir 20ml de droga em 180ml de SGI e infundir a 6ml/hora "+
         "(Essa infusão equivale a 5mcg/kg/minuto). Titular pela resposta.")
-    }else if(peso == 35){
+    }else if(peso <= 35){
             alert("DOBUTAMINA - Ampola de 20ml com 12.5mg/ml.\n"+
             "\nPrescrição: Diluir 20ml de droga em 180ml de SGI e infundir a 8ml/hora "+
             "(Essa infusão equivale a 5mcg/kg/minuto). Titular pela resposta.")
@@ -279,7 +282,7 @@ function fDobutamina(){
 }
 function fMildazolam(){ 
     var peso = p.value; 
-    if(peso == 0){
+    if(peso <= 0 || peso > 150){
         alert("Ação inválida! Informe um peso válido para prosseguir.")
         location.reload();
     }else if(peso > 0 && peso <= 3){
@@ -330,7 +333,7 @@ function fMildazolam(){
 }    
 function fNoradrenalina(){ 
     var peso = p.value; 
-    if(peso == 0){
+    if(peso <= 0 || peso > 150){
         alert("Ação inválida! Informe um peso válido para prosseguir.")
         location.reload();
     }else if(peso >= 0 && peso <= 3){
@@ -361,7 +364,7 @@ function fNoradrenalina(){
 // NOVA SESSÃO - Dispositivos ###################################################################################################
 function ambu(){ 
     var peso = p.value; 
-    if(peso == 0){
+    if(peso <= 0 || peso > 150){
         alert("Ação inválida! Informe um peso válido para prosseguir.")
         location.reload();
     }else if(peso <= 5){
@@ -378,7 +381,7 @@ function ambu(){
 }                  
 function intraOssea(){ 
     var peso = p.value; 
-    if(peso == 0){
+    if(peso <= 0 || peso > 150){
         alert("Ação inválida! Informe um peso válido para prosseguir.")
         location.reload();
     }else if(peso <= 9){
@@ -389,7 +392,7 @@ function intraOssea(){
 } 
 function fixacao(){ 
     var peso = p.value; 
-    if(peso == 0){
+    if(peso <= 0 || peso > 150){
         alert("Ação inválida! Informe um peso válido para prosseguir.")
         location.reload();
     }else if(peso <= 3){
@@ -416,7 +419,7 @@ function fixacao(){
 }  
 function cargaD(){ 
     var peso = p.value; 
-    if(peso == 0){
+    if(peso <= 0 || peso > 150){
         alert("Ação inválida! Informe um peso válido para prosseguir.")
         location.reload();
     }if(peso >= 100){
@@ -432,7 +435,7 @@ function cargaD(){
 }  
 function canulaT(){ 
     var peso = p.value; 
-    if(peso == 0){
+    if(peso <= 0 || peso > 150){
         alert("Ação inválida! Informe um peso válido para prosseguir.")
         location.reload();
     }else{
@@ -450,7 +453,7 @@ function canulaT(){
 }  
 function cargaC(){ 
     var peso = p.value; 
-    if(peso == 0){
+    if(peso <= 0 || peso > 150){
         alert("Ação inválida! Informe um peso válido para prosseguir.")
         location.reload();
     }if(peso > 0){
@@ -460,7 +463,7 @@ function cargaC(){
 }  
 function dreno(){ 
     var peso = p.value; 
-    if(peso == 0){
+    if(peso <= 0 || peso > 150){
         alert("Ação inválida! Informe um peso válido para prosseguir.")
         location.reload();
     }else{
@@ -476,7 +479,7 @@ function dreno(){
 }  
 function laminaL(){ 
     var peso = p.value; 
-    if(peso == 0){
+    if(peso <= 0 || peso > 150){
         alert("Ação inválida! Informe um peso válido para prosseguir.")
         location.reload();
     }else{
@@ -491,7 +494,7 @@ function laminaL(){
 }  
 function pasD(){ 
     var peso = p.value; 
-    if(peso == 0){
+    if(peso <= 0 || peso > 150){
         alert("Ação inválida! Informe um peso válido para prosseguir.")
         location.reload();
     }else{
@@ -504,7 +507,7 @@ function pasD(){
 }  
 function sng(){ 
     var peso = p.value; 
-    if(peso == 0){
+    if(peso <= 0 || peso > 150){
         alert("Ação inválida! Informe um peso válido para prosseguir.")
         location.reload();
     }else{
@@ -519,7 +522,7 @@ function sng(){
 }  
 function sAspiracao(){ 
     var peso = p.value; 
-    if(peso == 0){
+    if(peso <= 0 || peso > 150){
         alert("Ação inválida! Informe um peso válido para prosseguir.")
         location.reload();
     }else{
@@ -533,7 +536,7 @@ function sAspiracao(){
 }  
 function sUrinaria(){ 
     var peso = p.value; 
-    if(peso == 0){
+    if(peso <= 0 || peso > 150){
         alert("Ação inválida! Informe um peso válido para prosseguir.")
         location.reload();
     }else{
@@ -548,12 +551,3 @@ function sUrinaria(){
     }
 }  
  
-//Função configurando o input de recebimento do peso do pct
-const kg = window.document.getElementById("peso")
-kg.addEventListener('keypress', () => {
-    let tam = kg.value.length
-
-    if (tam === 2){
-        kg.value += ''
-    }
-})
