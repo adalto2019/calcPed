@@ -31,7 +31,7 @@ Com o objetivo de auxiliar potencialmente médicos pediatras nas urgências e em
 Projeto atualmente em validação por profissionais da área
 
 ### NOVA VERSÃO 1.1.
-Visualizar: [mycalcped.com](https://github.com/adalto2019/myCalcPed)
+Visualizar: [mycalcped.com](https://adalto2019.github.io/myCalcPed)
 
 ### Desenvolvido por
 Adalto C R S Junior - Março 2024. Versão: 1.0.
